@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync,statSync} from 'node:fs';import {products} from '../assets/js/products.js';
+const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');const css=readFileSync(new URL('../assets/css/styles.css',import.meta.url),'utf8');
+test('site informa status demonstrativo de forma visível',()=>{assert.match(html,/VALORES DEMONSTRATIVOS/);assert.match(html,/Valores demonstrativos/);assert.match(html,/Modo demonstração/)});
+test('catálogo usa cinco imagens WebP locais e textos alternativos',()=>{assert.equal(products.length,5);for(const p of products){assert.match(p.image,/\.webp$/);assert.ok(p.alt);assert.ok(statSync(new URL(`../${p.image.replace('./','')}`,import.meta.url)).size<90_000)}});
+test('documento oferece carrinho, busca, catálogo e formulário acessíveis',()=>{for(const id of ['products','filters','search','cart-panel','checkout-form','customer-name','customer-phone','preview-dialog','toast'])assert.ok(html.includes(`id="${id}"`),id);assert.match(html,/aria-live="polite"/);assert.match(html,/aria-modal="true"/)});
+test('CSS declara breakpoints e redução de movimento',()=>{for(const bp of ['1100','780','480','350'])assert.ok(css.includes(`max-width:${bp}px`));assert.match(css,/prefers-reduced-motion:reduce/);assert.match(css,/focus-visible/)});

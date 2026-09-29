@@ -1,0 +1,77 @@
+[
+  {
+    "type": "Nova função",
+    "title": "Criar identidade e estrutura responsiva da vitrine HS",
+    "body": "Objetivo: site editorial mobile-first exclusivo da nova linha. Aceite: hero, navegação, benefícios, rodapé, acessibilidade semântica, 320–1440px. Teste: screenshots e navegação por teclado. Risco: aguardar logo e guia oficiais."
+  },
+  {
+    "type": "Nova função",
+    "title": "Implementar catálogo e categorias dos processados",
+    "body": "Site exclusivamente para a linha processada/higienizada. MVP de demonstração: cenoura, abóbora, couve-flor, vinagrete e kit sopão com imagens enviadas e PREÇOS DEMONSTRATIVOS rotulados. Aceite: busca, filtros Todos/Individuais/Kits e combos/Saladas, ordenação, estado vazio, dados configuráveis. Para produção: dados aprovados pelo HS."
+  },
+  {
+    "type": "Nova função",
+    "title": "Implementar seleção, quantidades e resumo do pedido",
+    "body": "Objetivo: carrinho local sem dados pessoais persistentes. Aceite: adicionar/remover, limite de quantidade, resumo em português e confirmação antes de enviar. Testes unitários de cart.js."
+  },
+  {
+    "type": "Nova função",
+    "title": "Configurar finalização comercial oficial com HS",
+    "body": "Objetivo: fluxo de pedido aprovado via WhatsApp ou sistema existente. Aceite: número/URL verificado, campos e mensagem aprovados. Nunca usar número TAJO em produção; gate de lançamento."
+  },
+  {
+    "type": "Melhoria",
+    "title": "Aplicar motion acessível, skeleton e feedback nos componentes",
+    "body": "Usar design-motion-principles e emilkowalski/skills; skeleton somente em espera, animações de entrada/saída discretas, loading real, reduced-motion e navegação por teclado. Validar sem jumps e sem movimentos decorativos excessivos."
+  },
+  {
+    "type": "Melhoria",
+    "title": "Revisar interface mobile, responsividade e acessibilidade",
+    "body": "Testar 320,375,390,768,1024,1440px; contraste, foco, toque, drawer, campos, legibilidade, teclado e leitor de tela. Corrigir problemas visuais encontrados."
+  },
+  {
+    "type": "Nova função",
+    "title": "Inserir fotos, peso, preços e disponibilidade oficiais",
+    "body": "Fotos enviadas pelo HS já aplicadas em WebP à prévia (5 itens). Para produção: confirmar licenças, fornecer pesos, valores, composição, disponibilidade e imagem/logomarca oficial aprovada. Não publicar preços demonstrativos."
+  },
+  {
+    "type": "Nova função",
+    "title": "Aplicar identidade oficial e configurações de domínio",
+    "body": "Receber logo, cores, nome e URL definitivos. Revisar metadados, título, contato e analytics somente se autorizados. Usar assets locais otimizados."
+  },
+  {
+    "type": "Melhoria",
+    "title": "Criar pipeline CI e política de PR para branch main",
+    "body": "Require status checks: check, tests, build, smoke browser, review. PR template deve citar Issue, mudanças, validação, riscos e próximos passos. Configurar proteção na interface do GitHub."
+  },
+  {
+    "type": "Nova função",
+    "title": "Validar privacidade e termos com responsável jurídico",
+    "body": "Definir controlador, coleta, finalidade, base legal, retenção, terceiros e canal de contato. Aceite formal de termos e política antes do launch gate. Sem inventar texto jurídico."
+  },
+  {
+    "type": "Melhoria",
+    "title": "Garantir performance e qualidade de imagens",
+    "body": "Otimizar fotos autorizadas, evitar CLS, priorizar hero e lazy load abaixo da dobra. Medir Lighthouse em mobile, orçamento sugerido JS inicial <100kB gzip e hero comprimida <250kB."
+  },
+  {
+    "type": "Correção",
+    "title": "Resolver defeitos apontados nos smoke tests e revisão final",
+    "body": "Investigar quebras de layout, teclado, filtros, drawer e CTA. Acrescentar teste de regressão para cada falha identificada. Não abrir/fechar sem evidência de bug."
+  },
+  {
+    "type": "Nova função",
+    "title": "Preparar lançamento e deploy por aprovação",
+    "body": "Confirmar data e condições com HS, domínio e Vercel, configurar ambiente protegido, executar check:production, testes completos, revisão de segurança e aprovação explícita. Definir rollback."
+  },
+  {
+    "type": "Melhoria",
+    "title": "Aprovar experiência mobile baseada no mockup do HS",
+    "body": "Objetivo: revisar layout da versão 1.0.0-demo com Simone/patroa. Verificar hero, logomarca, imagens, contraste, cabeçalho, cards e carrinho em 320/375/390/768/1024/1440. Aceite: feedback registrado, aprovações de identidade e sem overflow. Riscos: marca original enviada em baixa resolução e preços ainda demonstrativos."
+  },
+  {
+    "type": "Nova função",
+    "title": "Cadastrar catálogo oficial da linha processada e liberar canal de pedidos",
+    "body": "Receber catálogo oficial, pesos, preços e condições; receber número oficial de pedidos, política legal aprovada, confirmar forma de atendimento; atualizar config apenas com aceite formal. Aceite: check:production verde e revisão do HS. Não usar número da Simone como destino por presunção."
+  }
+]

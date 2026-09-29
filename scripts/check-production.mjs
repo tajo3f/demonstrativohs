@@ -1,0 +1,13 @@
+import {SITE} from '../assets/js/config.js';
+import {products} from '../assets/js/products.js';
+import {validWhatsapp} from '../assets/js/cart.js';
+import {existsSync,readFileSync} from 'node:fs';
+const problems=[];
+if(!validWhatsapp(SITE.whatsapp))problems.push('Número oficial para PEDIDOS do HS não confirmado. O número comercial da Simone não é automaticamente o canal de pedidos.');
+if(!SITE.catalogApproved||SITE.priceStatus!=='official')problems.push('Produtos, pesos, preços, estoque e fotos ainda demonstrativos/não aprovados.');
+if(!SITE.visualIdentityApproved)problems.push('Identidade visual ainda sem aprovação formal do HS.');
+if(!SITE.policyApprovedByLegal)problems.push('Privacidade ainda sem aprovação do HS/jurídico.');
+if(!existsSync('assets/images/hs-simbolo.webp'))problems.push('Logo/referência visual não encontrada.');
+if(products.some(p=>!p.price||!p.image||!p.weight||p.weight==='A confirmar'))problems.push('Peso ou dados do catálogo não oficiais.');
+if(readFileSync('politica-de-privacidade.html','utf8').includes('Rascunho — não publicar'))problems.push('Política de privacidade ainda é rascunho.');
+if(problems.length){console.error('PUBLICAÇÃO BLOQUEADA:\n- '+problems.join('\n- '));process.exitCode=1}else console.log('Gate de produção liberado; revisão humana ainda necessária.');

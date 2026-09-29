@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {sanitizeCart,changeQuantity,countItems,cartTotal,money,buildMessage,formatPhone,isValidPhone,validWhatsapp,canCheckout} from '../assets/js/cart.js';
+import {products} from '../assets/js/products.js';
+const ids=['kit-sopao','cenoura'];
+test('sanitiza carrinho indevido',()=>{assert.deepEqual(sanitizeCart({'kit-sopao':2,'x':4,'cenoura':-1},ids),{'kit-sopao':2});assert.deepEqual(sanitizeCart(null,ids),{});assert.deepEqual(sanitizeCart(['cenoura'],ids),{})});
+test('adiciona, remove e limita quantidade',()=>{let c=changeQuantity({},'kit-sopao',1,ids);assert.equal(countItems(c),1);assert.deepEqual(changeQuantity(c,'kit-sopao',-1,ids),{});assert.deepEqual(changeQuantity(c,'x',1,ids),c);assert.equal(changeQuantity({'kit-sopao':99},'kit-sopao',1,ids)['kit-sopao'],99)});
+test('soma valores demonstrativos corretamente',()=>{assert.equal(cartTotal({'cenoura':2,'kit-sopao':1},products),32.7);assert.match(money(8.9),/8,90/)});
+test('mensagem contém dados, itens e aviso de valores demonstrativos',()=>{const s=buildMessage({cart:{cenoura:2},products,name:'Maria',phone:'27999887766',fulfillment:'A combinar',payment:'Pix (a confirmar)',notes:'Sem sacola'});assert.match(s,/2x Cenoura picada/);assert.match(s,/Nome: Maria/);assert.match(s,/DEMONSTRATIVA/);assert.match(s,/Sem sacola/);assert.match(s,/Subtotal demonstrativo/)});
+test('valida nome, telefone e carrinho',()=>{assert.throws(()=>buildMessage({cart:{cenoura:1},products,name:'',phone:'27999887766'}));assert.throws(()=>buildMessage({cart:{},products,name:'Maria',phone:'27999887766'}));assert.throws(()=>buildMessage({cart:{cenoura:1},products,name:'Maria',phone:'123'}))});
+test('formata telefone',()=>{assert.equal(formatPhone('27999887766'),'(27) 99988-7766');assert.equal(isValidPhone('(27) 99988-7766'),true)});
+test('bloqueia envio sem todas as aprovações',()=>{assert.equal(validWhatsapp('5527995238209'),true);assert.equal(canCheckout({whatsapp:'',catalogApproved:true,visualIdentityApproved:true,policyApprovedByLegal:true,priceStatus:'official'}),false);assert.equal(canCheckout({whatsapp:'5527995238209',catalogApproved:false,visualIdentityApproved:true,policyApprovedByLegal:true,priceStatus:'demo'}),false)});
