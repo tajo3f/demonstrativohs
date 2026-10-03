@@ -2,58 +2,199 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#fffefa">
-  <meta name="description" content="Conheça a nova linha de frutas, legumes e verduras processados e higienizados do HS Hortigranjeiro Schulz. Explore o catálogo de demonstração e monte sua seleção.">
-  <meta property="og:title" content="HS Hortigranjeiro Schulz | Mais frescor, menos trabalho">
-  <meta property="og:description" content="Descubra a nova linha de frutas, legumes e verduras processados e higienizados.">
-  <meta property="og:type" content="website">
-  <title>HS Hortigranjeiro Schulz • Processados e higienizados</title>
-  <link rel="icon" href="./assets/images/hs-simbolo.webp" type="image/webp">
-  <link rel="preload" href="./assets/images/cenoura.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="./assets/css/styles.css">
-  <script type="module" src="./assets/js/app.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Aplicativo web demonstrativo da nova linha HS Hortigranjeiro Schulz.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="HS Hortigranjeiro">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="./assets/images/icon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="./assets/images/icon-180.png">
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <title>HS Hortigranjeiro Schulz | Pedidos</title>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-  <div class="announcement"><span class="announcement-star" aria-hidden="true">✳</span> PRÉVIA EXCLUSIVA • NOVA LINHA HS <span class="announcement-divide">|</span> VALORES DEMONSTRATIVOS</div>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#inicio" class="brand" aria-label="HS Hortigranjeiro Schulz - início">
-        <img src="./assets/images/hs-simbolo.webp" width="60" height="55" alt="Símbolo HS">
-        <span class="brand-words"><strong>hortigranjeiro<span>schulz</span></strong><small>FRUTAS • LEGUMES • VERDURAS</small></span>
-      </a>
-      <nav class="desktop-nav" aria-label="Navegação principal"><a href="#linha">Produtos</a><a href="#como-funciona">Como funciona</a><a href="#sobre">Sobre a linha</a></nav>
-      <div class="header-actions"><button class="cart-trigger" type="button" data-open-cart aria-controls="cart-panel" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-label">Meu pedido</span><b class="cart-count" id="cart-count">0</b></button><button class="menu-toggle" id="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button></div>
+  <div class="demo-strip" role="status"><span></span><strong>PRÉVIA DEMONSTRATIVA</strong><small>Valores, pesos e canal de pedidos aguardam aprovação oficial.</small></div>
+
+  <div class="app-shell" id="app-shell">
+    <aside class="desktop-sidebar" aria-label="Navegação desktop">
+      <img class="side-logo" src="./assets/images/hs-logo-oficial.png" alt="HS Hortigranjeiro Schulz">
+      <nav>
+        <button class="side-link active" data-route="home"><span class="nav-icon">⌂</span><span>Início</span></button>
+        <button class="side-link" data-route="products"><span class="nav-icon">▦</span><span>Produtos</span></button>
+        <button class="side-link" data-route="cart"><span class="nav-icon">🛒</span><span>Carrinho</span><b class="nav-badge" id="side-count">0</b></button>
+      </nav>
+      <div class="side-install">
+        <img src="./assets/images/hs-icon-circular.png" alt="" aria-hidden="true">
+        <div><strong>Instale o app</strong><span>Acesso rápido pelo celular.</span></div>
+        <button id="install-side" type="button">Instalar</button>
+      </div>
+      <small class="side-credit">Desenvolvido por TAJO Digital 3F</small>
+    </aside>
+
+    <main class="app-main" id="main">
+      <header class="app-header">
+        <button class="header-back" id="header-back" type="button" aria-label="Voltar" hidden>‹</button>
+        <img src="./assets/images/hs-logo-oficial.png" class="header-logo" alt="HS Hortigranjeiro Schulz">
+        <div class="header-actions">
+          <button class="icon-button" id="install-header" type="button" aria-label="Instalar aplicativo" title="Instalar aplicativo">
+            <svg viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3"/></svg>
+          </button>
+          <button class="icon-button cart-button" type="button" data-route="cart" aria-label="Abrir carrinho">
+            <svg viewBox="0 0 24 24"><path d="M4 5h2l2 10h9l2-7H7m3 11h.01M17 19h.01"/></svg>
+            <span id="header-count">0</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="view active" id="view-home" data-view="home" aria-label="Início">
+        <div class="home-wrap">
+          <label class="search-home" for="home-search">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="home-search" type="search" placeholder="Buscar produtos..." autocomplete="off">
+          </label>
+
+          <section class="promo-card" aria-label="Nova linha HS">
+            <div class="promo-copy">
+              <span>NOVA LINHA HS</span>
+              <h1>Hortifruti processado com <em>qualidade e praticidade</em>.</h1>
+              <p>Mais tempo para o que realmente importa no seu dia.</p>
+              <button type="button" class="promo-cta" data-route="products">Ver produtos <b>→</b></button>
+            </div>
+            <div class="promo-visual" aria-hidden="true">
+              <div class="produce-orb orb-one"><img src="./assets/images/cenoura.webp" alt=""></div>
+              <div class="produce-orb orb-two"><img src="./assets/images/abobora.webp" alt=""></div>
+              <div class="produce-orb orb-three"><img src="./assets/images/couve-flor.webp" alt=""></div>
+              <div class="leaf-shape leaf-a"></div>
+              <div class="leaf-shape leaf-b"></div>
+            </div>
+          </section>
+
+          <section class="quick-categories" aria-labelledby="cat-title">
+            <div class="section-title-row"><h2 id="cat-title">Categorias</h2><button type="button" data-route="products">Ver todos</button></div>
+            <div class="category-row">
+              <button class="category-orb" data-category="all"><span><img src="./assets/images/hs-icon-circular.png" alt=""></span><b>Todos</b></button>
+              <button class="category-orb" data-category="individuais"><span><img src="./assets/images/cenoura.webp" alt=""></span><b>Legumes</b></button>
+              <button class="category-orb" data-category="saladas"><span><img src="./assets/images/vinagrete.webp" alt=""></span><b>Saladas</b></button>
+              <button class="category-orb" data-category="kits"><span><img src="./assets/images/kit-sopao.webp" alt=""></span><b>Kits</b></button>
+            </div>
+          </section>
+
+          <section class="featured-section" aria-labelledby="featured-title">
+            <div class="section-title-row"><div><h2 id="featured-title">Destaques</h2><p>Seleção demonstrativa da nova linha.</p></div><button type="button" data-route="products">Ver catálogo</button></div>
+            <div class="home-products" id="home-products"></div>
+          </section>
+
+          <section class="info-banner">
+            <div class="info-icon">◒</div>
+            <div><strong>Produtos preparados para facilitar sua rotina.</strong><span>Informações oficiais serão publicadas somente após aprovação da HS.</span></div>
+            <span>›</span>
+          </section>
+
+          <section class="home-benefits">
+            <article><span>🌿</span><div><strong>Produtos selecionados</strong><small>Catálogo organizado e fácil de consultar.</small></div></article>
+            <article><span>✓</span><div><strong>Pedido mais simples</strong><small>Escolha, revise e envie em poucos passos.</small></div></article>
+            <article><span>⚡</span><div><strong>Experiência rápida</strong><small>Interface leve, feita primeiro para celular.</small></div></article>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-products" data-view="products" aria-label="Produtos" hidden>
+        <div class="products-page">
+          <div class="page-heading">
+            <div><span class="page-kicker">CATÁLOGO HS</span><h1>Produtos</h1><p><span id="product-count">0</span> opções demonstrativas</p></div>
+          </div>
+          <label class="catalog-search" for="catalog-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="catalog-search" type="search" placeholder="Buscar no catálogo..."></label>
+          <div class="filter-row" id="filter-row" aria-label="Categorias"></div>
+          <div class="catalog-grid" id="catalog-grid"></div>
+          <div class="empty-state" id="empty-state" hidden><span>🌱</span><strong>Nenhum produto encontrado.</strong><p>Tente outro termo ou categoria.</p></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-cart" data-view="cart" aria-label="Carrinho" hidden>
+        <div class="cart-page">
+          <div class="cart-heading"><div><span class="page-kicker">SEU PEDIDO</span><h1>Meu Carrinho</h1><p id="cart-count-label">0 itens</p></div><button class="trash-button" id="clear-cart" type="button" aria-label="Limpar carrinho">⌫</button></div>
+          <div class="cart-items" id="cart-items"></div>
+          <div class="cart-empty" id="cart-empty"><span>🛒</span><strong>Seu carrinho está vazio.</strong><p>Adicione produtos para montar seu pedido.</p><button type="button" data-route="products">Ver produtos</button></div>
+          <div class="cart-summary" id="cart-summary" hidden>
+            <div class="summary-line"><span>Subtotal (<b id="summary-items">0</b> itens)</span><strong id="summary-subtotal">R$ 0,00</strong></div>
+            <div class="summary-line"><span>Entrega</span><button type="button" class="text-action" id="delivery-action">Combinar</button></div>
+            <div class="summary-total"><span>Total demonstrativo</span><strong id="summary-total">R$ 0,00</strong></div>
+            <button class="checkout-button" id="open-checkout" type="button">Finalizar pedido <span>→</span></button>
+            <small>O envio real permanece bloqueado até a HS confirmar o WhatsApp oficial e os dados comerciais.</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-more" data-view="more" aria-label="Mais" hidden>
+        <div class="more-page">
+          <img src="./assets/images/hs-icon-circular.png" class="more-icon" alt="HS">
+          <h1>HS Hortigranjeiro Schulz</h1>
+          <p>Aplicativo web demonstrativo para a nova linha de produtos processados e higienizados.</p>
+          <button class="more-card" id="install-more" type="button"><span>📲</span><div><strong>Instalar no celular</strong><small>Adicione o HS à sua tela inicial.</small></div><b>›</b></button>
+          <button class="more-card" type="button" id="about-demo"><span>ℹ️</span><div><strong>Sobre esta prévia</strong><small>Entenda quais dados ainda precisam de aprovação.</small></div><b>›</b></button>
+          <a class="more-card" href="./privacidade.html"><span>🔒</span><div><strong>Privacidade</strong><small>Leia o rascunho da política.</small></div><b>›</b></a>
+          <a class="more-card" href="./termos.html"><span>📄</span><div><strong>Termos</strong><small>Leia o rascunho dos termos.</small></div><b>›</b></a>
+          <small class="tajo-credit">Desenvolvido por <strong>TAJO Digital 3F</strong></small>
+        </div>
+      </section>
+    </main>
+
+    <aside class="desktop-cart" aria-label="Resumo do carrinho">
+      <div class="desktop-cart-head"><div><span>SEU PEDIDO</span><h2>Meu Carrinho</h2></div><b id="desktop-cart-count">0</b></div>
+      <div id="desktop-cart-items" class="desktop-cart-items"></div>
+      <div class="desktop-cart-empty" id="desktop-cart-empty"><span>🛒</span><p>Seu pedido aparece aqui.</p></div>
+      <div class="desktop-cart-summary" id="desktop-cart-summary" hidden><span>Subtotal</span><strong id="desktop-subtotal">R$ 0,00</strong><button type="button" data-route="cart">Revisar pedido</button></div>
+    </aside>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegação principal">
+    <button class="bottom-link active" data-route="home"><span>⌂</span><b>Início</b></button>
+    <button class="bottom-link" data-route="products"><span>▦</span><b>Produtos</b></button>
+    <button class="bottom-link bottom-cart-link" data-route="cart"><span>🛒</span><i id="bottom-count">0</i><b>Carrinho</b></button>
+    <button class="bottom-link" data-route="more"><span>☰</span><b>Mais</b></button>
+  </nav>
+
+  <dialog class="product-dialog" id="product-dialog">
+    <div class="product-detail" id="product-detail"></div>
+  </dialog>
+
+  <dialog class="checkout-dialog" id="checkout-dialog">
+    <form method="dialog" class="checkout-sheet" id="checkout-form">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div class="checkout-title"><div><span class="page-kicker">FINALIZAÇÃO</span><h2>Dados do pedido</h2></div><button class="close-sheet" value="cancel" aria-label="Fechar">×</button></div>
+      <div class="checkout-steps">
+        <label><span>Nome *</span><input id="customer-name" required autocomplete="name" placeholder="Seu nome"></label>
+        <label><span>WhatsApp *</span><input id="customer-phone" required inputmode="tel" autocomplete="tel" placeholder="(27) 99999-9999"></label>
+        <label><span>Recebimento</span><select id="customer-delivery"><option>Combinar</option><option>Retirada</option><option>Entrega</option></select></label>
+        <label><span>Endereço</span><input id="customer-address" autocomplete="street-address" placeholder="Informe se for entrega"></label>
+        <label><span>Pagamento</span><select id="customer-payment"><option>Combinar</option><option>Pix</option><option>Dinheiro</option><option>Débito</option><option>Crédito</option></select></label>
+        <label><span>Observações</span><textarea id="customer-notes" rows="3" placeholder="Alguma observação?"></textarea></label>
+      </div>
+      <div class="checkout-preview" id="checkout-preview"></div>
+      <button class="checkout-button" id="finalize-order" type="button">Copiar pedido demonstrativo <span>→</span></button>
+      <small>O WhatsApp real será habilitado somente após confirmação do canal oficial pela HS.</small>
+    </form>
+  </dialog>
+
+  <dialog class="install-dialog" id="install-dialog">
+    <div class="install-sheet">
+      <button class="close-sheet install-close" type="button" aria-label="Fechar">×</button>
+      <img src="./assets/images/hs-icon-circular.png" alt="HS">
+      <h2>Instalar HS Hortigranjeiro</h2>
+      <p id="install-copy">Tenha acesso rápido ao catálogo e aos seus pedidos direto pela tela inicial.</p>
+      <div class="install-actions">
+        <button type="button" class="install-primary" id="install-confirm">Instalar</button>
+        <button type="button" class="install-secondary install-close">Agora não</button>
+      </div>
     </div>
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Menu mobile" hidden><a href="#linha">Conhecer produtos</a><a href="#como-funciona">Como funciona</a><a href="#sobre">Sobre a linha</a><button type="button" data-open-cart>Meu pedido <span id="menu-cart-count">(0)</span></button></nav>
-  </header>
-  <main id="conteudo">
-    <section class="hero" id="inicio">
-      <div class="container hero-inner">
-        <div class="hero-copy"><div class="eyebrow"><span class="leaf-mark" aria-hidden="true">✳</span> QUALIDADE PARA O SEU DIA A DIA</div><h1>Frutas, legumes<br>e verduras <em>processados e higienizados.</em></h1><p>Mais praticidade, frescor e qualidade para a sua casa ou seu negócio.</p><div class="hero-buttons"><a href="#linha" class="btn btn-primary">Conhecer produtos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><button class="btn btn-soft" type="button" data-open-cart>Montar meu pedido <span aria-hidden="true">↗</span></button></div><div class="hero-caption"><span class="caption-rule"></span> NOVA LINHA • HS HORTIGRANJEIRO SCHULZ</div></div>
-        <div class="hero-photo"><span class="hero-photo-circle one" aria-hidden="true"></span><span class="hero-photo-circle two" aria-hidden="true"></span><img src="./assets/images/cenoura.webp" alt="Cenoura cortada em palitos, em embalagem transparente" width="800" height="800" fetchpriority="high" decoding="async"><span class="hero-photo-badge"><span aria-hidden="true">✳</span> Praticidade<br>de verdade</span><span class="hero-photo-label">PRODUTO REAL • FOTO FORNECIDA</span></div>
-      </div>
-    </section>
-    <div class="benefit-band"><div class="container benefit-grid"><div><span class="benefit-icon">✳</span><span><b>Processados</b><small>com cuidado</small></span></div><div><span class="benefit-icon">◉</span><span><b>Higienizados</b><small>para facilitar</small></span></div><div><span class="benefit-icon">✓</span><span><b>Praticidade</b><small>no dia a dia</small></span></div></div></div>
-    <section class="catalog section" id="linha" aria-labelledby="catalog-title">
-      <div class="container"><div class="section-top"><div><span class="kicker">ESCOLHAS PARA CADA MOMENTO</span><h2 id="catalog-title">Conheça a <em>nova linha.</em></h2><p>Produtos que facilitam o preparo e valorizam o frescor. Explore os itens disponíveis nesta demonstração.</p></div><span class="round-stamp" aria-hidden="true">FEITO PARA<br>FACILITAR<br>✳</span></div>
-        <div class="catalog-toolbar"><div class="filters" id="filters" role="group" aria-label="Filtrar categoria"></div><div class="toolbar-bottom"><label class="search-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input type="search" id="search" placeholder="Buscar um produto" autocomplete="off" aria-label="Buscar um produto"></label><label class="sort-field"><span>Ordenar</span><select id="sort" aria-label="Ordenar produtos"><option value="featured">Destaques</option><option value="lowest">Menor preço</option><option value="highest">Maior preço</option><option value="az">Nome A–Z</option></select></label></div></div>
-        <div id="products" class="product-grid" aria-live="polite" aria-busy="true"><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div></div>
-        <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">✳</span><h3>Nada por aqui ainda.</h3><p>Tente outra palavra ou veja todos os produtos.</p><button id="clear-filters" class="btn btn-outline" type="button">Limpar filtros</button></div>
-        <div class="demo-note"><span aria-hidden="true">ⓘ</span><p><strong>Prévia comercial.</strong> Valores demonstrativos. Pesos, preços, disponibilidade e condições de venda serão confirmados pelo HS antes da publicação.</p></div>
-      </div>
-    </section>
-    <section class="how section" id="como-funciona"><div class="container"><div class="how-heading"><span class="kicker">FÁCIL DO PRIMEIRO CLIQUE AO ÚLTIMO</span><h2>Seu pedido em <em>poucos passos.</em></h2><p>Uma experiência simples, pensada para funcionar principalmente no celular.</p></div><div class="steps-grid"><article><span>01</span><div class="step-icon" aria-hidden="true">⌕</div><h3>Escolha seus produtos</h3><p>Navegue pelo catálogo e encontre os itens que combinam com sua rotina.</p></article><article><span>02</span><div class="step-icon" aria-hidden="true">＋</div><h3>Monte sua seleção</h3><p>Ajuste as quantidades e confira os valores demonstrativos.</p></article><article><span>03</span><div class="step-icon" aria-hidden="true">↗</div><h3>Confira e finalize</h3><p>Revise as informações e encaminhe seu pedido pelo canal comercial do HS, quando aprovado.</p></article></div></div></section>
-    <section class="story section" id="sobre"><div class="container story-inner"><div class="story-visual"><div class="story-image-wrap"><img src="./assets/images/kit-sopao.webp" width="600" height="600" loading="lazy" decoding="async" alt="Kit sopão com legumes processados em embalagem transparente"></div><span class="story-star" aria-hidden="true">✳</span></div><div class="story-copy"><span class="kicker">DO CAMPO PARA SUA ROTINA</span><h2>Mais tempo para o que <em>realmente importa.</em></h2><p>A nova linha do HS reúne frutas, legumes e verduras processados e higienizados, com opções individuais e kits para deixar o preparo mais prático.</p><p>Este site é uma prévia de apresentação. A composição final dos produtos será definida com a equipe HS.</p><a class="text-link" href="#linha">Explorar o catálogo <span aria-hidden="true">↗</span></a></div></div></section>
-    <section class="end-cta"><div class="container end-cta-inner"><span class="end-cta-icon" aria-hidden="true">✳</span><div><span class="kicker">UMA NOVIDADE HS</span><h2>Frescor na sua rotina. <em>Praticidade no seu tempo.</em></h2><p>Escolha seus itens e conheça a experiência de compra da nova linha.</p></div><button class="btn btn-light" type="button" data-open-cart>Ver meu pedido <span aria-hidden="true">↗</span></button></div></section>
-  </main>
-  <footer class="footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="#inicio"><img src="./assets/images/hs-simbolo.webp" alt="" width="55" height="50"><span class="brand-words"><strong>hortigranjeiro<span>schulz</span></strong><small>PROCESSADOS E HIGIENIZADOS</small></span></a><p>São Luís, Santa Maria de Jetibá – ES</p></div><div class="footer-nav"><a href="#linha">Produtos</a><a href="#como-funciona">Como funciona</a><a href="./politica-de-privacidade.html">Privacidade (rascunho)</a></div><div class="footer-bottom">Prévia demonstrativa para validação comercial. Fotos fornecidas pelo cliente; valores ilustrativos. Desenvolvido por TAJO Digital.</div></div></footer>
-  <div class="sticky-cart" id="sticky-cart" hidden><div><b id="sticky-count">0 itens</b><span id="sticky-total">R$ 0,00</span></div><button type="button" data-open-cart>Ver pedido <span aria-hidden="true">↗</span></button></div>
-  <div class="drawer-backdrop" id="cart-overlay" hidden></div>
-  <aside id="cart-panel" class="cart-panel" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cart-title" tabindex="-1"><div class="drawer-head"><div><span class="kicker">SUA SELEÇÃO</span><h2 id="cart-title">Meu pedido <small id="cart-heading-count">(0)</small></h2></div><button class="close-button" type="button" id="cart-close" aria-label="Fechar pedido">×</button></div><div class="drawer-scroll"><div id="cart-items" class="cart-items"></div><div class="cart-sum"><div><span>Subtotal demonstrativo</span><strong id="cart-subtotal">R$ 0,00</strong></div><small>Valor final, disponibilidade e frete sujeitos à confirmação pelo HS.</small></div><form id="checkout-form" novalidate><h3>Seus dados</h3><label for="customer-name">Nome completo <span>*</span></label><input id="customer-name" name="customer-name" autocomplete="name" maxlength="90" required placeholder="Como podemos chamar você?"><label for="customer-phone">WhatsApp para contato <span>*</span></label><input id="customer-phone" name="customer-phone" inputmode="tel" autocomplete="tel" maxlength="16" required placeholder="(27) 99999-9999"><label for="fulfillment">Forma de recebimento</label><select id="fulfillment"><option value="A combinar com o HS">A combinar com o HS</option><option value="Retirada (sujeita à confirmação)">Retirada (a confirmar)</option><option value="Entrega (sujeita à confirmação)">Entrega (a confirmar)</option></select><label for="customer-address">Endereço / referência (se for entrega)</label><textarea id="customer-address" maxlength="220" rows="2" placeholder="Rua, número, bairro e referência"></textarea><label for="payment">Preferência de pagamento</label><select id="payment"><option value="A combinar">A combinar</option><option value="Pix (a confirmar)">Pix (a confirmar)</option><option value="Dinheiro (a confirmar)">Dinheiro (a confirmar)</option><option value="Cartão (a confirmar)">Cartão (a confirmar)</option></select><label for="notes">Observações (opcional)</label><textarea id="notes" maxlength="350" rows="2" placeholder="Alguma informação importante?"></textarea><label class="privacy-consent"><input type="checkbox" id="privacy-agree"><span>Concordo em incluir esses dados no texto da solicitação e enviá-los ao canal do HS quando a operação estiver autorizada. <a href="./politica-de-privacidade.html" target="_blank" rel="noopener">Ver privacidade</a>.</span></label><div id="form-error" class="form-error" role="alert" hidden></div><button type="submit" class="btn btn-primary checkout-btn" id="checkout">Ver resumo do pedido <span aria-hidden="true">↗</span></button><p class="checkout-note" id="checkout-note">Modo demonstração: envio ao WhatsApp desativado até confirmação do canal oficial e aprovação do catálogo.</p></form></div></aside>
-  <dialog id="preview-dialog" class="preview-dialog" aria-labelledby="preview-title"><div class="preview-top"><div><span class="kicker">REVISÃO FINAL</span><h2 id="preview-title">Resumo do pedido</h2></div><button class="close-button" id="preview-close" aria-label="Fechar resumo" type="button">×</button></div><p>Confira a mensagem. Os valores desta prévia são apenas demonstrativos.</p><pre id="preview-message" class="message-preview"></pre><div class="preview-actions"><button type="button" id="copy-request" class="btn btn-outline">Copiar resumo</button><button type="button" id="send-request" class="btn btn-primary" disabled>Enviar ao WhatsApp ↗</button></div><p class="checkout-note" id="preview-note">Envio indisponível na demonstração até aprovação comercial.</p></dialog>
-  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
-  <noscript><p class="noscript">Ative o JavaScript para visualizar os produtos, pesquisar e montar uma seleção.</p></noscript>
+  </dialog>
+
+  <div class="toast" id="toast" hidden></div>
+  <script src="./assets/js/app.js" defer></script>
 </body>
 </html>
