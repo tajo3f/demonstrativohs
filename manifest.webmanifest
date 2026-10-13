@@ -1,15 +1,25 @@
 {
-  "name":"HS Hortigranjeiro Schulz — Pedidos",
-  "short_name":"HS Pedidos",
-  "description":"Aplicativo web demonstrativo da nova linha HS Hortigranjeiro Schulz.",
-  "start_url":"./",
-  "scope":"./",
-  "display":"standalone",
-  "background_color":"#ffffff",
-  "theme_color":"#ffffff",
-  "orientation":"portrait-primary",
-  "icons":[
-    {"src":"./assets/images/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
-    {"src":"./assets/images/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  "name": "HS Hortigranjeiro Schulz — Pedidos",
+  "short_name": "HS Pedidos",
+  "description": "Aplicativo web da nova linha de produtos processados e higienizados HS Hortigranjeiro Schulz.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }
