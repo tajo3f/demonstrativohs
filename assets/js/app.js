@@ -4,69 +4,69 @@
   const PRODUCTS = [
     {
       id: 'abobora-jacare-fatias-assar-500g',
-      name: 'abobora jacare em fatias pra assar 500g',
+      name: 'Abóbora jacaré em fatias para assar 500 g',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
-      weight: '500g',
+      weight: '500 g',
       image: './assets/images/abobora-jacare-fatias-assar-500g.webp',
       badge: 'Fatias',
       description: 'Abóbora jacaré em fatias, pronta para assar e facilitar o preparo.'
     },
     {
       id: 'abobora-japonesa-sem-casca-cubos-500g',
-      name: 'abobora japonesa sem casca em cubos 500g',
+      name: 'Abóbora japonesa sem casca em cubos 500 g',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
-      weight: '500g',
+      weight: '500 g',
       image: './assets/images/abobora-japonesa-sem-casca-cubos-500g.webp',
       badge: 'Cubos',
       description: 'Abóbora japonesa sem casca, cortada em cubos e pronta para o preparo.'
     },
     {
       id: 'abobrinha-laminas-lasanha-500g',
-      name: 'Abobrinha em lâminas para lasanha 500g',
+      name: 'Abobrinha em lâminas para lasanha 500 g',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
-      weight: '500g',
+      weight: '500 g',
       image: './assets/images/abobrinha-laminas-lasanha-500g.webp',
       badge: 'Lâminas',
       description: 'Abobrinha preparada em lâminas para lasanha e outros preparos.'
     },
     {
       id: 'abobrinha-em-rodelas-500g',
-      name: 'abobrinha em rodelas 500g',
+      name: 'Abobrinha em rodelas 500 g',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
-      weight: '500g',
+      weight: '500 g',
       image: './assets/images/abobrinha-em-rodelas-500g.webp',
       badge: 'Rodelas',
       description: 'Abobrinha em rodelas, pronta para facilitar o preparo das refeições.'
     },
     {
       id: 'abobrinha-rodelas-500g',
-      name: 'Abobrinha fatiada em rodelas 500g',
+      name: 'Abobrinha fatiada em rodelas 500 g',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
-      weight: '500g',
+      weight: '500 g',
       image: './assets/images/abobrinha-rodelas-500g.webp',
       badge: 'Fatiada',
       description: 'Abobrinha fatiada em rodelas para diferentes receitas e acompanhamentos.'
     },
     {
       id: 'abobrinha-meia-lua-500g',
-      name: 'Abobrinha meia lua 500g',
+      name: 'Abobrinha meia-lua 500 g',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
-      weight: '500g',
+      weight: '500 g',
       image: './assets/images/abobrinha-meia-lua-500g.webp',
-      badge: 'Meia lua',
-      description: 'Abobrinha cortada em meia lua, pronta para refogados e acompanhamentos.'
+      badge: 'Meia-lua',
+      description: 'Abobrinha cortada em meia-lua, pronta para refogados e acompanhamentos.'
     },
     {
       id: 'abobrinha-picada-500g',
@@ -81,40 +81,40 @@
     },
     {
       id: 'aipim-cortado-congelado-500g',
-      name: 'aipim cortado congelado 500g',
+      name: 'Aipim cortado e congelado 500 g',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 4.99,
-      weight: '500g',
+      weight: '500 g',
       image: './assets/images/aipim-cortado-congelado-500g.webp',
       badge: 'Congelado',
-      description: 'Aipim cortado e congelado em porção de 500g.'
+      description: 'Aipim cortado e congelado, em porção de 500 g.'
     },
     {
       id: 'kit-sopa-500g',
-      name: 'kit sopa, inhame chines, chuchu, batata inglesa, cenoura 500g',
+      name: 'Kit para sopa: inhame-chinês, chuchu, batata-inglesa e cenoura 500 g',
       category: 'kits',
       categoryLabel: 'Kits',
       price: 6.49,
-      weight: '500g',
+      weight: '500 g',
       image: './assets/images/kit-sopa-inhame-chines-chuchu-batata-cenoura-500g.webp',
-      badge: 'Kit sopa',
-      description: 'Kit sopa com inhame chines, chuchu, batata inglesa e cenoura.'
+      badge: 'Kit para sopa',
+      description: 'Kit para sopa com inhame-chinês, chuchu, batata-inglesa e cenoura.'
     },
     {
       id: 'quiabo-fatiado-500g',
-      name: 'Quiabo fatiado 500g',
+      name: 'Quiabo fatiado 500 g',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 12.49,
-      weight: '500g',
+      weight: '500 g',
       image: './assets/images/quiabo-fatiado-500g.webp',
       badge: 'Fatiado',
-      description: 'Quiabo fatiado em porção de 500g, pronto para o preparo.'
+      description: 'Quiabo fatiado em porção de 500 g, pronto para o preparo.'
     },
     {
       id: 'salada-de-frutas',
-      name: 'Salada de Frutas',
+      name: 'Salada de frutas',
       category: 'saladas',
       categoryLabel: 'Saladas',
       price: null,
@@ -135,8 +135,8 @@
     {id:'kits', label:'Kits'}
   ];
 
-  const CART_KEY = 'hs-v9-cart';
-  const CUSTOM_KEY = 'hs-v9-customizations';
+  const CART_KEY = 'hs-v10-cart';
+  const CUSTOM_KEY = 'hs-v10-customizations';
   let cart = {};
   let customizations = {};
   let category = 'all';
@@ -203,7 +203,7 @@
       return;
     }
     setQty(id, (cart[id] || 0) + 1);
-    toast(`${p.name} adicionado ao carrinho`);
+    toast(`Produto adicionado ao carrinho: ${p.name}.`);
   }
 
   function remove(id) { setQty(id, (cart[id] || 0) - 1); }
@@ -365,7 +365,7 @@
     const q = cart[id] || 1;
     const currentFruits = selectedFruits(id);
     const root = $('#product-detail');
-    root.innerHTML = `<button type="button" class="detail-close" aria-label="Fechar">×</button><div class="detail-image"><img src="${p.image}" alt="${p.name}"></div><div class="detail-body"><span>${p.categoryLabel.toUpperCase()}</span><h2>${p.name}</h2><small>${p.weight}</small><div class="detail-price">${priceLabel(p)}</div><p class="detail-description">${p.description}</p>${p.customizable ? fruitPickerHtml(currentFruits) : ''}<div class="detail-benefits"><div><span>◒</span><b>Seleção HS</b></div><div><span>✓</span><b>Praticidade</b></div><div><span>◷</span><b>Pronto para rotina</b></div></div><div class="detail-actions"><div class="detail-stepper"><button type="button" data-minus>−</button><span data-detail-qty>${q}</span><button type="button" data-plus>+</button></div><button type="button" class="detail-add">${p.customizable ? 'Salvar e adicionar' : 'Adicionar ao carrinho'}</button></div><div class="tip-card"><strong>Informação</strong><br>${p.customizable ? 'Sua seleção de frutas será enviada junto com o pedido.' : 'Produto higienizado e preparado para facilitar sua rotina.'}</div></div>`;
+    root.innerHTML = `<button type="button" class="detail-close" aria-label="Fechar">×</button><div class="detail-image"><img src="${p.image}" alt="${p.name}"></div><div class="detail-body"><span>${p.categoryLabel.toUpperCase()}</span><h2>${p.name}</h2><small>${p.weight}</small><div class="detail-price">${priceLabel(p)}</div><p class="detail-description">${p.description}</p>${p.customizable ? fruitPickerHtml(currentFruits) : ''}<div class="detail-benefits"><div><span>◒</span><b>Seleção HS</b></div><div><span>✓</span><b>Praticidade</b></div><div><span>◷</span><b>Pronto para o dia a dia</b></div></div><div class="detail-actions"><div class="detail-stepper"><button type="button" data-minus>−</button><span data-detail-qty>${q}</span><button type="button" data-plus>+</button></div><button type="button" class="detail-add">${p.customizable ? 'Salvar e adicionar' : 'Adicionar ao carrinho'}</button></div><div class="tip-card"><strong>Informação</strong><br>${p.customizable ? 'Sua seleção de frutas será enviada junto com o pedido.' : 'Produto higienizado e preparado para facilitar sua rotina.'}</div></div>`;
 
     let temp = q;
     const val = $('[data-detail-qty]',root);
@@ -381,7 +381,7 @@
         customizations[id] = {fruits};
       }
       setQty(id,temp);
-      toast(`${p.name} atualizado no carrinho`);
+      toast(`Carrinho atualizado: ${p.name}.`);
       $('#product-dialog').close();
     };
     $('.detail-close',root).onclick = () => $('#product-dialog').close();
@@ -412,7 +412,7 @@
       toast('Informe nome e WhatsApp para continuar.');
       return;
     }
-    const text = `${checkoutText()}\n\nCliente: ${name}\nWhatsApp: ${phone}\nRecebimento: ${$('#customer-delivery').value}\nEndereço: ${$('#customer-address').value || 'Não informado'}\nPagamento: ${$('#customer-payment').value}\nObservações: ${$('#customer-notes').value || 'Nenhuma'}\n\nPedido gerado pelo catálogo HS.`;
+    const text = `${checkoutText()}\n\nCliente: ${name}\nWhatsApp: ${phone}\nForma de recebimento: ${$('#customer-delivery').value}\nEndereço: ${$('#customer-address').value || 'Não informado'}\nForma de pagamento: ${$('#customer-payment').value}\nObservações: ${$('#customer-notes').value || 'Nenhuma'}\n\nPedido gerado pelo catálogo HS.`;
     try {
       await navigator.clipboard.writeText(text);
       toast('Pedido copiado com sucesso.');
@@ -427,9 +427,9 @@
     customizations = {};
     save();
     renderAll();
-    toast('Carrinho limpo');
+    toast('Carrinho limpo.');
   });
-  $('#delivery-action').addEventListener('click', () => toast('Entrega será combinada com a HS.'));
+  $('#delivery-action').addEventListener('click', () => toast('A entrega será combinada com a HS.'));
 
   $('#home-search').addEventListener('input', e => {
     query = e.target.value;
@@ -451,7 +451,7 @@
   function openInstall() {
     if (isStandalone()) { toast('O app já está instalado neste dispositivo.'); return; }
     const copy = $('#install-copy');
-    copy.textContent = isIOS() ? 'No iPhone: toque em Compartilhar e depois em “Adicionar à Tela de Início”.' : 'Tenha acesso rápido ao catálogo e aos seus pedidos direto pela tela inicial.';
+    copy.textContent = isIOS() ? 'No iPhone: toque em Compartilhar e depois em “Adicionar à Tela de Início”.' : 'Tenha acesso rápido ao catálogo e aos seus pedidos diretamente pela tela inicial.';
     $('#install-confirm').hidden = isIOS();
     $('#install-dialog').showModal();
   }

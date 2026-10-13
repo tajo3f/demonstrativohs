@@ -1,7 +1,7 @@
-# Contexto do Projeto — HS App V6
+# Contexto do Projeto — HS App V10
 
-A V6 abandona o formato tradicional de site e assume uma experiência de **app de pedidos mobile-first**, mantendo o frontend leve e sem backend nesta fase.
+A V10 mantém a experiência de **app de pedidos mobile-first**, com frontend leve e sem backend nesta fase.
 
-Princípios: visual fresco, comercial, rápido, acessível, pouca dependência, microinterações discretas, carrinho local e PWA instalável.
+Princípios: visual fresco e comercial, navegação rápida e acessível, poucas dependências, microinterações discretas, carrinho local e PWA instalável.
 
-Não publicar dados demonstrativos como oficiais. Não habilitar envio real sem WhatsApp confirmado pela HS.
+Não publique dados demonstrativos como se fossem oficiais. Não habilite o envio real de pedidos sem a confirmação do WhatsApp oficial da HS.
