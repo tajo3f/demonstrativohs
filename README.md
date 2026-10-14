@@ -1,39 +1,19 @@
-# HS Hortigranjeiro Schulz — App de Pedidos V13
+# HS Hortigranjeiro — App de Pedidos V14
 
-Aplicativo web/PWA da nova linha de produtos processados e higienizados.
+Versão comercial, mobile-first e instalável (PWA) do catálogo da nova linha de produtos processados e higienizados da HS Hortigranjeiro Schulz.
 
-## Catálogo atual
+## Melhorias da V14
+- Vitrine inicial redesenhada com três produtos coloridos, sem imagens sobrepostas.
+- Destaques da página inicial reorganizados para mostrar variedade de cores e linhas.
+- Catálogo atualizado com os novos produtos, pesos e preços informados pela HS.
+- Nomes, acentuação, pontuação, concordância e descrições revisados em português.
+- Imagens dos produtos exibidas de forma proporcional, preservando o produto inteiro sempre que possível.
+- Carrinho, personalização da salada de frutas, filtros e PWA preservados.
 
-### Processados
-- Abóbora jacaré em fatias para assar 500 g — R$ 3,99
-- Abóbora japonesa sem casca em cubos 500 g — R$ 3,99
-- Abobrinha em lâminas para lasanha 500 g — R$ 3,99
-- Abobrinha em rodelas 500 g — R$ 3,99
-- Abobrinha fatiada em rodelas 500 g — R$ 3,99
-- Abobrinha meia-lua 500 g — R$ 3,99
-- Abobrinha picada 500 g — R$ 3,99
-- Aipim cortado e congelado 500 g — R$ 4,99
-- Quiabo fatiado 500 g — R$ 12,49
-
-### Kits
-- Kit para sopa: inhame-chinês, chuchu, batata-inglesa e cenoura 500 g — R$ 6,49
-
-### Saladas
-- Salada de frutas — personalizável, com preço a confirmar
-
-## Salada de frutas
-O cliente pode selecionar as frutas desejadas. A seleção é salva no navegador junto ao carrinho e aparece no resumo do pedido. A lista inicial de frutas fica em `FRUIT_OPTIONS`, no arquivo `assets/js/app.js`, e pode ser ajustada conforme a disponibilidade oficial da HS.
-
-## Organização do catálogo
-O catálogo permanece organizado por linhas comerciais:
-- Todos
+## Linhas do catálogo
 - Processados
-- Saladas
+- Saladas / frutas prontas
 - Kits
 
-## Executar
-Abra `index.html` em um servidor local ou publique o projeto na Vercel. Para testar:
-
-```bash
-npm run check
-```
+## Observação
+A salada de frutas permanece personalizável. As frutas disponíveis podem ser alteradas em `FRUIT_OPTIONS`, no arquivo `assets/js/app.js`.

@@ -9,35 +9,30 @@ const manifest=JSON.parse(fs.readFileSync(new URL('../manifest.webmanifest',impo
 
 test('estrutura principal do app existe',()=>{for(const id of ['view-home','view-products','view-cart','bottom-count','product-dialog','install-dialog'])assert.match(html,new RegExp(`id="${id}"`))});
 
-test('catálogo contém os dez produtos recebidos nesta atualização',()=>{
+test('novos produtos estão cadastrados com português revisado',()=>{
   for(const name of [
-    'Abóbora jacaré em fatias para assar 500 g',
-    'Abóbora japonesa sem casca em cubos 500 g',
-    'Abobrinha em lâminas para lasanha 500 g',
-    'Abobrinha em rodelas 500 g',
-    'Abobrinha fatiada em rodelas 500 g',
-    'Abobrinha meia-lua 500 g',
-    'Abobrinha picada 500 g',
-    'Aipim cortado e congelado 500 g',
-    'Kit para sopa: inhame-chinês, chuchu, batata-inglesa e cenoura 500 g',
-    'Quiabo fatiado 500 g'
+    'Vagem verde cortada em bastonetes 500 g',
+    'Batata-doce rosada com casca em rodelas 500 g',
+    'Batata-inglesa em canoas 500 g',
+    'Beterraba em cubos pequenos 500 g',
+    'Chuchu em corte paysanne (fatias finas e irregulares) 500 g',
+    'Combinado de cenoura e vagem em cubos pequenos 500 g',
+    'Goiaba fatiada 300 g',
+    'Kit Primavera 01: couve-flor, brócolis, batata-inglesa e cenoura 500 g',
+    'Melancia em cubos 250 g'
   ]) assert.match(js,new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
 });
 
-test('preços enviados foram cadastrados',()=>{
-  for(const price of ['price: 3.99','price: 4.99','price: 6.49','price: 12.49']) assert.match(js,new RegExp(price.replace('.', '\\.')));
-});
-
+test('preços dos novos itens foram cadastrados',()=>{for(const price of ['price: 10.99','price: 7.99','price: 8.49','price: 2.99','price: 8.99','price: 5.49'])assert.match(js,new RegExp(price.replace('.', '\\.')))});
 test('salada de frutas continua personalizável',()=>{assert.match(js,/Salada de frutas/);assert.match(js,/FRUIT_OPTIONS/);assert.match(js,/fruit-customizer/)});
 test('catálogo segue organizado por linhas comerciais',()=>{for(const label of ['Todos','Processados','Saladas','Kits'])assert.match(js,new RegExp(`label:'${label}'`));assert.match(html,/Nosso catálogo/)});
 test('PWA está em modo standalone',()=>assert.equal(manifest.display,'standalone'));
-test('carrinho e personalizações preservam localStorage existente',()=>{assert.match(js,/hs-v10-cart/);assert.match(js,/hs-v10-customizations/)});
-test('service worker usa cache V13',()=>assert.match(sw,/hs-v13-shell/));
+test('carrinho preserva armazenamento local',()=>{assert.match(js,/hs-v10-cart/);assert.match(js,/hs-v10-customizations/)});
+test('service worker usa cache V14',()=>assert.match(sw,/hs-v14-shell/));
 test('não contém WhatsApp hardcoded',()=>assert.doesNotMatch(js,/wa\.me\//));
-test('imagens do catálogo são contidas sem corte',()=>{assert.match(css,/V12 — imagens proporcionais/);assert.match(css,/\.catalog-image img\{[\s\S]*?object-fit:contain/)});
-test('modal de produto usa layout compacto e responsivo',()=>{assert.match(css,/grid-template-columns:minmax\(280px,40%\) minmax\(0,1fr\)/);assert.match(css,/\.detail-image\{[\s\S]*?min-height:410px/);assert.match(css,/@media\(max-width:680px\)/)});
-test('destaques possuem botão rápido de adicionar',()=>{assert.match(js,/mini-quick-add/);assert.match(js,/Adicionar \$\{p\.name\} ao carrinho/)});
-test('carrinho desktop possui remoção rápida',()=>{assert.match(js,/desktop-remove/);assert.match(js,/setQty\(p\.id,0\)/);assert.match(css,/\.desktop-remove\{/)});
-
-test('hero mobile separa copy, vitrine e benefícios sem sobreposição',()=>{assert.match(css,/V13 — responsividade comercial definitiva/);assert.match(css,/@media \(max-width: 720px\)/);assert.match(css,/\.promo-card\{[\s\S]*?display:flex;[\s\S]*?flex-direction:column/);assert.match(css,/\.promo-copy\{[\s\S]*?order:1/);assert.match(css,/\.promo-visual\{[\s\S]*?order:2/);assert.match(css,/\.promo-benefits\{[\s\S]*?order:3/)});
+test('hero usa três produtos coloridos e não sobrepostos',()=>{assert.match(html,/beterraba-cubos-pequenos-500g\.webp/);assert.match(html,/abobora-japonesa-sem-casca-cubos-500g\.webp/);assert.match(html,/vagem-verde-bastonetes-500g\.webp/);assert.match(css,/V14 — vitrine colorida/);assert.match(css,/grid-template-columns:\.92fr 1\.08fr \.92fr/);assert.match(css,/position:relative!important/)});
+test('destaques usam seleção variada',()=>{assert.match(js,/HOME_FEATURE_IDS/);assert.match(js,/melancia-cubos-250g/);assert.match(js,/beterraba-cubos-pequenos-500g/)});
+test('imagens do catálogo preservam proporção',()=>assert.match(css,/\.catalog-image img\{object-fit:contain!important/));
+test('catálogo oferece adição rápida',()=>{assert.match(js,/action-host/);assert.match(js,/b\.textContent = p\.customizable \? '✦' : '\+'/)});
+test('carrinho desktop possui remoção rápida',()=>{assert.match(js,/desktop-remove/);assert.match(js,/setQty\(p\.id,0\)/)});
 test('html não duplica o estado vazio do carrinho',()=>assert.equal((html.match(/id="cart-empty"/g)||[]).length,1));

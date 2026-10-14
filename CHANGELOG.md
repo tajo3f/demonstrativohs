@@ -1,3 +1,12 @@
+# V14 — catálogo ampliado, vitrine colorida e revisão textual
+
+- Adicionados novos processados, frutas prontas e kits com os pesos e preços informados.
+- Hero redesenhado com beterraba, abóbora e vagem, sem sobreposição entre as imagens.
+- Destaques da home passaram a priorizar variedade visual e cores.
+- Revisão de ortografia, acentuação, pontuação, hifenização e descrições comerciais dos produtos.
+- Mantidas as correções de responsividade, carrinho e modal das versões anteriores.
+- Cache do PWA atualizado para V14.
+
 # V13 — responsividade mobile e acabamento comercial
 
 - Hero mobile reconstruído para eliminar sobreposição entre texto e fotos.
