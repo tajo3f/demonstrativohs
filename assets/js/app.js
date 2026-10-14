@@ -5,6 +5,7 @@
     {
       id: 'abobora-jacare-fatias-assar-500g',
       name: 'Abóbora jacaré em fatias para assar 500 g',
+      shortName: 'Abóbora em fatias',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
@@ -16,6 +17,7 @@
     {
       id: 'abobora-japonesa-sem-casca-cubos-500g',
       name: 'Abóbora japonesa sem casca em cubos 500 g',
+      shortName: 'Abóbora em cubos',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
@@ -27,6 +29,7 @@
     {
       id: 'abobrinha-laminas-lasanha-500g',
       name: 'Abobrinha em lâminas para lasanha 500 g',
+      shortName: 'Abobrinha para lasanha',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
@@ -38,6 +41,7 @@
     {
       id: 'abobrinha-em-rodelas-500g',
       name: 'Abobrinha em rodelas 500 g',
+      shortName: 'Abobrinha em rodelas',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
@@ -49,6 +53,7 @@
     {
       id: 'abobrinha-rodelas-500g',
       name: 'Abobrinha fatiada em rodelas 500 g',
+      shortName: 'Abobrinha fatiada',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
@@ -60,6 +65,7 @@
     {
       id: 'abobrinha-meia-lua-500g',
       name: 'Abobrinha meia-lua 500 g',
+      shortName: 'Abobrinha meia-lua',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
@@ -71,6 +77,7 @@
     {
       id: 'abobrinha-picada-500g',
       name: 'Abobrinha picada 500 g',
+      shortName: 'Abobrinha picada',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 3.99,
@@ -82,6 +89,7 @@
     {
       id: 'aipim-cortado-congelado-500g',
       name: 'Aipim cortado e congelado 500 g',
+      shortName: 'Aipim cortado',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 4.99,
@@ -93,6 +101,7 @@
     {
       id: 'kit-sopa-500g',
       name: 'Kit para sopa: inhame-chinês, chuchu, batata-inglesa e cenoura 500 g',
+      shortName: 'Kit para sopa',
       category: 'kits',
       categoryLabel: 'Kits',
       price: 6.49,
@@ -104,6 +113,7 @@
     {
       id: 'quiabo-fatiado-500g',
       name: 'Quiabo fatiado 500 g',
+      shortName: 'Quiabo fatiado',
       category: 'processados',
       categoryLabel: 'Processados',
       price: 12.49,
@@ -115,6 +125,7 @@
     {
       id: 'salada-de-frutas',
       name: 'Salada de frutas',
+      shortName: 'Salada de frutas',
       category: 'saladas',
       categoryLabel: 'Saladas',
       price: null,
@@ -150,6 +161,7 @@
   const byId = id => PRODUCTS.find(p => p.id === id);
   const priceLabel = p => Number.isFinite(p.price) ? money(p.price) : 'Preço a confirmar';
   const itemPriceLabel = (p, qty=1) => Number.isFinite(p.price) ? money(p.price * qty) : 'A confirmar';
+  const cardName = p => p.shortName || p.name.replace(/\s+500\s*g$/i,'');
 
   try { cart = JSON.parse(localStorage.getItem(CART_KEY) || '{}') || {}; } catch { cart = {}; }
   try { customizations = JSON.parse(localStorage.getItem(CUSTOM_KEY) || '{}') || {}; } catch { customizations = {}; }
@@ -232,15 +244,24 @@
   function productMini(p) {
     const art = document.createElement('article');
     art.className = 'mini-product';
-    art.innerHTML = `<img src="${p.image}" alt="${p.name}"><div class="mini-product-info"><strong>${p.name}</strong><small>${p.weight} • ${p.categoryLabel}</small><b>${priceLabel(p)}</b></div><button type="button" aria-label="Adicionar ${p.name}">+</button>`;
-    art.querySelector('img').addEventListener('click', () => openDetail(p.id));
-    art.querySelector('button').addEventListener('click', () => add(p.id));
+    art.tabIndex = 0;
+    art.setAttribute('role','button');
+    art.setAttribute('aria-label',`Ver ${p.name}`);
+    art.innerHTML = `<div class="mini-product-media"><img src="${p.image}" alt="${p.name}" loading="lazy"><span>${p.badge}</span></div><div class="mini-product-info"><strong>${cardName(p)}</strong><small>${p.weight}</small><b>${priceLabel(p)}</b></div><button class="mini-quick-add" type="button" aria-label="${p.customizable ? `Personalizar ${p.name}` : `Adicionar ${p.name} ao carrinho`}">+</button>`;
+    const open = () => openDetail(p.id);
+    art.addEventListener('click', open);
+    art.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    const quick = art.querySelector('.mini-quick-add');
+    quick.addEventListener('click', e => {
+      e.stopPropagation();
+      p.customizable ? openDetail(p.id) : add(p.id);
+    });
     return art;
   }
 
   function renderHome() {
     const host = $('#home-products');
-    host.replaceChildren(...PRODUCTS.slice(0,3).map(productMini));
+    host.replaceChildren(...PRODUCTS.slice(0,8).map(productMini));
   }
 
   function filterProducts() {
@@ -265,7 +286,7 @@
     const q = cart[p.id] || 0;
     const art = document.createElement('article');
     art.className = 'catalog-card';
-    art.innerHTML = `<div class="catalog-image"><img src="${p.image}" alt="${p.name}" loading="lazy"><span>${p.badge}</span></div><div class="catalog-body"><h3>${p.name}</h3><small>${p.weight} • ${p.categoryLabel}</small><div class="catalog-price"><strong>${priceLabel(p)}</strong><div class="action-host"></div></div></div>`;
+    art.innerHTML = `<div class="catalog-image"><img src="${p.image}" alt="${p.name}" loading="lazy"><span>${p.badge}</span></div><div class="catalog-body"><h3 title="${p.name}">${cardName(p)}</h3><small>${p.weight} • ${p.categoryLabel}</small><div class="catalog-price"><strong>${priceLabel(p)}</strong><div class="action-host"></div></div></div>`;
     art.querySelector('.catalog-image').addEventListener('click', () => openDetail(p.id));
     const h = art.querySelector('.action-host');
     if (!q) {
@@ -335,7 +356,8 @@
       const d = document.createElement('div');
       d.className = 'desktop-cart-line';
       const custom = customSummary(p.id);
-      d.innerHTML = `<img src="${p.image}" alt=""><div><strong>${p.name}</strong><small>${q}x • ${p.weight}${custom ? ` • ${custom}` : ''}</small></div><b>${itemPriceLabel(p,q)}</b>`;
+      d.innerHTML = `<img src="${p.image}" alt="${p.name}"><div class="desktop-cart-line-info"><strong>${p.name}</strong><small>${q}x • ${p.weight}${custom ? ` • ${custom}` : ''}</small></div><div class="desktop-cart-actions"><b>${itemPriceLabel(p,q)}</b><button class="desktop-remove" type="button" aria-label="Remover ${p.name} do carrinho"><span aria-hidden="true">×</span> Remover</button></div>`;
+      d.querySelector('.desktop-remove').addEventListener('click', () => setQty(p.id,0));
       host.append(d);
     });
     $('#desktop-cart-empty').hidden = !!entries.length;

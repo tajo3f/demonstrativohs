@@ -1,3 +1,24 @@
+# V12 — imagens, modal e carrinho refinados
+
+- Todas as imagens dos produtos foram redimensionadas com `object-fit: contain` para exibir o produto inteiro sem cortar ou esconder as informações do card.
+- Cards do catálogo receberam proporções consistentes em desktop e mobile.
+- O modal de detalhes foi redesenhado no desktop com foto e informações lado a lado e, no mobile, com foto compacta no topo.
+- A seção de destaques agora possui botão `+` para adicionar produtos ao carrinho rapidamente.
+- O catálogo principal mantém o botão `+` e o seletor de quantidade após a inclusão.
+- O carrinho lateral do desktop agora possui ação **Remover** em cada item.
+- Cache/PWA atualizado para V12.
+
+# V11 — acabamento visual e correções responsivas
+
+- Home redesenhada com linguagem visual inspirada na referência oficial HS.
+- Hero verde com composição de produtos, CTA e benefícios da nova linha.
+- Catálogo por linhas refinado com chips e ícones.
+- Destaques reorganizados em cards visuais com faixa verde.
+- Cards de produtos corrigidos no celular: imagem, texto, preço e botão não se sobrepõem mais.
+- Nomes curtos exibidos nos cards; nomes completos preservados nos detalhes, carrinho e pedido.
+- Botões de adicionar ganharam área de toque estável e alinhamento consistente.
+- Mantidas funcionalidades do carrinho, PWA e personalização da salada de frutas.
+
 # Changelog
 
 ## 10.0.0

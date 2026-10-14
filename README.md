@@ -1,4 +1,4 @@
-# HS Hortigranjeiro Schulz — App de Pedidos V10
+# HS Hortigranjeiro Schulz — App de Pedidos V12
 
 Aplicativo web/PWA da nova linha de produtos processados e higienizados.
 

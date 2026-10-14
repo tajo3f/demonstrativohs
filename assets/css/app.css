@@ -32,3 +32,278 @@
 @media(max-width:540px){.fruit-options{gap:6px}.fruit-option span{padding:7px 9px;font-size:9px}.detail-image{height:250px}}
 
 /* V8 — catálogo por linhas: Todos / Processados / Saladas / Kits */
+
+
+/* V11 — acabamento visual inspirado na referência oficial HS + correções mobile */
+.demo-strip{display:none}
+.app-shell{min-height:100dvh}
+.desktop-sidebar{height:100dvh}
+.home-wrap{width:min(100%,980px)}
+.search-home{display:none}
+
+/* Hero: linguagem visual próxima da peça de referência, sem sacrificar a responsividade */
+.promo-card{
+  margin-top:8px;min-height:390px;border-radius:30px;
+  grid-template-columns:1.02fr .98fr;
+  background:
+    radial-gradient(circle at 84% 14%,rgba(176,236,104,.24),transparent 28%),
+    radial-gradient(circle at 58% 92%,rgba(133,202,57,.24),transparent 25%),
+    linear-gradient(138deg,#0c5b1d 0%,#0c7424 47%,#15952e 100%);
+  box-shadow:0 24px 60px rgba(5,79,24,.22)
+}
+.promo-card:before{
+  background:
+    linear-gradient(90deg,rgba(4,60,17,.43),rgba(4,91,24,.12) 55%,transparent 72%),
+    radial-gradient(circle at 100% 0,rgba(255,255,255,.14),transparent 32%)
+}
+.promo-copy{padding:42px 32px 92px 34px;justify-content:flex-start;padding-top:54px}
+.promo-copy>span{font-size:10px;letter-spacing:.2em;color:#d8ff95}
+.promo-copy h1{font-size:38px;line-height:.98;max-width:430px;margin:10px 0 14px}
+.promo-copy h1 em{color:#c8ff70}
+.promo-copy p{font-size:14px;max-width:330px}
+.promo-cta{min-height:50px;padding:0 25px;font-size:14px;background:linear-gradient(135deg,#70df24,#38b80d);box-shadow:0 12px 26px rgba(3,69,11,.3)}
+.promo-visual{min-height:390px;overflow:hidden}
+.hero-product{position:absolute;background:#fff;border:3px solid rgba(255,255,255,.82);border-radius:18px;overflow:hidden;box-shadow:0 16px 32px rgba(0,44,10,.26);z-index:3}
+.hero-product img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-product-a{width:43%;height:64%;right:4%;bottom:8%;transform:rotate(1.5deg)}
+.hero-product-b{width:37%;height:55%;left:4%;top:18%;transform:rotate(-2deg)}
+.hero-product-c{width:34%;height:48%;left:28%;bottom:5%;transform:rotate(1deg)}
+.hero-product-d{width:29%;height:39%;right:29%;top:4%;transform:rotate(3deg)}
+.hero-leaf{position:absolute;background:linear-gradient(145deg,#9ae449,#2f9d20);border-radius:100% 0 100% 0;opacity:.28;z-index:1}
+.hero-leaf-a{width:160px;height:82px;right:-35px;top:-15px;transform:rotate(29deg)}
+.hero-leaf-b{width:170px;height:88px;left:20px;bottom:-45px;transform:rotate(208deg)}
+.hero-shelf{position:absolute;left:-10%;right:-8%;bottom:-2px;height:17%;background:linear-gradient(#b77b3d,#8a552a);opacity:.92;transform:skewX(-4deg);z-index:2;box-shadow:0 -8px 28px rgba(0,44,10,.2)}
+.promo-benefits{position:absolute;left:34px;right:34px;bottom:22px;z-index:6;display:flex;gap:16px;align-items:center;color:#fff}
+.promo-benefits span{display:flex;align-items:center;gap:7px;font-size:9.7px;font-weight:750;white-space:nowrap}
+.promo-benefits b{width:28px;height:28px;border-radius:50%;border:1px solid rgba(208,255,133,.68);display:grid;place-items:center;color:#d7ff91;font-size:13px}
+
+/* Catálogo e títulos */
+.section-title-row h2{font-size:28px;color:#15234d;letter-spacing:-.045em;position:relative;display:inline-flex;align-items:center;gap:9px}
+.section-title-row h2:after{content:"";width:17px;height:10px;border-radius:100% 0 100% 0;background:var(--green);transform:rotate(-18deg);display:inline-block}
+.section-title-row p{font-size:12px}
+.section-title-row button{font-size:12px}
+.home-catalog-pills{gap:10px}
+.home-catalog-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:#fff;border-color:#dde3da;box-shadow:0 3px 10px rgba(33,58,25,.035);font-size:11px}
+.home-catalog-pill:before{font-size:15px;line-height:1;color:var(--green-dark)}
+.home-catalog-pill[data-home-category="all"]:before{content:"▦"}
+.home-catalog-pill[data-home-category="processados"]:before{content:"◒"}
+.home-catalog-pill[data-home-category="saladas"]:before{content:"❧"}
+.home-catalog-pill[data-home-category="kits"]:before{content:"◇"}
+.home-catalog-pill.is-featured:before{color:#fff}
+
+/* Destaques com card visual semelhante à referência */
+.home-products{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.mini-product{padding:0;display:block;overflow:hidden;border-radius:16px;border:1px solid #dfe5dc;cursor:pointer;box-shadow:0 9px 24px rgba(29,63,22,.07);transition:transform .18s var(--ease),box-shadow .18s var(--ease)}
+.mini-product:hover{transform:translateY(-3px);box-shadow:0 15px 30px rgba(29,63,22,.12)}
+.mini-product-media{position:relative;aspect-ratio:1/1;overflow:hidden;background:#f1f5ee}
+.mini-product-media img{width:100%;height:100%;object-fit:cover;object-position:center}
+.mini-product-media span{position:absolute;left:8px;top:8px;background:rgba(255,255,255,.94);color:var(--green-dark);font-size:7.5px;font-weight:900;padding:5px 8px;border-radius:999px;box-shadow:0 5px 14px rgba(19,54,10,.1)}
+.mini-product-info{min-width:0;background:linear-gradient(135deg,#17852b,#08711f);padding:10px 11px 11px;color:#fff;min-height:72px;display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-content:center}
+.mini-product strong{color:#fff;font-size:11.5px;line-height:1.15;white-space:normal;overflow:visible;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mini-product small{color:rgba(255,255,255,.78);font-size:8.5px;margin:1px 0 0;grid-column:1}
+.mini-product b{color:#dfff9e;font-size:10px;grid-column:2;grid-row:1/3;align-self:center;white-space:nowrap}
+
+/* Cards do catálogo: corrige imagem grande, texto cortado e botão desalinhado */
+.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.catalog-card{min-width:0;overflow:hidden;border-radius:20px;border-color:#e0e5dd;box-shadow:0 8px 24px rgba(26,58,22,.06)}
+.catalog-image{aspect-ratio:1/1;overflow:hidden;background:#f2f5f0;min-height:0}
+.catalog-image img{width:100%;height:100%;object-fit:cover;object-position:center;transform:none}
+.catalog-image span{left:9px;top:9px;font-size:8px;padding:6px 9px;max-width:calc(100% - 18px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.catalog-body{padding:12px;min-width:0;min-height:132px}
+.catalog-body h3{font-size:14px;line-height:1.16;min-height:32px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.catalog-body small{font-size:9.5px;margin:5px 0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.catalog-price{min-width:0;min-height:44px;margin-top:auto;padding-top:4px;align-items:center}
+.catalog-price strong{font-size:16px;line-height:1.1;min-width:0}
+.action-host{flex:0 0 auto;display:grid;place-items:center}
+.catalog-price .action-host>button{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;padding:0;line-height:1;font-size:24px;font-weight:700;box-shadow:0 8px 18px rgba(62,172,15,.18)}
+.catalog-qty{flex:0 0 auto;height:40px;grid-template-columns:34px 28px 34px}
+
+@media(max-width:1180px){
+  .home-products{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:850px){
+  .home-wrap,.products-page{max-width:720px}
+  .promo-card{min-height:360px}
+  .promo-copy{padding:40px 22px 82px 26px}
+  .promo-copy h1{font-size:32px}
+  .promo-visual{min-height:360px}
+  .promo-benefits{left:26px;right:26px}
+  .home-products{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:540px){
+  .app-header{height:70px;padding:0 12px;border-bottom-color:#edf0ec}
+  .header-logo{width:176px;height:54px}
+  .home-wrap,.products-page,.cart-page,.more-page{padding:12px 10px 28px}
+  .promo-card{min-height:410px;grid-template-columns:1.08fr .92fr;border-radius:24px}
+  .promo-copy{padding:28px 4px 84px 18px;justify-content:flex-start}
+  .promo-copy>span{font-size:8px;margin-top:6px}
+  .promo-copy h1{font-size:28px;line-height:1.01;max-width:225px;margin-top:9px}
+  .promo-copy p{font-size:11.5px;line-height:1.45;max-width:190px}
+  .promo-cta{min-height:45px;padding:0 18px;font-size:12px;margin-top:16px}
+  .promo-visual{min-height:410px}
+  .hero-product{border-radius:13px;border-width:2px}
+  .hero-product-a{width:63%;height:47%;right:1%;bottom:21%;z-index:5}
+  .hero-product-b{width:55%;height:39%;left:-5%;top:27%;z-index:3}
+  .hero-product-c{width:49%;height:36%;left:15%;bottom:15%;z-index:4}
+  .hero-product-d{width:43%;height:31%;right:4%;top:11%;z-index:2}
+  .hero-shelf{height:16%;bottom:8%}
+  .promo-benefits{left:14px;right:14px;bottom:14px;gap:7px;justify-content:space-between}
+  .promo-benefits span{font-size:7.2px;gap:4px;white-space:normal;line-height:1.15;max-width:31%}
+  .promo-benefits b{width:23px;height:23px;font-size:10px;flex:0 0 auto}
+  .section-title-row{margin:25px 2px 13px;align-items:center}
+  .section-title-row h2{font-size:24px}
+  .section-title-row p{font-size:10.5px}
+  .section-title-row button{font-size:10.5px;white-space:nowrap}
+  .home-catalog-pills{gap:7px;padding-bottom:4px}
+  .home-catalog-pill{padding:9px 13px;font-size:9.5px;gap:5px}
+  .home-catalog-pill:before{font-size:13px}
+  .home-products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .mini-product{border-radius:13px}
+  .mini-product-info{padding:8px 9px;min-height:64px}
+  .mini-product strong{font-size:10.5px}
+  .mini-product small{font-size:7.8px}
+  .mini-product b{font-size:9px}
+  .catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .catalog-card{border-radius:16px}
+  .catalog-body{padding:10px;min-height:122px}
+  .catalog-body h3{font-size:12.5px;line-height:1.18;min-height:30px}
+  .catalog-body small{font-size:8.8px;margin:4px 0 7px}
+  .catalog-price{min-height:40px;gap:6px}
+  .catalog-price strong{font-size:14px;white-space:nowrap}
+  .catalog-price .action-host>button{width:38px;height:38px;border-radius:12px;font-size:22px}
+  .catalog-qty{height:38px;grid-template-columns:31px 25px 31px}
+}
+@media(max-width:360px){
+  .promo-card{min-height:395px}
+  .promo-copy h1{font-size:25px;max-width:200px}
+  .promo-copy p{max-width:165px}
+  .promo-benefits span{font-size:6.8px}
+  .catalog-body{padding:9px}
+  .catalog-body h3{font-size:11.5px}
+  .catalog-price strong{font-size:13px}
+  .catalog-price .action-host>button{width:36px;height:36px}
+}
+
+
+/* V12 — imagens proporcionais, detalhe compacto e ações rápidas no carrinho */
+
+/* O produto deve aparecer inteiro sem esconder nome, peso, preço ou ações. */
+.catalog-image{
+  aspect-ratio:4/3;
+  min-height:0;
+  padding:10px;
+  background:#f7f8f5;
+  overflow:hidden;
+}
+.catalog-image img{
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position:center;
+  transform:none;
+}
+.catalog-body{min-height:136px}
+
+/* Destaques da home: foto inteira + botão de compra rápida. */
+.mini-product{position:relative}
+.mini-product-media{aspect-ratio:4/3;padding:8px;background:#f7f8f5}
+.mini-product-media img{width:100%;height:100%;object-fit:contain;object-position:center}
+.mini-product-info{display:block;position:relative;padding-right:50px}
+.mini-product strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mini-product small{display:block;margin:4px 0 0}
+.mini-product b{display:block;margin-top:6px;white-space:nowrap}
+.mini-quick-add{
+  position:absolute;right:10px;bottom:10px;z-index:4;
+  width:38px;height:38px;border:0;border-radius:12px;
+  background:linear-gradient(135deg,#59c91a,#3eaa0d);color:#fff;
+  display:grid;place-items:center;padding:0;font-size:23px;font-weight:800;line-height:1;
+  box-shadow:0 8px 18px rgba(52,153,10,.24)
+}
+.mini-quick-add:hover{transform:translateY(-1px);filter:brightness(1.03)}
+
+/* Modal de produto no desktop: foto e informações lado a lado.
+   Assim a foto nunca ocupa a tela inteira e os dados ficam visíveis sem rolagem excessiva. */
+.product-dialog{
+  width:min(840px,calc(100% - 48px));
+  max-height:88dvh;
+  overflow:hidden;
+  border-radius:26px;
+}
+.product-detail{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(280px,40%) minmax(0,1fr);
+  max-height:88dvh;
+  overflow:hidden;
+  background:#fff;
+}
+.detail-image{
+  height:auto;
+  min-height:410px;
+  max-height:88dvh;
+  padding:22px;
+  background:#f7f8f5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.detail-image img{
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:430px;
+  object-fit:contain;
+  object-position:center;
+}
+.detail-body{
+  padding:24px;
+  max-height:88dvh;
+  overflow:auto;
+  overscroll-behavior:contain;
+}
+.detail-body h2{font-size:24px;line-height:1.08;margin-right:28px}
+.detail-description{margin:10px 0 12px}
+.detail-benefits{margin:13px 0}
+.detail-close{position:absolute}
+
+/* Remoção prática no carrinho lateral do desktop. */
+.desktop-cart-line{grid-template-columns:50px minmax(0,1fr) auto;align-items:center}
+.desktop-cart-line-info{min-width:0}
+.desktop-cart-line-info strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.desktop-cart-actions{display:grid;justify-items:end;gap:5px;min-width:72px}
+.desktop-cart-actions b{white-space:nowrap}
+.desktop-remove{
+  border:0;background:#fff3f3;color:#c83f3f;border-radius:9px;
+  padding:5px 7px;font-size:8px;font-weight:850;line-height:1;
+  display:inline-flex;align-items:center;gap:3px
+}
+.desktop-remove span{font-size:13px;line-height:1}
+.desktop-remove:hover{background:#ffe8e8;color:#a92e2e}
+
+@media(max-width:680px){
+  .product-dialog{
+    width:100%;max-height:92dvh;border-radius:26px 26px 0 0;
+    position:fixed;inset:auto 0 0;margin:auto;overflow:auto;
+  }
+  .product-detail{display:block;max-height:none;overflow:visible}
+  .detail-image{height:220px;min-height:220px;max-height:220px;padding:12px}
+  .detail-image img{width:100%;height:100%;max-height:100%;object-fit:contain}
+  .detail-body{max-height:none;overflow:visible;padding:17px 16px 20px}
+  .detail-body h2{font-size:21px;margin-right:0}
+  .detail-price{font-size:22px;margin-top:9px}
+  .detail-description{font-size:11px;line-height:1.45}
+  .detail-benefits{margin:12px 0}
+  .detail-close{position:absolute;right:12px;top:12px}
+}
+
+@media(max-width:540px){
+  .catalog-image{aspect-ratio:1/1;padding:7px}
+  .catalog-body{min-height:124px}
+  .mini-product-media{aspect-ratio:1/1;padding:6px}
+  .mini-product-info{padding-right:44px}
+  .mini-quick-add{width:34px;height:34px;right:8px;bottom:8px;font-size:21px}
+}
