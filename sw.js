@@ -1,4 +1,4 @@
-const CACHE='hs-v12-shell';
+const CACHE='hs-v13-shell';
 const ASSETS=[
   './','./index.html','./assets/css/app.css','./assets/js/app.js','./manifest.webmanifest',
   './assets/images/hs-logo-oficial.png','./assets/images/hs-icon-circular.png',

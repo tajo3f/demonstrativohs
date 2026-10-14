@@ -1,3 +1,15 @@
+# V13 — responsividade mobile e acabamento comercial
+
+- Hero mobile reconstruído para eliminar sobreposição entre texto e fotos.
+- Vitrine de produtos isolada em uma área própria e responsiva.
+- Benefícios reorganizados em uma faixa independente.
+- Cabeçalho, catálogo, chips e destaques refinados para celulares.
+- Cards do catálogo com até três linhas de nome, preço e botão sempre visíveis.
+- Botões rápidos preservados e ajustados para toque.
+- Duplicidade do estado vazio do carrinho removida do HTML.
+- Ajustes adicionais para 360 px, 430 px, tablets e desktop.
+- Cache/PWA atualizado para V13.
+
 # V12 — imagens, modal e carrinho refinados
 
 - Todas as imagens dos produtos foram redimensionadas com `object-fit: contain` para exibir o produto inteiro sem cortar ou esconder as informações do card.
