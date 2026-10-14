@@ -58,26 +58,13 @@
             <input id="home-search" type="search" placeholder="Buscar produtos..." autocomplete="off">
           </label>
 
-          <section class="promo-card" aria-label="Nova linha HS">
-            <div class="promo-copy">
-              <span>NOVA LINHA HS</span>
-              <h1>Hortifruti processado com <em>qualidade e praticidade.</em></h1>
-              <p>Mais tempo para o que realmente importa no seu dia.</p>
-              <button type="button" class="promo-cta" data-route="products">Ver produtos <b>→</b></button>
-            </div>
-            <div class="promo-visual" aria-hidden="true">
-              <div class="hero-product hero-product-a"><img src="./assets/images/beterraba-cubos-pequenos-500g.webp" alt="Beterraba em cubos pequenos"></div>
-              <div class="hero-product hero-product-b"><img src="./assets/images/abobora-japonesa-sem-casca-cubos-500g.webp" alt="Abóbora japonesa em cubos"></div>
-              <div class="hero-product hero-product-c"><img src="./assets/images/vagem-verde-bastonetes-500g.webp" alt="Vagem verde em bastonetes"></div>
-              <div class="hero-leaf hero-leaf-a"></div>
-              <div class="hero-leaf hero-leaf-b"></div>
-              <div class="hero-shelf"></div>
-            </div>
-            <div class="promo-benefits" aria-label="Benefícios da nova linha">
-              <span><b>◒</b> Mais frescor</span>
-              <span><b>✓</b> Higienizados e seguros</span>
-              <span><b>◷</b> Prontos para usar</span>
-            </div>
+          <section class="promo-banner-v20" aria-label="Nova linha HS: hortifruti processado com qualidade e praticidade">
+            <picture class="promo-banner-picture">
+              <source media="(max-width: 640px)" srcset="./assets/images/hero-hs-v20-720.webp">
+              <source media="(max-width: 1280px)" srcset="./assets/images/hero-hs-v20-1200.webp">
+              <img src="./assets/images/hero-hs-v20-1664.webp" alt="Nova linha HS: hortifruti processado com qualidade e praticidade. Mais frescor, produtos higienizados e seguros, prontos para usar." width="1664" height="936" fetchpriority="high">
+            </picture>
+            <button type="button" class="promo-banner-cta" data-route="products" aria-label="Ver produtos da nova linha HS">Ver produtos <span aria-hidden="true">→</span></button>
           </section>
 
           <section class="quick-categories catalog-selector-section" aria-labelledby="cat-title">
@@ -98,7 +85,7 @@
 
           <section class="featured-section" aria-labelledby="featured-title">
             <div class="section-title-row"><div><h2 id="featured-title">Destaques</h2><p>Seleção colorida e prática da nova linha HS.</p></div><button type="button" data-route="products">Ver catálogo</button></div>
-            <div class="home-products" id="home-products"></div>
+            <div class="home-products catalog-grid shared-product-grid" id="home-products"></div>
           </section>
 
           <section class="info-banner">
@@ -137,7 +124,7 @@
             <div class="summary-line"><span>Entrega</span><button type="button" class="text-action" id="delivery-action">Combinar</button></div>
             <div class="summary-total"><span>Total</span><strong id="summary-total">R$ 0,00</strong></div>
             <button class="checkout-button" id="open-checkout" type="button">Finalizar pedido <span>→</span></button>
-            <small>O envio real permanece bloqueado até a HS confirmar o WhatsApp oficial e os dados comerciais.</small>
+            <small>Revise os itens e finalize para abrir o pedido já formatado no WhatsApp.</small>
           </div>
         </div>
       </section>
@@ -181,15 +168,15 @@
       <div class="checkout-title"><div><span class="page-kicker">FINALIZAÇÃO</span><h2>Dados do pedido</h2></div><button class="close-sheet" value="cancel" aria-label="Fechar">×</button></div>
       <div class="checkout-steps">
         <label><span>Nome *</span><input id="customer-name" required autocomplete="name" placeholder="Seu nome"></label>
-        <label><span>WhatsApp *</span><input id="customer-phone" required inputmode="tel" autocomplete="tel" placeholder="(27) 99999-9999"></label>
+        <label><span>Telefone / WhatsApp *</span><input id="customer-phone" required inputmode="tel" autocomplete="tel" placeholder="(27) 99999-9999"></label>
         <label><span>Forma de recebimento</span><select id="customer-delivery"><option>Combinar</option><option>Retirada</option><option>Entrega</option></select></label>
         <label><span>Endereço</span><input id="customer-address" autocomplete="street-address" placeholder="Informe o endereço para entrega"></label>
         <label><span>Forma de pagamento</span><select id="customer-payment"><option>Combinar</option><option>Pix</option><option>Dinheiro</option><option>Débito</option><option>Crédito</option></select></label>
         <label><span>Observações</span><textarea id="customer-notes" rows="3" placeholder="Alguma observação?"></textarea></label>
       </div>
       <div class="checkout-preview" id="checkout-preview"></div>
-      <button class="checkout-button" id="finalize-order" type="button">Copiar pedido <span>→</span></button>
-      <small>O pedido pode ser copiado e enviado pelo canal oficial de atendimento da HS.</small>
+      <button class="checkout-button" id="finalize-order" type="button">Enviar pelo WhatsApp <span>→</span></button>
+      <small>O WhatsApp será aberto com o pedido organizado e pronto para envio.</small>
     </form>
   </dialog>
 

@@ -255,8 +255,13 @@
     {id:'kits', label:'Kits'}
   ];
 
-  const CART_KEY = 'hs-v10-cart';
-  const CUSTOM_KEY = 'hs-v10-customizations';
+  const CART_KEY = 'hs-cart-v1';
+  const CUSTOM_KEY = 'hs-customizations-v1';
+  const LEGACY_CART_KEYS = ['hs-v10-cart'];
+  const LEGACY_CUSTOM_KEYS = ['hs-v10-customizations'];
+  // Informe somente quando a HS definir oficialmente o número de pedidos, no formato 55DDDNUMERO.
+  // Se ficar vazio, o WhatsApp abre com a mensagem pronta para o cliente escolher o contato.
+  const HS_WHATSAPP_NUMBER = '';
   let cart = {};
   let customizations = {};
   let category = 'all';
@@ -272,8 +277,19 @@
   const itemPriceLabel = (p, qty=1) => Number.isFinite(p.price) ? money(p.price * qty) : 'A confirmar';
   const cardName = p => p.shortName || p.name.replace(/\s+500\s*g$/i,'');
 
-  try { cart = JSON.parse(localStorage.getItem(CART_KEY) || '{}') || {}; } catch { cart = {}; }
-  try { customizations = JSON.parse(localStorage.getItem(CUSTOM_KEY) || '{}') || {}; } catch { customizations = {}; }
+  function loadStoredObject(primaryKey, legacyKeys=[]) {
+    try {
+      const primary = localStorage.getItem(primaryKey);
+      if (primary) return JSON.parse(primary) || {};
+      for (const key of legacyKeys) {
+        const legacy = localStorage.getItem(key);
+        if (legacy) return JSON.parse(legacy) || {};
+      }
+    } catch {}
+    return {};
+  }
+  cart = loadStoredObject(CART_KEY, LEGACY_CART_KEYS);
+  customizations = loadStoredObject(CUSTOM_KEY, LEGACY_CUSTOM_KEYS);
   for (const id of Object.keys(cart)) {
     if (!byId(id) || !Number.isFinite(Number(cart[id])) || cart[id] <= 0) delete cart[id];
   }
@@ -371,7 +387,8 @@
   function renderHome() {
     const host = $('#home-products');
     const featured = HOME_FEATURE_IDS.map(byId).filter(Boolean);
-    host.replaceChildren(...featured.map(productMini));
+    // Os destaques usam exatamente o mesmo componente visual e as mesmas ações do catálogo.
+    host.replaceChildren(...featured.map(catalogCard));
   }
 
   function filterProducts() {
@@ -521,37 +538,97 @@
   }
 
   function checkoutText() {
-    const lines = ['PEDIDO HS HORTIGRANJEIRO SCHULZ',''];
+    const lines = [];
     PRODUCTS.filter(p => cart[p.id]).forEach(p => {
+      const qty = cart[p.id];
       const custom = customSummary(p.id);
-      lines.push(`${cart[p.id]}x ${p.name} — ${itemPriceLabel(p,cart[p.id])}`);
-      if (custom) lines.push(`   ${custom}`);
+      lines.push(`• *${qty}x ${p.name}*`);
+      lines.push(`  ${p.weight} • ${itemPriceLabel(p, qty)}`);
+      if (custom) lines.push(`  ${custom}`);
     });
     lines.push('');
-    lines.push(hasPendingPrices() ? 'Valores: a confirmar pela HS.' : `Subtotal: ${money(total())}`);
+    lines.push(hasPendingPrices() ? '*TOTAL:* A confirmar pela HS' : `*TOTAL:* ${money(total())}`);
     return lines.join('\n');
   }
 
+  function buildWhatsAppOrder() {
+    const name = $('#customer-name').value.trim();
+    const phone = $('#customer-phone').value.trim();
+    const delivery = $('#customer-delivery').value;
+    const addressTyped = $('#customer-address').value.trim();
+    const address = delivery === 'Retirada' ? 'Retirada no estabelecimento' : (addressTyped || 'A combinar');
+    const payment = $('#customer-payment').value || 'A combinar';
+    const notes = $('#customer-notes').value.trim() || 'Sem observações.';
+
+    return [
+      '🟢 *NOVO PEDIDO • HS HORTIGRANJEIRO*',
+      '',
+      '━━━━━━━━━━━━━━━━━━',
+      '👤 *NOME*',
+      name,
+      '',
+      '📱 *TELEFONE*',
+      phone,
+      '',
+      '📍 *ENDEREÇO*',
+      address,
+      '',
+      '💳 *FORMA DE PAGAMENTO*',
+      payment,
+      '',
+      '📝 *OBS*',
+      notes,
+      '',
+      '━━━━━━━━━━━━━━━━━━',
+      '🛒 *PEDIDO*',
+      checkoutText(),
+      '━━━━━━━━━━━━━━━━━━',
+      '',
+      '_Pedido gerado pelo catálogo digital HS._'
+    ].join('\n');
+  }
+
+  function whatsappUrl(message) {
+    const number = HS_WHATSAPP_NUMBER.replace(/\D/g,'');
+    const base = number ? `https://wa.me/${number}` : 'https://wa.me/';
+    return `${base}?text=${encodeURIComponent(message)}`;
+  }
+
   $('#open-checkout').addEventListener('click', () => {
-    $('#checkout-preview').textContent = checkoutText();
+    $('#checkout-preview').textContent = checkoutText().replace(/\*/g,'');
     $('#checkout-dialog').showModal();
   });
 
-  $('#finalize-order').addEventListener('click', async () => {
+  $('#customer-phone').addEventListener('input', e => {
+    const digits = e.target.value.replace(/\D/g,'').slice(0,11);
+    let formatted = digits;
+    if (digits.length > 2) formatted = `(${digits.slice(0,2)}) ${digits.slice(2)}`;
+    if (digits.length > 7) formatted = `(${digits.slice(0,2)}) ${digits.slice(2,7)}-${digits.slice(7)}`;
+    e.target.value = formatted;
+  });
+
+  $('#finalize-order').addEventListener('click', () => {
     const name = $('#customer-name').value.trim();
     const phone = $('#customer-phone').value.trim();
     if (!name || phone.replace(/\D/g,'').length < 10) {
-      toast('Informe nome e WhatsApp para continuar.');
+      toast('Informe seu nome e um telefone válido para continuar.');
       return;
     }
-    const text = `${checkoutText()}\n\nCliente: ${name}\nWhatsApp: ${phone}\nForma de recebimento: ${$('#customer-delivery').value}\nEndereço: ${$('#customer-address').value || 'Não informado'}\nForma de pagamento: ${$('#customer-payment').value}\nObservações: ${$('#customer-notes').value || 'Nenhuma'}\n\nPedido gerado pelo catálogo HS.`;
-    try {
-      await navigator.clipboard.writeText(text);
-      toast('Pedido copiado com sucesso.');
-      $('#checkout-dialog').close();
-    } catch {
-      toast('Não foi possível copiar automaticamente.');
+    if (!count()) {
+      toast('Adicione pelo menos um produto ao carrinho.');
+      return;
     }
+
+    const message = buildWhatsAppOrder();
+    const url = whatsappUrl(message);
+    const opened = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!opened) window.location.href = url;
+
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(message).catch(() => {});
+    }
+    toast('Pedido preparado para envio no WhatsApp.');
+    $('#checkout-dialog').close();
   });
 
   $('#clear-cart').addEventListener('click', () => {

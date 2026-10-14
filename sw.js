@@ -1,4 +1,4 @@
-const CACHE='hs-v14-shell';
+const CACHE='hs-v20-shell';
 const ASSETS=[
   "./",
   "./index.html",
@@ -27,6 +27,9 @@ const ASSETS=[
   "./assets/images/kit-sopa-inhame-chines-chuchu-batata-cenoura-500g.webp",
   "./assets/images/melancia-cubos-250g.webp",
   "./assets/images/salada-de-frutas.svg",
+  "./assets/images/hero-hs-v20-720.webp",
+  "./assets/images/hero-hs-v20-1200.webp",
+  "./assets/images/hero-hs-v20-1664.webp",
 ];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

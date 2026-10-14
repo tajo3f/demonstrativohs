@@ -1,3 +1,13 @@
+# V20 — Hero único responsivo, cards padronizados e pedido WhatsApp
+
+- Hero comercial consolidado em uma única imagem responsiva, preservando proporção em celular, tablet e desktop.
+- Botão **Ver produtos** mantido como única ação funcional dentro do hero.
+- Cards da home padronizados com o mesmo componente usado no catálogo.
+- Pedido do WhatsApp reorganizado para leitura rápida: Nome, Telefone, Endereço, Forma de pagamento, Observações e Pedido.
+- Ação de finalização agora abre o WhatsApp com o texto pronto e também tenta copiar a mensagem para a área de transferência.
+- Máscara simples para telefone/WhatsApp no checkout.
+- Cache PWA atualizado para `hs-v20-shell`.
+
 # V14 — catálogo ampliado, vitrine colorida e revisão textual
 
 - Adicionados novos processados, frutas prontas e kits com os pesos e preços informados.
