@@ -1,4 +1,4 @@
-const CACHE='hs-v23-shell';
+const CACHE='hs-v24-shell';
 const ASSETS=[
   "./",
   "./index.html",

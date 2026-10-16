@@ -1,6 +1,6 @@
 {
-  "name": "hs-hortigranjeiro-app-v23",
-  "version": "23.0.0",
+  "name": "hs-hortigranjeiro-app-v24",
+  "version": "24.0.0",
   "private": true,
   "scripts": {
     "test": "node --test tests/*.test.mjs",

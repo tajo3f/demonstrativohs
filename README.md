@@ -1,4 +1,4 @@
-# HS Hortigranjeiro Schulz — App de Pedidos V23
+# HS Hortigranjeiro Schulz — App de Pedidos V24
 
 Versão de produção do catálogo digital/PWA da nova linha HS.
 

@@ -909,11 +909,15 @@
   }
 
   function buildWhatsAppOrder() {
-    const name = $('#customer-name').value.trim();
-    const phone = $('#customer-phone').value.trim();
+    const name = $('#customer-name').value.trim() || 'Não informado';
+    const phone = $('#customer-phone').value.trim() || 'Não informado';
     const deliveryMethod = $('#customer-delivery').value;
     const addressTyped = $('#customer-address').value.trim();
-    const address = deliveryMethod === 'Retirada' ? 'Retirada no estabelecimento' : (addressTyped || 'A combinar');
+    const address = deliveryMethod === 'Retirada'
+      ? 'Retirada no estabelecimento'
+      : deliveryMethod === 'Entrega'
+        ? (addressTyped || 'Não informado')
+        : 'A combinar';
     const payment = $('#customer-payment').value || 'A combinar';
     const notes = $('#customer-notes').value.trim() || 'Sem observações.';
 
@@ -951,10 +955,48 @@
     return `${base}?text=${encodeURIComponent(message)}`;
   }
 
+  function syncDeliveryFields({ focus = false } = {}) {
+    const deliveryMethod = $('#customer-delivery').value;
+    const field = $('#delivery-address-field');
+    const input = $('#customer-address');
+    const isDelivery = deliveryMethod === 'Entrega';
+
+    field.hidden = !isDelivery;
+    input.disabled = !isDelivery;
+    input.setAttribute('aria-required', isDelivery ? 'true' : 'false');
+    field.classList.toggle('is-visible', isDelivery);
+
+    if (isDelivery && focus) {
+      window.setTimeout(() => input.focus({ preventScroll: false }), 60);
+    }
+  }
+
+  function closeCheckout() {
+    const dialog = $('#checkout-dialog');
+    if (dialog.open) dialog.close();
+  }
+
+  $('#checkout-form').addEventListener('submit', event => event.preventDefault());
+
   $('#open-checkout').addEventListener('click', () => {
     $('#checkout-preview').textContent = checkoutText().replace(/\*/g, '');
+    syncDeliveryFields();
     $('#checkout-dialog').showModal();
   });
+
+  $('#close-checkout').addEventListener('click', closeCheckout);
+  $('#checkout-dialog').addEventListener('click', event => {
+    if (event.target === $('#checkout-dialog')) closeCheckout();
+  });
+
+  $('#continue-shopping').addEventListener('click', () => {
+    closeCheckout();
+    route('products');
+    toast('Carrinho mantido. Você pode continuar adicionando produtos.');
+  });
+
+  $('#customer-delivery').addEventListener('change', () => syncDeliveryFields({ focus: true }));
+  syncDeliveryFields();
 
   $('#customer-phone').addEventListener('input', event => {
     const digits = event.target.value.replace(/\D/g, '').slice(0, 11);
@@ -965,15 +1007,24 @@
   });
 
   $('#finalize-order').addEventListener('click', () => {
-    const name = $('#customer-name').value.trim();
     const phone = $('#customer-phone').value.trim();
+    const phoneDigits = phone.replace(/\D/g, '');
+    const deliveryMethod = $('#customer-delivery').value;
+    const address = $('#customer-address').value.trim();
 
-    if (!name || phone.replace(/\D/g, '').length < 10) {
-      toast('Informe seu nome e um telefone válido para continuar.');
-      return;
-    }
     if (!count()) {
       toast('Adicione pelo menos um produto ao carrinho.');
+      return;
+    }
+    if (phone && phoneDigits.length < 10) {
+      $('#customer-phone').focus();
+      toast('Revise o telefone informado ou deixe o campo em branco.');
+      return;
+    }
+    if (deliveryMethod === 'Entrega' && !address) {
+      syncDeliveryFields();
+      $('#customer-address').focus();
+      toast('Informe o endereço para entrega antes de enviar o pedido.');
       return;
     }
 

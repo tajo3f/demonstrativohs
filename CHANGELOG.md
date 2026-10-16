@@ -1,3 +1,16 @@
+# V24 — correção da finalização e fluxo de entrega
+
+- Corrigido o fechamento da finalização: o botão “Fechar” não dispara mais validação de campos.
+- Nome e telefone deixaram de ser obrigatórios; se preenchidos, o telefone é validado para evitar número incompleto.
+- O campo de endereço agora aparece somente ao selecionar **Entrega** e recebe foco automaticamente.
+- Para envio com **Entrega**, o endereço é validado antes de abrir o WhatsApp.
+- Adicionado botão **Adicionar mais itens**, que fecha a finalização, mantém o carrinho e retorna ao catálogo.
+- Mensagem do WhatsApp trata campos opcionais com “Não informado” e mantém o pedido formatado.
+- Cache PWA atualizado para `hs-v24-shell`.
+- Testes de regressão adicionados para fechamento, entrega, campos opcionais e carrinho.
+
+---
+
 # V23 — acabamento profissional do hero e dos cards
 
 - Reposicionamento do botão **Ver produtos** para uma área livre do banner, sem sobrepor os textos da arte.

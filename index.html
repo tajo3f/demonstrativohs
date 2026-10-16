@@ -164,20 +164,27 @@
   </dialog>
 
   <dialog class="checkout-dialog" id="checkout-dialog">
-    <form method="dialog" class="checkout-sheet" id="checkout-form">
+    <form class="checkout-sheet" id="checkout-form" novalidate>
       <div class="sheet-handle" aria-hidden="true"></div>
-      <div class="checkout-title"><div><span class="page-kicker">FINALIZAÇÃO</span><h2>Dados do pedido</h2></div><button class="close-sheet" value="cancel" aria-label="Fechar">×</button></div>
+      <div class="checkout-title">
+        <div><span class="page-kicker">FINALIZAÇÃO</span><h2>Dados do pedido</h2></div>
+        <button class="close-sheet" id="close-checkout" type="button" aria-label="Fechar finalização">×</button>
+      </div>
+      <p class="checkout-helper">Preencha o que desejar agora. Você pode fechar esta etapa a qualquer momento e continuar adicionando produtos.</p>
       <div class="checkout-steps">
-        <label><span>Nome *</span><input id="customer-name" required autocomplete="name" placeholder="Seu nome"></label>
-        <label><span>Telefone / WhatsApp *</span><input id="customer-phone" required inputmode="tel" autocomplete="tel" placeholder="(27) 99999-9999"></label>
-        <label><span>Forma de recebimento</span><select id="customer-delivery"><option>Combinar</option><option>Retirada</option><option>Entrega</option></select></label>
-        <label><span>Endereço</span><input id="customer-address" autocomplete="street-address" placeholder="Informe o endereço para entrega"></label>
+        <label><span>Nome <em>opcional</em></span><input id="customer-name" autocomplete="name" placeholder="Seu nome"></label>
+        <label><span>Telefone / WhatsApp <em>opcional</em></span><input id="customer-phone" inputmode="tel" autocomplete="tel" placeholder="(27) 99999-9999"></label>
+        <label><span>Forma de recebimento</span><select id="customer-delivery"><option value="Combinar">Combinar com a HS</option><option value="Retirada">Retirada</option><option value="Entrega">Entrega</option></select></label>
         <label><span>Forma de pagamento</span><select id="customer-payment"><option>Combinar</option><option>Pix</option><option>Dinheiro</option><option>Débito</option><option>Crédito</option></select></label>
-        <label><span>Observações</span><textarea id="customer-notes" rows="3" placeholder="Alguma observação?"></textarea></label>
+        <label class="checkout-full delivery-address-field" id="delivery-address-field" hidden><span>Endereço para entrega</span><input id="customer-address" autocomplete="street-address" placeholder="Rua, número, bairro e referência"><small class="field-hint">Este campo aparece somente quando a opção “Entrega” está selecionada.</small></label>
+        <label class="checkout-full"><span>Observações</span><textarea id="customer-notes" rows="3" placeholder="Alguma observação?"></textarea></label>
       </div>
       <div class="checkout-preview" id="checkout-preview"></div>
-      <button class="checkout-button" id="finalize-order" type="button">Enviar pelo WhatsApp <span>→</span></button>
-      <small>O WhatsApp será aberto com o pedido organizado e pronto para envio.</small>
+      <div class="checkout-actions">
+        <button class="checkout-secondary" id="continue-shopping" type="button">Adicionar mais itens</button>
+        <button class="checkout-button" id="finalize-order" type="button">Enviar pelo WhatsApp <span>→</span></button>
+      </div>
+      <small>O WhatsApp será aberto com o pedido organizado e pronto para envio. Se escolher entrega, informe o endereço antes de enviar.</small>
     </form>
   </dialog>
 
