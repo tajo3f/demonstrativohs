@@ -1,3 +1,36 @@
+# V23 — acabamento profissional do hero e dos cards
+
+- Reposicionamento do botão **Ver produtos** para uma área livre do banner, sem sobrepor os textos da arte.
+- Rodapé verde dos cards reorganizado para manter **preço e ação** sempre dentro dos limites do card.
+- Botão rápido `+` centralizado geometricamente no quadrado verde-claro, com área de toque consistente.
+- Stepper de quantidade (`− / quantidade / +`) adaptado para telas estreitas, evitando estouro horizontal.
+- Ajustes responsivos específicos para celulares pequenos, mantendo leitura e hierarquia comercial.
+- Cache PWA atualizado para `hs-v23-shell`.
+- Testes atualizados para validar os acabamentos da V23.
+
+# V22 — atualização de produtos, identidade verde e acabamento final
+
+- Adicionado **Kit Refogado**: abobrinha em meia-lua, cenoura em rodelas e vagem em bastonetes — 500 g por R$ 10,49.
+- Fotos desta atualização aplicadas aos respectivos produtos, convertidas para WebP sem cortes.
+- Cards da home e do catálogo receberam bloco de informações em verde para reforçar a identidade visual HS.
+- Botão **Ver produtos** do hero ficou menor e foi posicionado um pouco mais abaixo.
+- Revisão adicional de ortografia, acentuação, hifenização, concordância e textos comerciais.
+- Mantida a formatação profissional do pedido para WhatsApp e as opções especiais da Seleta de legumes e do Mix de forno.
+- Indexação de produção habilitada no HTML.
+- Cache PWA atualizado para `hs-v22-shell`.
+
+# V21 — novos itens, cards verdes e experiência refinada
+
+- Novos itens adicionados ao catálogo com fotos reais desta atualização.
+- Categorias da home e do catálogo reorganizadas para **Todos / Processados / Frutas / Saladas / Kits**.
+- Cards de produto ganharam destaque visual em verde para reforçar a identidade da HS.
+- Botão **Ver produtos** do hero foi reduzido e posicionado mais abaixo, preservando melhor a arte inicial.
+- Pedido do WhatsApp mantido com a ordem: **Nome, Telefone, Endereço, Forma de pagamento, Observações e Pedido**.
+- Seleta de legumes agora possui opção **sem milho** ou **com milho verde em conserva (+ 80 g / R$ 3,49)**.
+- Mix de forno agora informa claramente que a embalagem pode ir ao forno **sem a tampa**.
+- Revisões de português, microcopys e descrições para melhorar a experiência do cliente.
+- Cache PWA atualizado para `hs-v21-shell`.
+
 # V20 — Hero único responsivo, cards padronizados e pedido WhatsApp
 
 - Hero comercial consolidado em uma única imagem responsiva, preservando proporção em celular, tablet e desktop.

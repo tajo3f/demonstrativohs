@@ -1,4 +1,4 @@
-const CACHE='hs-v20-shell';
+const CACHE='hs-v23-shell';
 const ASSETS=[
   "./",
   "./index.html",
@@ -24,12 +24,32 @@ const ASSETS=[
   "./assets/images/combinado-cenoura-vagem-cubos-500g.webp",
   "./assets/images/goiaba-fatiada-300g.webp",
   "./assets/images/kit-primavera-01-500g.webp",
+  "./assets/images/kit-refogado-abobrinha-cenoura-vagem-500g.webp",
   "./assets/images/kit-sopa-inhame-chines-chuchu-batata-cenoura-500g.webp",
   "./assets/images/melancia-cubos-250g.webp",
   "./assets/images/salada-de-frutas.svg",
   "./assets/images/hero-hs-v20-720.webp",
   "./assets/images/hero-hs-v20-1200.webp",
   "./assets/images/hero-hs-v20-1664.webp",
+
+  "./assets/images/inhame-em-cubos-500g.webp",
+  "./assets/images/inhame-chines-em-pedacos-500g.webp",
+  "./assets/images/mix-legumes-brocolis-couveflor-cenoura-500g.webp",
+  "./assets/images/mix-brocolis-couveflor-500g.webp",
+  "./assets/images/jardineira-de-legumes-500g.webp",
+  "./assets/images/mix-oriental-legumes-500g.webp",
+  "./assets/images/mix-repolho-verde-roxo-fatiado-300g.webp",
+  "./assets/images/espaguete-de-abobrinha-e-cenoura-300g.webp",
+  "./assets/images/salada-mix-especial-300g.webp",
+  "./assets/images/seleta-de-legumes-500g.webp",
+  "./assets/images/mix-de-forno-700g.webp",
+  "./assets/images/kiwi-em-cubos-250g.webp",
+  "./assets/images/manga-em-cubos-250g.webp",
+  "./assets/images/melao-em-cubos-250g.webp",
+  "./assets/images/mamao-em-cubos-250g.webp",
+  "./assets/images/abacaxi-em-cubos-250g.webp",
+  "./assets/images/laranja-descascada-500g.webp",
+  "./assets/images/milho-verde-3-espigas.webp",
 ];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

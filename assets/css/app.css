@@ -668,3 +668,329 @@
 @media(max-width:360px){
   .promo-banner-cta{min-height:30px;font-size:7.8px;padding:0 10px}
 }
+
+/* =========================================================
+   V21 — AJUSTES FINAIS DE UX, CARDS VERDES E OPÇÕES
+   ========================================================= */
+.promo-banner-cta{
+  left:5.3%!important;
+  bottom:22.8%!important;
+  min-height:clamp(34px,3.7vw,44px)!important;
+  padding:0 clamp(14px,1.8vw,20px)!important;
+  gap:8px!important;
+  font-size:clamp(9px,1.05vw,12px)!important;
+}
+
+.catalog-card{
+  position:relative;
+  border:1px solid #d3e8cf!important;
+  background:linear-gradient(180deg,#ffffff 0%,#f8fcf5 100%)!important;
+  box-shadow:0 10px 28px rgba(20,77,16,.08)!important;
+}
+.catalog-card::before{
+  content:'';
+  position:absolute;
+  inset:0 0 auto 0;
+  height:5px;
+  background:linear-gradient(90deg,#1d8f27,#7bd830);
+  z-index:1;
+}
+.catalog-card:hover{
+  border-color:#badaae!important;
+  box-shadow:0 16px 34px rgba(20,77,16,.12)!important;
+}
+.home-products.shared-product-grid .catalog-image,
+.catalog-grid .catalog-image{
+  background:linear-gradient(145deg,#ffffff,#f2f8ee)!important;
+}
+.catalog-image span{
+  background:#e9f7de!important;
+  color:#176c19!important;
+}
+.catalog-body{
+  background:linear-gradient(180deg,rgba(255,255,255,.85) 0%,rgba(242,251,238,.92) 100%);
+}
+.catalog-body h3{color:#16382e!important}
+.catalog-body small{color:#60715f!important}
+.catalog-price strong{color:#175c14!important}
+.catalog-price button{
+  box-shadow:0 10px 18px rgba(24,100,14,.15);
+}
+
+.option-customizer .option-choices{display:grid;gap:8px}
+.option-choice{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:10px;
+  border:1px solid #dfe7da;
+  border-radius:14px;
+  padding:10px 12px;
+  background:#fff;
+}
+.option-choice span{
+  display:block;
+  border:0!important;
+  background:transparent!important;
+  padding:0!important;
+  color:#4a5a46!important;
+  font-size:10px!important;
+  font-weight:800!important;
+  box-shadow:none!important;
+}
+.option-choice b{
+  color:#1c6a13;
+  font-size:9px;
+  white-space:nowrap;
+}
+.option-choice input:checked + span{color:#13460f!important}
+.option-choice input:checked ~ b{color:#0c610f}
+.tip-card{line-height:1.55}
+
+@media(max-width:720px){
+  .promo-banner-cta{bottom:21.2%!important;min-height:33px!important;padding:0 13px!important;font-size:8.8px!important}
+}
+@media(max-width:430px){
+  .promo-banner-cta{bottom:20.2%!important;min-height:31px!important;padding:0 11px!important;font-size:7.9px!important}
+}
+
+
+/* =========================================================
+   V22 — CARDS COM IDENTIDADE VERDE + HERO REFINADO
+   ========================================================= */
+.catalog-card{
+  border:1px solid #bdd9b7!important;
+  background:#fff!important;
+  box-shadow:0 10px 28px rgba(17,79,25,.10)!important;
+}
+.catalog-card::before{height:4px!important;background:linear-gradient(90deg,#0f7f2c,#65c82d)!important}
+.catalog-card:hover{border-color:#8fc284!important;box-shadow:0 17px 38px rgba(17,79,25,.16)!important}
+.catalog-body{
+  background:linear-gradient(145deg,#087d2a 0%,#0f9130 58%,#159c34 100%)!important;
+  color:#fff!important;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.catalog-body h3{color:#fff!important;font-weight:850!important}
+.catalog-body small{color:rgba(255,255,255,.82)!important}
+.catalog-price strong{color:#fff!important;font-weight:900!important}
+.catalog-price .action-host>button{
+  background:#66d126!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.25)!important;
+  box-shadow:0 9px 20px rgba(0,70,20,.28)!important;
+}
+.catalog-qty{
+  background:rgba(255,255,255,.95)!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55);
+}
+.catalog-qty button{color:#0a7728!important}
+.catalog-qty span{color:#104a25!important}
+.catalog-image span{
+  background:#eaf7df!important;
+  color:#126f25!important;
+  border:1px solid #cee9c6;
+}
+
+/* CTA único do hero: menor e um pouco mais abaixo, sem competir com a arte. */
+.promo-banner-cta{
+  left:5.35%!important;
+  bottom:17.2%!important;
+  min-height:clamp(31px,3.15vw,39px)!important;
+  padding:0 clamp(12px,1.55vw,17px)!important;
+  gap:7px!important;
+  font-size:clamp(8px,.92vw,10.8px)!important;
+  box-shadow:0 8px 18px rgba(20,100,14,.24)!important;
+}
+@media(max-width:720px){
+  .promo-banner-cta{bottom:16.8%!important;min-height:30px!important;padding:0 11px!important;font-size:8px!important}
+}
+@media(max-width:430px){
+  .promo-banner-cta{bottom:16.2%!important;min-height:28px!important;padding:0 10px!important;font-size:7.5px!important;gap:5px!important}
+}
+@media(max-width:360px){
+  .promo-banner-cta{bottom:15.8%!important;min-height:27px!important;font-size:7.1px!important;padding:0 9px!important}
+}
+
+/* =========================================================
+   V23 — ACABAMENTO PROFISSIONAL: HERO + PREÇO + AÇÃO
+   ========================================================= */
+
+/*
+ * O CTA fica no respiro visual entre o subtítulo e a faixa de benefícios
+ * da arte, sem cobrir nenhuma palavra incorporada ao banner.
+ */
+.promo-banner-cta{
+  left:5.35%!important;
+  bottom:24.2%!important;
+  min-height:clamp(30px,3vw,38px)!important;
+  padding:0 clamp(12px,1.5vw,17px)!important;
+  gap:7px!important;
+  font-size:clamp(8px,.9vw,10.5px)!important;
+  white-space:nowrap;
+  line-height:1!important;
+  box-shadow:0 8px 18px rgba(20,100,14,.24)!important;
+}
+
+/*
+ * Rodapé comercial do card: preço sempre à esquerda e ação sempre à direita,
+ * com margens simétricas e sem risco de escapar do card.
+ */
+.catalog-body{
+  padding:12px 12px 13px!important;
+}
+.catalog-price{
+  width:100%;
+  min-width:0;
+  min-height:44px!important;
+  margin-top:auto!important;
+  padding-top:7px!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  align-items:center!important;
+  gap:10px!important;
+}
+.catalog-price strong{
+  min-width:0!important;
+  max-width:100%;
+  display:flex;
+  align-items:center;
+  min-height:40px;
+  margin:0!important;
+  font-size:15px!important;
+  line-height:1.05!important;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.action-host{
+  width:40px;
+  height:40px;
+  min-width:40px;
+  min-height:40px;
+  margin:0!important;
+  display:grid!important;
+  place-items:center!important;
+  justify-self:end;
+  align-self:center;
+}
+.catalog-price .action-host>.catalog-quick-add{
+  width:40px!important;
+  height:40px!important;
+  min-width:40px!important;
+  min-height:40px!important;
+  margin:0!important;
+  padding:0!important;
+  border:1px solid rgba(255,255,255,.28)!important;
+  border-radius:12px!important;
+  background:#69d62c!important;
+  color:#fff!important;
+  display:grid!important;
+  place-items:center!important;
+  line-height:1!important;
+  box-shadow:0 8px 17px rgba(0,70,20,.24)!important;
+  overflow:hidden;
+}
+.catalog-quick-add-symbol{
+  width:100%;
+  height:100%;
+  display:grid;
+  place-items:center;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:25px;
+  font-weight:700;
+  line-height:1;
+  transform:translateY(-1px);
+}
+
+/* Quantidade já adicionada: controle compacto e sempre dentro do card. */
+.catalog-price .catalog-qty{
+  width:98px;
+  min-width:98px;
+  height:40px!important;
+  margin:0!important;
+  display:grid!important;
+  grid-template-columns:32px 34px 32px!important;
+  align-items:center!important;
+  justify-self:end;
+  overflow:hidden;
+  border-radius:12px!important;
+}
+.catalog-qty .catalog-stepper-button{
+  width:32px;
+  height:40px;
+  margin:0;
+  padding:0;
+  display:grid;
+  place-items:center;
+  line-height:1;
+}
+.catalog-stepper-button>span{
+  width:100%;
+  height:100%;
+  display:grid;
+  place-items:center;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:18px;
+  font-weight:800;
+  line-height:1;
+  transform:translateY(-1px);
+}
+.catalog-qty>span{
+  width:34px;
+  min-width:34px;
+  text-align:center;
+  font-size:10px!important;
+  line-height:1!important;
+}
+
+/* Tablet e celular: mantém o mesmo acabamento, apenas reduz medidas. */
+@media(max-width:720px){
+  .promo-banner-cta{
+    bottom:23.8%!important;
+    min-height:29px!important;
+    padding:0 11px!important;
+    font-size:7.8px!important;
+  }
+  .catalog-body{padding:10px 10px 11px!important}
+  .catalog-price{gap:7px!important;padding-top:6px!important}
+  .catalog-price strong{font-size:13px!important;min-height:38px}
+  .action-host{width:38px;height:38px;min-width:38px;min-height:38px}
+  .catalog-price .action-host>.catalog-quick-add{width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important}
+  .catalog-quick-add-symbol{font-size:23px}
+  .catalog-price .catalog-qty{width:90px;min-width:90px;height:38px!important;grid-template-columns:29px 32px 29px!important}
+  .catalog-qty .catalog-stepper-button{width:29px;height:38px}
+  .catalog-qty>span{width:32px;min-width:32px}
+}
+
+@media(max-width:430px){
+  .promo-banner-cta{
+    left:5.2%!important;
+    bottom:23.3%!important;
+    min-height:28px!important;
+    padding:0 10px!important;
+    font-size:7.4px!important;
+    gap:5px!important;
+  }
+  .catalog-body{padding:9px 9px 10px!important}
+  .catalog-price{gap:6px!important;min-height:40px!important;padding-top:5px!important}
+  .catalog-price strong{font-size:12.2px!important;min-height:36px}
+  .action-host{width:36px;height:36px;min-width:36px;min-height:36px}
+  .catalog-price .action-host>.catalog-quick-add{width:36px!important;height:36px!important;min-width:36px!important;min-height:36px!important;border-radius:11px!important}
+  .catalog-quick-add-symbol{font-size:22px}
+  .catalog-price .catalog-qty{width:82px;min-width:82px;height:36px!important;grid-template-columns:27px 28px 27px!important;border-radius:11px!important}
+  .catalog-qty .catalog-stepper-button{width:27px;height:36px}
+  .catalog-qty>span{width:28px;min-width:28px;font-size:9px!important}
+}
+
+/* Em telas muito estreitas, o stepper desce uma linha para não espremer o preço. */
+@media(max-width:360px){
+  .promo-banner-cta{
+    bottom:22.9%!important;
+    min-height:27px!important;
+    padding:0 9px!important;
+    font-size:7px!important;
+  }
+  .catalog-price:has(.catalog-qty){grid-template-columns:1fr!important;gap:4px!important}
+  .catalog-price:has(.catalog-qty) strong{min-height:24px}
+  .catalog-price .catalog-qty{justify-self:end}
+}

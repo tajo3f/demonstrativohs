@@ -1,7 +1,21 @@
-# Contexto do Projeto — HS App V10
+# Contexto do Projeto — HS App V23
 
-A V10 mantém a experiência de **app de pedidos mobile-first**, com frontend leve e sem backend nesta fase.
+A V23 é a versão de produção do catálogo/pedido mobile-first da nova linha HS.
 
-Princípios: visual fresco e comercial, navegação rápida e acessível, poucas dependências, microinterações discretas, carrinho local e PWA instalável.
+## Regras principais
 
-Não publique dados demonstrativos como se fossem oficiais. Não habilite o envio real de pedidos sem a confirmação do WhatsApp oficial da HS.
+- Frontend leve, responsivo e PWA.
+- Carrinho em `localStorage` e finalização pelo WhatsApp.
+- Não inventar preços, pesos, produtos ou número oficial de pedidos.
+- O número do WhatsApp permanece sem hardcode até confirmação oficial da HS.
+- Cards de produto devem usar o mesmo componente visual verde na home e no catálogo.
+- Fotos reais devem ser exibidas sem distorção ou corte (`object-fit: contain`).
+- A Seleta de legumes permite versão sem milho ou com 80 g de milho verde em conserva (+ R$ 3,49).
+- O Mix de forno informa que a embalagem pode ir ao forno sem a tampa.
+
+## Atualização V23
+
+- Kit Refogado 500 g — R$ 10,49.
+- Fotos recebidas nesta rodada aplicadas aos itens correspondentes.
+- CTA do hero menor e mais baixo.
+- Revisão de português e acabamento visual comercial.
