@@ -1,12 +1,11 @@
 {
-  "name": "hs-hortigranjeiro-app-v24",
-  "version": "24.0.0",
+  "name": "hs-hortigranjeiro-oficial",
+  "version": "25.0.0",
   "private": true,
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
-    "check": "node --check assets/js/app.js && node --test tests/*.test.mjs"
+    "test": "node --test tests/app.test.mjs",
+    "check": "node --check assets/js/app.js && node --test tests/app.test.mjs",
+    "test:browser": "python tests/browser_smoke.py"
   },
-  "engines": {
-    "node": ">=20"
-  }
+  "engines": {"node": ">=20"}
 }

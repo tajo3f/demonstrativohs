@@ -1020,3 +1020,98 @@
   .checkout-button{order:1;min-height:52px}
   .checkout-preview{max-height:165px;overflow:auto}
 }
+
+/* ============================================================
+   FINAL OFICIAL — QUESTIONÁRIOS, GALERIA E ACABAMENTO 22/10/2026
+   ============================================================ */
+.question-card{
+  margin:16px 0!important;
+  padding:16px!important;
+  border:1px solid #d9e7d3!important;
+  border-radius:18px!important;
+  background:linear-gradient(145deg,#f7fbf4,#ffffff)!important;
+  box-shadow:0 8px 22px rgba(21,91,28,.05);
+}
+.question-card legend{
+  padding:0 7px;
+  color:#0c6d24;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.04em;
+}
+.question-options{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
+.question-option{display:block!important;min-width:0}
+.question-option span{
+  min-height:44px;
+  width:100%;
+  padding:9px 10px!important;
+  border-radius:12px!important;
+  display:flex!important;
+  align-items:center;
+  gap:8px;
+  border:1px solid #dde7d9!important;
+  background:#fff!important;
+  color:#435143!important;
+  font-size:9.5px!important;
+  line-height:1.25;
+  font-weight:800!important;
+  box-shadow:0 3px 10px rgba(21,91,28,.03);
+}
+.question-option span i{
+  flex:0 0 20px;
+  width:20px;
+  height:20px;
+  border-radius:6px;
+  display:grid;
+  place-items:center;
+  border:1px solid #c9d7c4;
+  color:transparent;
+  font-style:normal;
+  font-size:12px;
+  background:#f8faf7;
+}
+.question-option input:checked+span{
+  background:#ecf8e6!important;
+  border-color:#75bd57!important;
+  color:#174d21!important;
+  box-shadow:0 7px 16px rgba(52,145,35,.10)!important;
+}
+.question-option input:checked+span i{
+  background:#38a722;
+  border-color:#38a722;
+  color:#fff;
+}
+.question-option input:disabled+span{opacity:.48;cursor:not-allowed}
+.question-counter{
+  margin-top:9px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  min-height:26px;
+  padding:0 10px;
+  background:#e9f6e3;
+  color:#176b28;
+  font-size:8.5px;
+  font-weight:900;
+}
+.addon-option span{justify-content:flex-start}
+.addon-option span em{font-style:normal;min-width:0;flex:1}
+.addon-option span b{margin-left:auto;color:#0d7928;font-size:8.5px;white-space:nowrap}
+.detail-gallery{display:flex;gap:8px;padding:9px 14px 0;background:#fff;overflow-x:auto;scrollbar-width:none}
+.detail-gallery::-webkit-scrollbar{display:none}
+.detail-thumb{width:58px;height:58px;flex:0 0 58px;border:2px solid transparent;border-radius:12px;background:#f5f7f4;padding:3px;overflow:hidden}
+.detail-thumb img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.detail-thumb.active{border-color:#48b72d;background:#edf8e8}
+.detail-image{overflow:hidden}
+.detail-image img{max-width:100%;max-height:100%;object-fit:contain!important}
+.catalog-image img{max-width:100%;max-height:100%;object-fit:contain!important}
+.catalog-body h3{min-height:2.35em;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.catalog-body small{min-height:1.3em}
+
+@media(max-width:540px){
+  .question-card{padding:13px!important}
+  .question-options{grid-template-columns:1fr!important}
+  .question-option span{min-height:42px;font-size:9.4px!important}
+  .detail-gallery{padding:8px 12px 0}
+  .detail-thumb{width:52px;height:52px;flex-basis:52px}
+}

@@ -1,31 +1,25 @@
-# Relatório de testes — HS Hortigranjeiro V24
+# Relatório de testes — versão final oficial
+
+Data: 22/10/2026
+
+## Testes executados e aprovados
+- `node --check assets/js/app.js`: JavaScript sem erro de sintaxe.
+- `npm test`: **8/8 testes aprovados**.
+- 40 produtos encontrados no catálogo.
+- 40 imagens principais de produtos existentes e sem duplicidade.
+- Todas as imagens principais abertas/validadas com sucesso.
+- 40 preços numéricos válidos e maiores que zero.
+- Abóbora japonesa sem casca em cubos: R$ 5,99 / 500 g.
+- Espaguete de abobrinha e cenoura: R$ 7,99 / 500 g.
+- Salada de frutas: R$ 12,49 / 250 g, 9 frutas disponíveis, limite de 3 seleções e 4 opcionais.
+- Seleta: R$ 7,99 / 500 g e adicional de milho de R$ 3,49 / 80 g.
+- WhatsApp oficial: 5527999087648.
+- IDs do HTML sem duplicidade.
+- Referências locais do HTML e do Service Worker verificadas.
+- Cache do PWA atualizado para `hs-final-2026-10-22-v1`.
+
+## Teste de navegador
+O arquivo `tests/browser_smoke.py` foi atualizado para validar seis larguras de tela, imagens, personalizações, carrinho, endereço de entrega e URL do WhatsApp. O Chromium do ambiente de geração bloqueia navegação local por política administrativa (`ERR_BLOCKED_BY_ADMINISTRATOR`), portanto esse smoke test precisa ser executado em um ambiente normal de desenvolvimento/CI com navegador liberado.
 
 ## Resultado
-
-- `node --check assets/js/app.js`: aprovado.
-- `npm run check`: 19/19 testes aprovados.
-- IDs HTML duplicados: 0.
-- Arquivos principais referenciados no HTML ausentes: 0.
-- Produtos cadastrados: 39.
-- Imagens de produtos referenciadas e existentes: 39/39.
-- Cache PWA: `hs-v24-shell`.
-- Número oficial do WhatsApp: ainda não configurado, conforme planejado.
-
-## Regressões cobertas
-
-1. A finalização pode ser fechada sem preencher nome ou telefone.
-2. O botão de fechar não dispara validação nativa do formulário.
-3. Nome e telefone são opcionais; telefone só é validado se o cliente começar a preenchê-lo.
-4. Ao escolher `Entrega`, o campo de endereço é exibido e habilitado.
-5. Ao escolher `Retirada` ou `Combinar`, o campo de endereço fica oculto e desabilitado.
-6. Pedidos marcados como `Entrega` não podem ser enviados sem endereço.
-7. O botão `Adicionar mais itens` fecha a finalização e mantém o carrinho.
-8. A mensagem do WhatsApp preserva a ordem: Nome, Telefone, Endereço, Forma de pagamento, Observações e Pedido.
-9. A salada de frutas continua personalizável.
-10. A seleta de legumes continua com as opções configuráveis.
-11. IDs de produtos não estão duplicados.
-12. Todas as imagens cadastradas no catálogo existem no pacote.
-
-## Pendente para publicação final
-
-Preencher `HS_WHATSAPP_NUMBER` em `assets/js/app.js` com o número oficial da HS no formato `55DDDNUMERO`.
+A verificação estática, de dados, imagens, PWA e sintaxe foi concluída sem falhas conhecidas.
