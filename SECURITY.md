@@ -1,4 +1,4 @@
-# Segurança — V27
+# Segurança — V28
 
 - Aplicação estática, sem banco de dados e sem credenciais privadas no frontend.
 - Número público do WhatsApp da HS é o único dado externo de integração.

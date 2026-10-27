@@ -19,7 +19,7 @@ const sliceProduct = id => {
 test('estrutura, PWA e nova identidade visual estão válidas', () => {
   for (const id of ['view-home','view-products','view-cart','product-dialog','checkout-dialog','install-dialog']) assert.match(html, new RegExp(`id="${id}"`));
   assert.equal(manifest.display, 'standalone');
-  assert.match(sw, /hs-final-2026-10-26-v27/);
+  assert.match(sw, /hs-final-2026-10-26-v28/);
   for (const file of ['hs-logo-oficial.png','hs-app-icon.png','hs-icon-circular.png','icon-32.png','icon-64.png','icon-180.png','icon-192.png','icon-512.png','favicon.ico']) {
     assert.ok(fs.existsSync(new URL(`../assets/images/${file}`, import.meta.url)), file);
   }
@@ -93,4 +93,19 @@ test('segurança estática e experiência do checkout', () => {
   assert.ok(css.includes('.package-option'));
   assert.ok(css.includes('.service-rules-grid'));
   assert.ok(css.includes('.implementation-card'));
+});
+
+
+test('V28 bloqueia a finalização fora do horário de funcionamento', () => {
+  assert.ok(js.includes("const BUSINESS_TIME_ZONE = 'America/Sao_Paulo'"));
+  assert.ok(js.includes('const BUSINESS_HOURS'));
+  assert.ok(js.includes('function orderingAvailability'));
+  assert.ok(js.includes('function updateOrderingAvailability'));
+  assert.ok(js.includes('function ensureOrderingOpen'));
+  assert.match(html, /id="ordering-status-card"/);
+  assert.match(html, /id="cart-ordering-status"/);
+  assert.match(html, /id="checkout-ordering-status"/);
+  assert.ok(css.includes('.checkout-button:disabled'));
+  assert.ok(css.includes('[data-ordering-state="closed"]'));
+  assert.ok(js.includes("button.disabled = !status.open"));
 });

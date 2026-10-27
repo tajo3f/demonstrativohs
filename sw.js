@@ -1,4 +1,4 @@
-const CACHE='hs-final-2026-10-26-v27';
+const CACHE='hs-final-2026-10-26-v28';
 const ASSETS=[
   './',
   './index.html',

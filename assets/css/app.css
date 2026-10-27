@@ -1145,3 +1145,19 @@
 .catalog-card .catalog-body small{line-height:1.35}
 @media(max-width:850px){.service-rules-grid{grid-template-columns:1fr}.implementation-card{margin-top:14px}.demo-strip{font-size:9px}.demo-strip small{display:inline!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62vw}}
 @media(max-width:540px){.demo-strip{justify-content:flex-start;padding:6px 10px!important}.demo-strip small{max-width:52vw}.implementation-card{grid-template-columns:42px 1fr;padding:12px}.implementation-card img{width:42px;height:42px}.service-rules-grid article{padding:12px}.package-option>span{padding:10px}.package-option b{font-size:11px}.header-logo{width:145px!important;height:50px!important}}
+
+
+/* V28 — disponibilidade de pedidos por horário de funcionamento */
+.ordering-status-card,.cart-ordering-status,.checkout-ordering-status{display:flex;align-items:center;gap:10px;border-radius:16px;border:1px solid #dcebd4;background:#f3f9ef;color:#17672a}
+.ordering-status-card{margin:14px 0 0;padding:13px 15px}.ordering-status-card>div{min-width:0}.ordering-status-card strong{display:block;font-size:11px}.ordering-status-card small{display:block;margin-top:3px;color:#68736a;font-size:9px;line-height:1.45}
+.ordering-status-icon{display:inline-grid;place-items:center;flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#e6f4dc;color:#43a90e;font-size:13px;line-height:1}
+.cart-ordering-status{margin:0 0 10px;padding:9px 11px;font-size:9.5px;font-weight:850}.cart-ordering-status .ordering-status-icon{width:18px;height:18px;font-size:10px}
+.checkout-ordering-status{margin:10px 0 0;padding:9px 11px;font-size:9.5px;font-weight:850}.checkout-ordering-status .ordering-status-icon{width:18px;height:18px;font-size:10px}
+.ordering-status-card[data-ordering-state="closed"],.cart-ordering-status[data-ordering-state="closed"],.checkout-ordering-status[data-ordering-state="closed"]{background:#f3f4f3;border-color:#e1e4e1;color:#767d78}
+.ordering-status-card[data-ordering-state="closed"] .ordering-status-icon,.cart-ordering-status[data-ordering-state="closed"] .ordering-status-icon,.checkout-ordering-status[data-ordering-state="closed"] .ordering-status-icon{background:#e4e6e4;color:#9aa09b}
+.ordering-status-card[data-ordering-state="closed"] small{color:#858b87}
+.order-button-status-icon{display:inline-block;width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 0 0 3px rgba(255,255,255,.15)}
+.checkout-button:disabled,.checkout-button.is-closed{cursor:not-allowed;background:#c8ccc9!important;color:#f5f6f5!important;box-shadow:none!important;opacity:1}
+.checkout-button:disabled .order-button-status-icon,.checkout-button.is-closed .order-button-status-icon{background:#929894;box-shadow:none}
+.checkout-button:disabled:hover{transform:none}
+@media(max-width:540px){.ordering-status-card{padding:11px 12px}.ordering-status-card strong{font-size:10.5px}.ordering-status-card small{font-size:8.8px}}

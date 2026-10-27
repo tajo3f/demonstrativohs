@@ -1032,6 +1032,20 @@
   // Canal oficial de pedidos da HS. Número público usado apenas para abrir o WhatsApp.
   const HS_WHATSAPP_NUMBER = '5527999087648';
 
+  // Horário de atendimento usado para liberar a finalização de pedidos.
+  // Fuso fixo da operação HS para evitar diferenças de horário do aparelho do cliente.
+  const BUSINESS_TIME_ZONE = 'America/Sao_Paulo';
+  const BUSINESS_HOURS = {
+    0: [],
+    1: [[450, 660], [720, 1080]], // segunda: 07:30–11:00 e 12:00–18:00
+    2: [[450, 660], [720, 1080]], // terça
+    3: [[450, 660], [720, 1080]], // quarta
+    4: [[450, 660], [720, 1080]], // quinta
+    5: [[450, 660], [720, 1080]], // sexta
+    6: [[450, 660], [720, 960]]   // sábado: 07:30–11:00 e 12:00–16:00
+  };
+  const BUSINESS_DAY_LABELS = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+
   let cart = {};
   let customizations = {};
   let category = 'all';
@@ -1137,6 +1151,104 @@
     toast.timer = setTimeout(() => { target.hidden = true; }, 2400);
   };
   const vibrate = () => { if (navigator.vibrate) navigator.vibrate(7); };
+
+
+  function businessNowParts(date = new Date()) {
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: BUSINESS_TIME_ZONE,
+      weekday: 'short',
+      hour: '2-digit',
+      minute: '2-digit',
+      hourCycle: 'h23'
+    }).formatToParts(date).reduce((acc, part) => { acc[part.type] = part.value; return acc; }, {});
+    const weekdayMap = { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 };
+    return { day: weekdayMap[parts.weekday], minutes: Number(parts.hour) * 60 + Number(parts.minute) };
+  }
+
+  function orderingAvailability(date = new Date()) {
+    const { day, minutes } = businessNowParts(date);
+    const sessions = BUSINESS_HOURS[day] || [];
+    const current = sessions.find(([start, end]) => minutes >= start && minutes < end);
+    if (current) return { open: true, day, minutes, closesAt: current[1] };
+
+    for (let offset = 0; offset <= 7; offset += 1) {
+      const targetDay = (day + offset) % 7;
+      const targetSessions = BUSINESS_HOURS[targetDay] || [];
+      for (const [start] of targetSessions) {
+        if (offset === 0 && start <= minutes) continue;
+        return { open: false, day, minutes, nextDay: targetDay, dayOffset: offset, opensAt: start };
+      }
+    }
+    return { open: false, day, minutes, nextDay: 1, dayOffset: 1, opensAt: 450 };
+  }
+
+  const formatBusinessTime = totalMinutes => {
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    return minutes ? `${hours}h${String(minutes).padStart(2, '0')}` : `${hours}h`;
+  };
+
+  function orderingStatusText(status = orderingAvailability()) {
+    if (status.open) return {
+      title: 'Pedidos disponíveis agora',
+      copy: `Finalização liberada até ${formatBusinessTime(status.closesAt)}.`,
+      short: `Aberto agora • pedidos até ${formatBusinessTime(status.closesAt)}`
+    };
+    const when = status.dayOffset === 0 ? 'hoje' : status.dayOffset === 1 ? 'amanhã' : BUSINESS_DAY_LABELS[status.nextDay];
+    return {
+      title: 'Pedidos fora do horário de funcionamento',
+      copy: `Você pode navegar pelo catálogo e montar o carrinho. A finalização reabre ${when}, às ${formatBusinessTime(status.opensAt)}.`,
+      short: `Fechado agora • reabre ${when}, às ${formatBusinessTime(status.opensAt)}`
+    };
+  }
+
+  function updateOrderingAvailability() {
+    const status = orderingAvailability();
+    const text = orderingStatusText(status);
+    const state = status.open ? 'open' : 'closed';
+
+    const homeCard = $('#ordering-status-card');
+    if (homeCard) {
+      homeCard.dataset.orderingState = state;
+      $('#ordering-status-title').textContent = text.title;
+      $('#ordering-status-copy').textContent = text.copy;
+    }
+
+    const cartStatus = $('#cart-ordering-status');
+    if (cartStatus) {
+      cartStatus.dataset.orderingState = state;
+      $('#cart-ordering-status-text').textContent = text.short;
+    }
+
+    const checkoutStatus = $('#checkout-ordering-status');
+    if (checkoutStatus) {
+      checkoutStatus.dataset.orderingState = state;
+      $('#checkout-ordering-status-text').textContent = text.short;
+    }
+
+    const openButton = $('#open-checkout');
+    const finalizeButton = $('#finalize-order');
+    [openButton, finalizeButton].forEach(button => {
+      if (!button) return;
+      button.disabled = !status.open;
+      button.setAttribute('aria-disabled', String(!status.open));
+      button.classList.toggle('is-closed', !status.open);
+    });
+
+    const note = $('#checkout-availability-note');
+    if (note) note.textContent = status.open
+      ? 'Revise os itens e finalize para abrir o pedido já formatado no WhatsApp.'
+      : `${text.copy} O carrinho continuará salvo para você finalizar depois.`;
+
+    return status;
+  }
+
+  function ensureOrderingOpen() {
+    const status = updateOrderingAvailability();
+    if (status.open) return true;
+    toast(orderingStatusText(status).short);
+    return false;
+  }
 
   function setQty(id, quantity) {
     if (quantity <= 0) {
@@ -1709,6 +1821,7 @@
   $('#checkout-form').addEventListener('submit', event => event.preventDefault());
 
   $('#open-checkout').addEventListener('click', () => {
+    if (!ensureOrderingOpen()) return;
     syncCustomerTypeFields();
     syncDeliveryFields();
     syncDeliveryRules();
@@ -1752,6 +1865,7 @@
   });
 
   $('#finalize-order').addEventListener('click', () => {
+    if (!ensureOrderingOpen()) return;
     const phone = $('#customer-phone').value.trim();
     const phoneDigits = phone.replace(/\D/g, '');
     const deliveryMethod = $('#customer-delivery').value;
@@ -1892,5 +2006,7 @@
     window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
   }
 
+  updateOrderingAvailability();
+  window.setInterval(updateOrderingAvailability, 60000);
   renderAll();
 })();

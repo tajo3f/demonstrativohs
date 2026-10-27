@@ -91,6 +91,11 @@
             <div><span>Nova operação digital</span><strong>Sistema em fase de implantação</strong><p>O catálogo e o fluxo de pedidos já estão disponíveis, enquanto a HS realiza os ajustes finais desta nova operação.</p></div>
           </section>
 
+          <section class="ordering-status-card" id="ordering-status-card" aria-live="polite" data-ordering-state="closed">
+            <span class="ordering-status-icon" aria-hidden="true">●</span>
+            <div><strong id="ordering-status-title">Pedidos fora do horário de funcionamento</strong><small id="ordering-status-copy">Você pode navegar pelo catálogo e montar o carrinho. A finalização ficará disponível no próximo horário de atendimento.</small></div>
+          </section>
+
           <section class="service-rules" aria-labelledby="service-rules-title">
             <div class="section-title-row service-rules-heading"><div><h2 id="service-rules-title">Entrega, retirada e atacado</h2><p>Informações importantes antes de finalizar seu pedido.</p></div></div>
             <div class="service-rules-grid">
@@ -140,8 +145,9 @@
             <div class="summary-line"><span>Subtotal (<b id="summary-items">0</b> itens)</span><strong id="summary-subtotal">R$ 0,00</strong></div>
             <div class="summary-line"><span>Entrega</span><button type="button" class="text-action" id="delivery-action">Combinar</button></div>
             <div class="summary-total"><span>Total</span><strong id="summary-total">R$ 0,00</strong></div>
-            <button class="checkout-button" id="open-checkout" type="button">Finalizar pedido <span>→</span></button>
-            <small>Revise os itens e finalize para abrir o pedido já formatado no WhatsApp.</small>
+            <div class="cart-ordering-status" id="cart-ordering-status" aria-live="polite"><span class="ordering-status-icon" aria-hidden="true">●</span><span id="cart-ordering-status-text">Verificando horário de funcionamento...</span></div>
+            <button class="checkout-button" id="open-checkout" type="button"><span class="order-button-status-icon" aria-hidden="true">●</span>Finalizar pedido <span>→</span></button>
+            <small id="checkout-availability-note">Revise os itens e finalize para abrir o pedido já formatado no WhatsApp.</small>
           </div>
         </div>
       </section>
@@ -186,6 +192,7 @@
         <div><span class="page-kicker">FINALIZAÇÃO</span><h2>Dados do pedido</h2></div>
         <button class="close-sheet" id="close-checkout" type="button" aria-label="Fechar finalização">×</button>
       </div>
+      <div class="checkout-ordering-status" id="checkout-ordering-status" aria-live="polite"><span class="ordering-status-icon" aria-hidden="true">●</span><span id="checkout-ordering-status-text">Verificando horário de funcionamento...</span></div>
       <p class="checkout-helper">Preencha o que desejar agora. Você pode fechar esta etapa a qualquer momento e continuar adicionando produtos.</p>
       <div class="checkout-steps">
         <label><span>Nome <em>opcional</em></span><input id="customer-name" autocomplete="name" placeholder="Seu nome"></label>
@@ -202,7 +209,7 @@
       <div class="checkout-preview" id="checkout-preview"></div>
       <div class="checkout-actions">
         <button class="checkout-secondary" id="continue-shopping" type="button">Adicionar mais itens</button>
-        <button class="checkout-button" id="finalize-order" type="button">Enviar pelo WhatsApp <span>→</span></button>
+        <button class="checkout-button" id="finalize-order" type="button"><span class="order-button-status-icon" aria-hidden="true">●</span>Enviar pelo WhatsApp <span>→</span></button>
       </div>
       <small>O WhatsApp será aberto com o pedido organizado e pronto para envio. A entrega custa R$ 10,00 nas áreas atendidas; a retirada no HS não possui taxa.</small>
     </form>

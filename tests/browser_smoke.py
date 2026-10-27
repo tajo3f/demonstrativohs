@@ -1,4 +1,4 @@
-"""Smoke test da V27 em Chromium real."""
+"""Smoke test da V28 em Chromium real."""
 from pathlib import Path
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from threading import Thread
@@ -7,8 +7,8 @@ from urllib.parse import unquote
 from playwright.sync_api import sync_playwright
 
 ROOT=Path(__file__).resolve().parents[1]
-server=ThreadingHTTPServer(('127.0.0.1',0),partial(SimpleHTTPRequestHandler,directory=str(ROOT)))
-url=f'http://127.0.0.1:{server.server_port}/'
+server=ThreadingHTTPServer(('128.0.0.1',0),partial(SimpleHTTPRequestHandler,directory=str(ROOT)))
+url=f'http://128.0.0.1:{server.server_port}/'
 Thread(target=server.serve_forever,daemon=True).start()
 errors=[]
 try:
@@ -71,7 +71,7 @@ try:
                 assert 'Troco calculado' in page.locator('#cash-change-result').inner_text()
                 page.fill('#customer-name','Joao Paulo')
                 page.fill('#customer-phone','27999999999')
-                page.fill('#customer-notes','Teste V27')
+                page.fill('#customer-notes','Teste V28')
                 page.evaluate("window.__wa=''; window.open=(u)=>{window.__wa=u; return {closed:false}}")
                 page.locator('#finalize-order').click()
                 wa=page.evaluate('window.__wa')
@@ -90,4 +90,4 @@ try:
         browser.close()
 finally:
     server.shutdown()
-print('BROWSER SMOKE PASS V27')
+print('BROWSER SMOKE PASS V28')

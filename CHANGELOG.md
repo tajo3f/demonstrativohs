@@ -1,5 +1,13 @@
 # Changelog
 
+## V28 — 26/10/2026
+- Finalização de pedidos bloqueada automaticamente fora do horário de funcionamento da HS.
+- Botões de “Finalizar pedido” e “Enviar pelo WhatsApp” ficam desativados e cinza quando o atendimento está fechado.
+- Indicador de disponibilidade foi adicionado à tela inicial, ao carrinho e à finalização.
+- O cliente continua podendo navegar, escolher produtos e montar o carrinho fora do horário; o pedido fica salvo para finalizar quando reabrir.
+- Verificação usa o fuso America/Sao_Paulo e atualiza automaticamente a cada minuto.
+- Horário configurado: segunda a sexta, 07:30–11:00 e 12:00–18:00; sábado, 07:30–11:00 e 12:00–16:00; domingo fechado.
+
 ## V27 — 26/10/2026
 - Nova identidade visual oficial HS aplicada ao site, PWA e favicon.
 - Preços destacados na planilha da cliente atualizados nos produtos correspondentes do catálogo.

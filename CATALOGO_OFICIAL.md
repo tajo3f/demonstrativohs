@@ -1,4 +1,4 @@
-# Catálogo oficial HS — V27
+# Catálogo oficial HS — V28
 
 Atualizado em 26/10/2026 conforme a planilha e as orientações mais recentes da HS.
 
