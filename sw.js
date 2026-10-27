@@ -1,4 +1,4 @@
-const CACHE='hs-final-2026-10-22-v1';
+const CACHE='hs-final-2026-10-26-v27';
 const ASSETS=[
   './',
   './index.html',
@@ -29,10 +29,12 @@ const ASSETS=[
   './assets/images/hero-hs-v20-1200.webp',
   './assets/images/hero-hs-v20-1664.webp',
   './assets/images/hero-hs-v20-720.webp',
+  './assets/images/hs-app-icon.png',
   './assets/images/hs-icon-circular.png',
   './assets/images/hs-logo-oficial.png',
   './assets/images/icon-180.png',
   './assets/images/icon-32.png',
+  './assets/images/icon-64.png',
   './assets/images/inhame-cara-500g.webp',
   './assets/images/inhame-chines-cubos-500g.webp',
   './assets/images/kit-buque-couve-brocolis-500g.webp',

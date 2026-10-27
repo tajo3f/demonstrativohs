@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#ffffff">
   <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
   <meta name="description" content="Aplicativo web da nova linha de produtos processados e higienizados HS Hortigranjeiro Schulz.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,13 +13,14 @@
   <meta name="apple-mobile-web-app-title" content="HS Hortigranjeiro">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./assets/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="./assets/images/icon-64.png" sizes="64x64">
   <link rel="icon" type="image/png" href="./assets/images/icon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="./assets/images/icon-180.png">
   <link rel="stylesheet" href="./assets/css/app.css">
   <title>HS Hortigranjeiro Schulz | Pedidos</title>
 </head>
 <body>
-  <div class="demo-strip" role="status"><span></span><strong>CATÁLOGO OFICIAL HS</strong><small>Produtos processados, higienizados e prontos para facilitar a sua rotina.</small></div>
+  <div class="demo-strip" role="status"><span></span><strong>IMPLANTAÇÃO ASSISTIDA</strong><small>Nova operação digital HS em fase de implantação e ajustes finais.</small></div>
 
   <div class="app-shell" id="app-shell">
     <aside class="desktop-sidebar" aria-label="Navegação desktop">
@@ -29,7 +31,7 @@
         <button class="side-link" data-route="cart"><span class="nav-icon">🛒</span><span>Carrinho</span><b class="nav-badge" id="side-count">0</b></button>
       </nav>
       <div class="side-install">
-        <img src="./assets/images/hs-icon-circular.png" alt="" aria-hidden="true">
+        <img src="./assets/images/hs-app-icon.png" alt="" aria-hidden="true">
         <div><strong>Instale o app</strong><span>Acesso rápido pelo celular.</span></div>
         <button id="install-side" type="button">Instalar</button>
       </div>
@@ -84,6 +86,20 @@
             </div>
           </section>
 
+          <section class="implementation-card" aria-label="Status de implantação">
+            <img src="./assets/images/hs-icon-circular.png" alt="" aria-hidden="true">
+            <div><span>Nova operação digital</span><strong>Sistema em fase de implantação</strong><p>O catálogo e o fluxo de pedidos já estão disponíveis, enquanto a HS realiza os ajustes finais desta nova operação.</p></div>
+          </section>
+
+          <section class="service-rules" aria-labelledby="service-rules-title">
+            <div class="section-title-row service-rules-heading"><div><h2 id="service-rules-title">Entrega, retirada e atacado</h2><p>Informações importantes antes de finalizar seu pedido.</p></div></div>
+            <div class="service-rules-grid">
+              <article><b>Entrega • R$ 10,00</b><p>Centro, São Luís e Vila Jetibá até a escola. Entregas às segundas e sextas-feiras.</p><small>Segunda: pedir até sexta-feira, às 9h. Sexta: pedir até quarta-feira, às 9h.</small></article>
+              <article><b>Retirada no HS Hortigranjeiro Schulz</b><p>Faça o pedido com 48 horas de antecedência.</p><small>Pedidos retirados não têm taxa de entrega.</small></article>
+              <article><b>Pessoa jurídica • CNPJ</b><p>15% de desconto no atacado a partir de 10 unidades de cada item e nas embalagens industriais.</p><small>Embalagens industriais não possuem quantidade mínima.</small></article>
+            </div>
+          </section>
+
           <section class="featured-section" aria-labelledby="featured-title">
             <div class="section-title-row"><div><h2 id="featured-title">Destaques</h2><p>Seleção especial da HS com mais praticidade, frescor e variedade.</p></div><button type="button" data-route="products">Ver catálogo</button></div>
             <div class="home-products catalog-grid shared-product-grid" id="home-products"></div>
@@ -132,9 +148,9 @@
 
       <section class="view" id="view-more" data-view="more" aria-label="Mais" hidden>
         <div class="more-page">
-          <img src="./assets/images/hs-icon-circular.png" class="more-icon" alt="HS">
+          <img src="./assets/images/hs-app-icon.png" class="more-icon" alt="HS Hortigranjeiro Schulz">
           <h1>HS Hortigranjeiro Schulz</h1>
-          <p>Aplicativo web da nova linha de produtos processados e higienizados.</p>
+          <p>Aplicativo web da nova linha de produtos processados e higienizados.</p><div class="more-status"><strong>Sistema em fase de implantação</strong><span>Nova operação digital HS em implantação assistida e ajustes finais.</span></div>
           <button class="more-card" id="install-more" type="button"><span>📲</span><div><strong>Instalar no celular</strong><small>Adicione o HS à sua tela inicial.</small></div><b>›</b></button>
           <button class="more-card" type="button" id="about-catalog"><span>ℹ️</span><div><strong>Sobre o catálogo</strong><small>Conheça a proposta da nova linha HS.</small></div><b>›</b></button>
           <a class="more-card" href="./privacidade.html"><span>🔒</span><div><strong>Privacidade</strong><small>Consulte como seus dados são tratados.</small></div><b>›</b></a>
@@ -174,8 +190,12 @@
       <div class="checkout-steps">
         <label><span>Nome <em>opcional</em></span><input id="customer-name" autocomplete="name" placeholder="Seu nome"></label>
         <label><span>Telefone / WhatsApp <em>opcional</em></span><input id="customer-phone" inputmode="tel" autocomplete="tel" placeholder="(27) 99999-9999"></label>
-        <label><span>Forma de recebimento</span><select id="customer-delivery"><option value="Combinar">Combinar com a HS</option><option value="Retirada">Retirada</option><option value="Entrega">Entrega</option></select></label>
+        <label><span>Tipo de cliente</span><select id="customer-type"><option value="pf">Pessoa física</option><option value="pj">Pessoa jurídica (CNPJ)</option></select></label>
+        <label class="customer-cnpj-field" id="customer-cnpj-field" hidden><span>CNPJ</span><input id="customer-cnpj" inputmode="numeric" autocomplete="off" placeholder="00.000.000/0000-00"><small class="field-hint">Necessário para as condições de atacado e embalagens industriais.</small></label>
+        <label><span>Forma de recebimento</span><select id="customer-delivery"><option value="Combinar">Escolher depois</option><option value="Retirada">Retirada no HS Hortigranjeiro Schulz</option><option value="Entrega">Entrega</option></select></label>
+        <div class="checkout-full delivery-rules" id="delivery-rules"><strong>Escolha entrega ou retirada</strong><span>As regras e os prazos aparecerão aqui para facilitar sua compra.</span></div>
         <label><span>Forma de pagamento</span><select id="customer-payment"><option>Combinar</option><option>Pix</option><option>Dinheiro</option><option>Débito</option><option>Crédito</option></select></label>
+        <label class="checkout-full cash-change-field" id="cash-change-field" hidden><span>Troco para qual valor?</span><input id="customer-cash-given" inputmode="decimal" autocomplete="off" placeholder="Ex.: 100,00"><small class="field-hint" id="cash-change-hint">Informe o valor que será entregue em dinheiro. O troco será calculado automaticamente.</small><strong class="cash-change-result" id="cash-change-result" hidden></strong></label>
         <label class="checkout-full delivery-address-field" id="delivery-address-field" hidden><span>Endereço para entrega</span><input id="customer-address" autocomplete="street-address" placeholder="Rua, número, bairro e referência"><small class="field-hint">Este campo aparece somente quando a opção “Entrega” está selecionada.</small></label>
         <label class="checkout-full"><span>Observações</span><textarea id="customer-notes" rows="3" placeholder="Alguma observação?"></textarea></label>
       </div>
@@ -184,14 +204,14 @@
         <button class="checkout-secondary" id="continue-shopping" type="button">Adicionar mais itens</button>
         <button class="checkout-button" id="finalize-order" type="button">Enviar pelo WhatsApp <span>→</span></button>
       </div>
-      <small>O WhatsApp será aberto com o pedido organizado e pronto para envio. Se escolher entrega, informe o endereço antes de enviar.</small>
+      <small>O WhatsApp será aberto com o pedido organizado e pronto para envio. A entrega custa R$ 10,00 nas áreas atendidas; a retirada no HS não possui taxa.</small>
     </form>
   </dialog>
 
   <dialog class="install-dialog" id="install-dialog">
     <div class="install-sheet">
       <button class="close-sheet install-close" type="button" aria-label="Fechar">×</button>
-      <img src="./assets/images/hs-icon-circular.png" alt="HS">
+      <img src="./assets/images/hs-app-icon.png" alt="HS">
       <h2>Instalar HS Hortigranjeiro</h2>
       <p id="install-copy">Tenha acesso rápido ao catálogo e aos seus pedidos diretamente pela tela inicial.</p>
       <div class="install-actions">

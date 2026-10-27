@@ -1,12 +1,12 @@
 {
   "name": "HS Hortigranjeiro Schulz — Pedidos",
   "short_name": "HS Pedidos",
-  "description": "Aplicativo web da nova linha de produtos processados e higienizados HS Hortigranjeiro Schulz.",
+  "description": "Catálogo digital HS Hortigranjeiro Schulz para pedidos, retirada, entrega e embalagens industriais.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "theme_color": "#0d5f24",
   "orientation": "portrait-primary",
   "icons": [
     {

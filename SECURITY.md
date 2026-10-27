@@ -1,12 +1,9 @@
-# Segurança
+# Segurança — V27
 
-Este projeto é um catálogo estático/PWA. Não existem chaves privadas, tokens, senhas ou credenciais no frontend.
-
-## Regras para publicar no GitHub
-- Nunca commitar `.env`, tokens, senhas ou credenciais de hospedagem.
-- O número de WhatsApp presente no código é o canal público de pedidos da HS e, por natureza, fica visível no frontend.
-- Dados digitados na finalização não são persistidos em servidor pelo site; o pedido é montado localmente e enviado somente após a ação do usuário no WhatsApp.
-- O carrinho e as personalizações usam `localStorage` do navegador.
-- A configuração de deploy inclui CSP, bloqueio de framing, `nosniff`, política de referência e permissões restritas.
-
-Se futuramente houver login, banco de dados, pagamentos ou painel administrativo, segredos deverão ficar exclusivamente no backend/variáveis de ambiente do provedor.
+- Aplicação estática, sem banco de dados e sem credenciais privadas no frontend.
+- Número público do WhatsApp da HS é o único dado externo de integração.
+- Política CSP definida no HTML.
+- Campos do cliente são usados apenas para montar a mensagem do pedido e não são enviados a servidores próprios.
+- Carrinho e personalizações ficam no `localStorage` do navegador.
+- Nenhuma chave de API, token ou senha deve ser adicionada ao repositório.
+- Publicação compatível com GitHub Pages/Vercel/hospedagem estática.
