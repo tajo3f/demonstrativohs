@@ -1,5 +1,12 @@
 # Changelog
 
+## V29 — 26/10/2026
+- Interface do computador unificada ao fluxo visual e funcional da versão móvel.
+- Navegação inferior, cards, checkout e modal de produto passam a seguir a mesma experiência em qualquer tela.
+- Barras laterais exclusivas de desktop foram removidas da experiência final para evitar divergências.
+- Foto do milho verde foi reenquadrada em 4:3, com o produto mais alto e mais visível.
+- Cache da PWA atualizado para V29 e CSS/JS com versionamento para evitar arquivos antigos no navegador.
+
 ## V28 — 26/10/2026
 - Finalização de pedidos bloqueada automaticamente fora do horário de funcionamento da HS.
 - Botões de “Finalizar pedido” e “Enviar pelo WhatsApp” ficam desativados e cinza quando o atendimento está fechado.

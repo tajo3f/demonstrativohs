@@ -1,11 +1,13 @@
-const CACHE='hs-final-2026-10-26-v28';
+const CACHE='hs-final-2026-10-26-v29';
 const ASSETS=[
   './',
   './index.html',
   './privacidade.html',
   './termos.html',
   './assets/css/app.css',
+  './assets/css/app.css?v=29',
   './assets/js/app.js',
+  './assets/js/app.js?v=29',
   './manifest.webmanifest',
   './assets/images/abacaxi-limao-sal-rosa-300g.webp',
   './assets/images/abobora-jacare-fatias-assar-500g.webp',

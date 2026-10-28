@@ -1,4 +1,4 @@
-"""Smoke test da V28 em Chromium real."""
+"""Smoke test da V29 em Chromium real."""
 from pathlib import Path
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from threading import Thread
@@ -19,6 +19,9 @@ try:
             page.on('pageerror',lambda e:errors.append(str(e)))
             response=page.goto(url,wait_until='networkidle')
             assert response and response.status==200,(w,response.status if response else None)
+            assert page.locator('.bottom-nav').is_visible(), f'navegacao inferior ausente em {w}'
+            assert not page.locator('.desktop-sidebar').is_visible(), f'sidebar desktop visivel em {w}'
+            assert not page.locator('.desktop-cart').is_visible(), f'carrinho lateral desktop visivel em {w}'
             assert not page.evaluate('document.documentElement.scrollWidth > window.innerWidth'), f'overflow horizontal {w}'
             assert page.locator('.implementation-card').is_visible()
             page.locator('[data-route="products"]').first.click()
@@ -71,7 +74,7 @@ try:
                 assert 'Troco calculado' in page.locator('#cash-change-result').inner_text()
                 page.fill('#customer-name','Joao Paulo')
                 page.fill('#customer-phone','27999999999')
-                page.fill('#customer-notes','Teste V28')
+                page.fill('#customer-notes','Teste V29')
                 page.evaluate("window.__wa=''; window.open=(u)=>{window.__wa=u; return {closed:false}}")
                 page.locator('#finalize-order').click()
                 wa=page.evaluate('window.__wa')
@@ -90,4 +93,4 @@ try:
         browser.close()
 finally:
     server.shutdown()
-print('BROWSER SMOKE PASS V28')
+print('BROWSER SMOKE PASS V29')

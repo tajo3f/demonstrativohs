@@ -1,4 +1,4 @@
-# HS Hortigranjeiro Schulz — Catálogo Digital V28
+# HS Hortigranjeiro Schulz — Catálogo Digital V29
 
 Aplicação web estática/PWA para catálogo e pedidos da nova linha HS.
 

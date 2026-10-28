@@ -19,7 +19,7 @@ const sliceProduct = id => {
 test('estrutura, PWA e nova identidade visual estão válidas', () => {
   for (const id of ['view-home','view-products','view-cart','product-dialog','checkout-dialog','install-dialog']) assert.match(html, new RegExp(`id="${id}"`));
   assert.equal(manifest.display, 'standalone');
-  assert.match(sw, /hs-final-2026-10-26-v28/);
+  assert.match(sw, /hs-final-2026-10-26-v29/);
   for (const file of ['hs-logo-oficial.png','hs-app-icon.png','hs-icon-circular.png','icon-32.png','icon-64.png','icon-180.png','icon-192.png','icon-512.png','favicon.ico']) {
     assert.ok(fs.existsSync(new URL(`../assets/images/${file}`, import.meta.url)), file);
   }
@@ -96,7 +96,7 @@ test('segurança estática e experiência do checkout', () => {
 });
 
 
-test('V28 bloqueia a finalização fora do horário de funcionamento', () => {
+test('V29 mantém o bloqueio da finalização fora do horário de funcionamento', () => {
   assert.ok(js.includes("const BUSINESS_TIME_ZONE = 'America/Sao_Paulo'"));
   assert.ok(js.includes('const BUSINESS_HOURS'));
   assert.ok(js.includes('function orderingAvailability'));
@@ -108,4 +108,16 @@ test('V28 bloqueia a finalização fora do horário de funcionamento', () => {
   assert.ok(css.includes('.checkout-button:disabled'));
   assert.ok(css.includes('[data-ordering-state="closed"]'));
   assert.ok(js.includes("button.disabled = !status.open"));
+});
+
+
+test('V29 mantém a mesma experiência visual e funcional no celular e no computador', () => {
+  assert.ok(css.includes('V29 — PARIDADE CELULAR + DESKTOP E MILHO REPOSICIONADO'));
+  assert.ok(css.includes('.desktop-sidebar,.desktop-cart{display:none!important}'));
+  assert.ok(css.includes('.bottom-nav{'));
+  assert.ok(css.includes('display:grid!important'));
+  assert.ok(css.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'));
+  assert.ok(css.includes('img[src$="milho-verde-3-espigas.webp"]'));
+  assert.ok(html.includes('app.css?v=29'));
+  assert.ok(html.includes('app.js?v=29'));
 });

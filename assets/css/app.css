@@ -1161,3 +1161,137 @@
 .checkout-button:disabled .order-button-status-icon,.checkout-button.is-closed .order-button-status-icon{background:#929894;box-shadow:none}
 .checkout-button:disabled:hover{transform:none}
 @media(max-width:540px){.ordering-status-card{padding:11px 12px}.ordering-status-card strong{font-size:10.5px}.ordering-status-card small{font-size:8.8px}}
+
+
+/* ============================================================
+   V29 — PARIDADE CELULAR + DESKTOP E MILHO REPOSICIONADO
+   A experiência passa a usar a mesma navegação, os mesmos cards,
+   os mesmos modais e o mesmo fluxo em celular e computador.
+   ============================================================ */
+
+/* Remove variações exclusivas de desktop para evitar experiências diferentes. */
+.app-shell{
+  display:block!important;
+  width:min(100%,900px)!important;
+  max-width:900px!important;
+  margin:0 auto!important;
+  background:#fff!important;
+  min-height:calc(100dvh - 30px)!important;
+}
+.desktop-sidebar,.desktop-cart{display:none!important}
+.app-main{
+  width:100%!important;
+  max-width:900px!important;
+  margin:0 auto!important;
+  padding-bottom:calc(66px + var(--safe-bottom))!important;
+  background:#fff!important;
+}
+.app-header{
+  height:64px!important;
+  padding:0 12px!important;
+  max-width:900px!important;
+  margin:0 auto!important;
+}
+.header-logo{width:145px!important;height:50px!important;object-fit:contain!important;object-position:left center!important}
+.bottom-nav{
+  display:grid!important;
+  left:50%!important;
+  right:auto!important;
+  width:min(100%,900px)!important;
+  transform:translateX(-50%)!important;
+  grid-template-columns:repeat(4,1fr)!important;
+}
+.home-wrap,.products-page,.cart-page,.more-page{
+  width:100%!important;
+  max-width:760px!important;
+  margin:0 auto!important;
+  padding:14px 12px 30px!important;
+}
+
+/* Mesmos cards e mesma densidade visual do celular em qualquer tela. */
+.catalog-grid,.home-products.shared-product-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:10px!important;
+}
+.catalog-card{border-radius:17px!important}
+.catalog-image{
+  aspect-ratio:1.05/1!important;
+  padding:8px!important;
+  background:linear-gradient(145deg,#ffffff,#f2f8ee)!important;
+}
+.catalog-image img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+.catalog-body{padding:10px 10px 11px!important;min-height:132px!important}
+.catalog-body h3{font-size:12px!important;line-height:1.18!important;min-height:42px!important;-webkit-line-clamp:3!important}
+.catalog-body small{font-size:8.7px!important;margin:4px 0 7px!important}
+.catalog-price{min-height:42px!important;gap:7px!important;padding-top:6px!important}
+.catalog-price strong{font-size:13px!important;min-height:38px!important}
+.action-host{width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important}
+.catalog-price .action-host>.catalog-quick-add{width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important}
+.catalog-quick-add-symbol{font-size:23px!important}
+.catalog-price .catalog-qty{width:90px!important;min-width:90px!important;height:38px!important;grid-template-columns:29px 32px 29px!important}
+.catalog-qty .catalog-stepper-button{width:29px!important;height:38px!important}
+.catalog-qty>span{width:32px!important;min-width:32px!important}
+
+/* Componentes informativos seguem o empilhamento do celular também no PC. */
+.service-rules-grid,.home-benefits{grid-template-columns:1fr!important}
+.question-options{grid-template-columns:1fr!important}
+.checkout-steps{grid-template-columns:1fr!important}
+.checkout-steps label:nth-last-child(1){grid-column:auto!important}
+.checkout-actions{grid-template-columns:1fr!important}
+.checkout-secondary{order:2!important;min-height:46px!important}
+.checkout-button{order:1!important;min-height:52px!important}
+
+/* Detalhe do produto: mesmo bottom-sheet do celular, inclusive no computador. */
+.product-dialog{
+  width:min(100%,760px)!important;
+  max-height:92dvh!important;
+  border-radius:26px 26px 0 0!important;
+  position:fixed!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:0!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  overflow:auto!important;
+}
+.product-detail{display:block!important;max-height:none!important;overflow:visible!important}
+.detail-image{height:240px!important;min-height:240px!important;max-height:240px!important;padding:12px!important}
+.detail-image img{width:100%!important;height:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important}
+.detail-body{max-height:none!important;overflow:visible!important;padding:17px 16px 20px!important}
+.detail-body h2{font-size:21px!important;margin-right:0!important}
+.detail-price{font-size:22px!important;margin-top:9px!important}
+.detail-description{font-size:11px!important;line-height:1.45!important}
+.detail-benefits{margin:12px 0!important}
+.detail-close{position:absolute!important;right:12px!important;top:12px!important}
+
+/* Milho verde: mais alto e mais evidente em card, home e catálogo. */
+.catalog-image img[src$="milho-verde-3-espigas.webp"],
+.detail-image img[src$="milho-verde-3-espigas.webp"]{
+  object-position:center top!important;
+}
+
+/* Mantém o aplicativo agradável em monitores grandes sem esticar demais a interface. */
+@media(min-width:901px){
+  body{background:#eef1ed!important}
+  .app-shell{box-shadow:0 0 70px rgba(26,36,25,.10)!important}
+}
+@media(max-width:430px){
+  .home-wrap,.products-page,.cart-page,.more-page{padding-left:12px!important;padding-right:12px!important}
+  .catalog-grid,.home-products.shared-product-grid{gap:8px!important}
+  .catalog-body{padding:9px 9px 10px!important;min-height:128px!important}
+  .catalog-body h3{font-size:11.4px!important}
+  .catalog-price strong{font-size:12.2px!important;min-height:36px!important}
+  .action-host{width:36px!important;height:36px!important;min-width:36px!important;min-height:36px!important}
+  .catalog-price .action-host>.catalog-quick-add{width:36px!important;height:36px!important;min-width:36px!important;min-height:36px!important}
+}
+@media(max-width:360px){
+  .catalog-price:has(.catalog-qty){grid-template-columns:1fr!important;gap:4px!important}
+  .catalog-price:has(.catalog-qty) strong{min-height:24px!important}
+  .catalog-price .catalog-qty{justify-self:end!important}
+}
