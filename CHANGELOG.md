@@ -1,3 +1,9 @@
+## V30 — 28/10/2026
+- Atualizados os preços: abacaxi temperado (R$ 8,99), mamão 250 g (R$ 5,99), melão 250 g (R$ 7,99), manga Palmer 250 g (R$ 5,99), kiwi 250 g (R$ 17,35), goiaba 250 g (R$ 7,99) e salada de frutas 200 g (R$ 9,99).
+- Campo de observações do pedido reforçado no checkout para alterações, preferências e instruções de entrega.
+- Identidade visual do app/PWA, ícones de instalação, Apple Touch Icon e favicon atualizados com a nova logomarca oficial enviada pela cliente.
+- Cache da PWA atualizado para V30.
+
 # Changelog
 
 ## V29 — 26/10/2026

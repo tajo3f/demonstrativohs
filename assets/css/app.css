@@ -1295,3 +1295,15 @@
   .catalog-price:has(.catalog-qty) strong{min-height:24px!important}
   .catalog-price .catalog-qty{justify-self:end!important}
 }
+
+
+/* V30 — observações do pedido + identidade PWA oficial */
+.checkout-notes-field textarea{
+  min-height:108px;
+  resize:vertical;
+  line-height:1.45;
+}
+.checkout-notes-field .field-hint{
+  display:block;
+  margin-top:6px;
+}

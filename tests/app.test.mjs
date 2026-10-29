@@ -19,7 +19,7 @@ const sliceProduct = id => {
 test('estrutura, PWA e nova identidade visual estão válidas', () => {
   for (const id of ['view-home','view-products','view-cart','product-dialog','checkout-dialog','install-dialog']) assert.match(html, new RegExp(`id="${id}"`));
   assert.equal(manifest.display, 'standalone');
-  assert.match(sw, /hs-final-2026-10-26-v29/);
+  assert.match(sw, /hs-final-2026-10-28-v30/);
   for (const file of ['hs-logo-oficial.png','hs-app-icon.png','hs-icon-circular.png','icon-32.png','icon-64.png','icon-180.png','icon-192.png','icon-512.png','favicon.ico']) {
     assert.ok(fs.existsSync(new URL(`../assets/images/${file}`, import.meta.url)), file);
   }
@@ -61,8 +61,8 @@ test('embalagens industriais aparecem apenas nos produtos configurados pela plan
 });
 
 test('salada de frutas continua personalizável com até 3 frutas e opcionais', () => {
-  assert.match(js, /Salada de frutas 250 g/);
-  assert.match(sliceProduct('salada-de-frutas-250g'), /"price": 12\.49/);
+  assert.match(js, /Salada de frutas 200 g/);
+  assert.match(sliceProduct('salada-de-frutas-250g'), /"price": 9\.99/);
   assert.match(js, /maxFruits/);
   for (const fruta of ['Uva preta sem semente','Uva verde sem semente','Manga','Kiwi','Morango','Mamão','Melão','Maçã','Banana prata']) assert.ok(js.includes(fruta), fruta);
   for (const opcional of ['Mel','Granola','Leite em pó','Leite condensado']) assert.ok(js.includes(opcional), opcional);
@@ -96,7 +96,7 @@ test('segurança estática e experiência do checkout', () => {
 });
 
 
-test('V29 mantém o bloqueio da finalização fora do horário de funcionamento', () => {
+test('V30 mantém o bloqueio da finalização fora do horário de funcionamento', () => {
   assert.ok(js.includes("const BUSINESS_TIME_ZONE = 'America/Sao_Paulo'"));
   assert.ok(js.includes('const BUSINESS_HOURS'));
   assert.ok(js.includes('function orderingAvailability'));
@@ -111,13 +111,34 @@ test('V29 mantém o bloqueio da finalização fora do horário de funcionamento'
 });
 
 
-test('V29 mantém a mesma experiência visual e funcional no celular e no computador', () => {
+test('V30 mantém a mesma experiência visual e funcional no celular e no computador', () => {
   assert.ok(css.includes('V29 — PARIDADE CELULAR + DESKTOP E MILHO REPOSICIONADO'));
   assert.ok(css.includes('.desktop-sidebar,.desktop-cart{display:none!important}'));
   assert.ok(css.includes('.bottom-nav{'));
   assert.ok(css.includes('display:grid!important'));
   assert.ok(css.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'));
   assert.ok(css.includes('img[src$="milho-verde-3-espigas.webp"]'));
-  assert.ok(html.includes('app.css?v=29'));
-  assert.ok(html.includes('app.js?v=29'));
+  assert.ok(html.includes('app.css?v=30'));
+  assert.ok(html.includes('app.js?v=30'));
+});
+
+
+test('V30 atualiza preços e pesos das frutas solicitadas e mantém observações no checkout', () => {
+  const expected = {
+    'abacaxi-limao-sal-rosa-300g': ['"price": 8.99', '"weight": "300 g"'],
+    'mamao-picado-250g': ['"price": 5.99', '"weight": "250 g"'],
+    'melao-picado-250g': ['"price": 7.99', '"weight": "250 g"'],
+    'manga-palmer-cubos-250g': ['"price": 5.99', '"weight": "250 g"'],
+    'kiwi-fatiado-300g': ['"price": 17.35', '"weight": "250 g"', '"name": "Kiwi fatiado 250 g"'],
+    'goiaba-fatiada-300g': ['"price": 7.99', '"weight": "250 g"', '"name": "Goiaba fatiada 250 g"'],
+    'salada-de-frutas-250g': ['"price": 9.99', '"weight": "200 g"', '"name": "Salada de frutas 200 g"']
+  };
+  for (const [id, snippets] of Object.entries(expected)) {
+    const block = sliceProduct(id);
+    for (const snippet of snippets) assert.ok(block.includes(snippet), `${id}: ${snippet}`);
+  }
+  assert.match(html, /id="customer-notes"/);
+  assert.ok(html.includes('Observações do pedido'));
+  assert.ok(js.includes("const notes = $('#customer-notes').value.trim() || 'Sem observações.';"));
+  assert.ok(js.includes("'*OBS*'"));
 });

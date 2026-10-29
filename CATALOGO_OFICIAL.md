@@ -1,4 +1,4 @@
-# Catálogo oficial HS — V29
+# Catálogo oficial HS — V30
 
 Atualizado em 26/10/2026 conforme a planilha e as orientações mais recentes da HS.
 
@@ -7,7 +7,7 @@ Atualizado em 26/10/2026 conforme a planilha e as orientações mais recentes da
 - **Milho verde com 3 espigas** — 3 espigas — R$ 4,99
 - **Laranja pera — 2 frutas** — Aprox, 500 g — R$ 5,99
 - **Mix de forno 700 g** — 700 g — R$ 15,99 | Industrial: 5 kg — R$ 109,20 (PJ/CNPJ; 15% já aplicado)
-- **Salada de frutas 250 g** — 250 g — R$ 12,49
+- **Salada de frutas 200 g** — 200 g — R$ 9,99
 - **Quiabo fatiado 500 g** — 500 g — R$ 9,99 | Industrial: 5 kg — R$ 94,87 (PJ/CNPJ; 15% já aplicado)
 - **Abobrinha em lâminas para lasanha 500 g** — 500 g — R$ 4,99 | Industrial: 5 kg — R$ 46,00 (PJ/CNPJ; 15% já aplicado)
 - **Abobrinha fatiada em rodelas 500 g** — 500 g — R$ 4,99 | Industrial: 5 kg — R$ 46,00 (PJ/CNPJ; 15% já aplicado)
@@ -22,7 +22,7 @@ Atualizado em 26/10/2026 conforme a planilha e as orientações mais recentes da
 - **Chuchu em corte paysanne 500 g** — 500 g — R$ 3,99 | Industrial: 5 kg — R$ 29,61 (PJ/CNPJ; 15% já aplicado)
 - **Batata-doce rosada com casca em rodelas 500 g** — 500 g — R$ 9,35
 - **Melancia em cubos 250 g** — 250 g — R$ 3,99
-- **Goiaba fatiada 300 g** — 300 g — R$ 5,49
+- **Goiaba fatiada 250 g** — 250 g — R$ 7,99
 - **Combinado de cenoura e vagem em cubos pequenos 500 g** — 500 g — R$ 9,35 | Industrial: 5 kg — R$ 86,25 (PJ/CNPJ; 15% já aplicado)
 - **Kit Primavera 01: couve-flor, brócolis, batata-inglesa e cenoura 500 g** — 500 g — R$ 13,60 | Industrial: 5 kg — R$ 128,80 (PJ/CNPJ; 15% já aplicado)
 - **Beterraba em cubos pequenos 500 g** — 500 g — R$ 5,99 | Industrial: 5 kg — R$ 30,00 (PJ/CNPJ; 15% já aplicado)
@@ -31,11 +31,11 @@ Atualizado em 26/10/2026 conforme a planilha e as orientações mais recentes da
 - **Kit Primavera 02: couve-flor, brócolis, vagem e cenoura 500 g** — 500 g — R$ 13,60 | Industrial: 5 kg — R$ 128,80 (PJ/CNPJ; 15% já aplicado)
 - **Kit Buquê: couve e brócolis 500 g** — 500 g — R$ 9,99 | Industrial: 5 kg — R$ 92,00 (PJ/CNPJ; 15% já aplicado)
 - **Inhame-chinês em cubos 500 g** — 500 g — R$ 8,99 | Industrial: 5 kg — R$ 83,95 (PJ/CNPJ; 15% já aplicado)
-- **Kiwi fatiado 300 g** — 300 g — R$ 15,60
-- **Manga Palmer em cubos 250 g** — 250 g — R$ 3,99
-- **Melão picado 250 g** — 250 g — R$ 4,99
-- **Mamão picado 250 g** — 250 g — R$ 4,99
-- **Abacaxi temperado com limão e sal rosa 300 g** — 300 g — R$ 6,99
+- **Kiwi fatiado 250 g** — 250 g — R$ 17,35
+- **Manga Palmer em cubos 250 g** — 250 g — R$ 5,99
+- **Melão picado 250 g** — 250 g — R$ 7,99
+- **Mamão picado 250 g** — 250 g — R$ 5,99
+- **Abacaxi temperado com limão e sal rosa 300 g** — 300 g — R$ 8,99
 - **Kit Maionese: cenoura, vagem, chuchu e batata-inglesa 500 g** — 500 g — R$ 8,99 | Industrial: 5 kg — R$ 80,50 (PJ/CNPJ; 15% já aplicado)
 - **Kit Yakisoba 500 g** — 500 g — R$ 12,99 | Industrial: 5 kg — R$ 106,60 (PJ/CNPJ; 15% já aplicado)
 - **Inhame cará 500 g** — 500 g — R$ 8,99 | Industrial: 5 kg — R$ 77,90 (PJ/CNPJ; 15% já aplicado)

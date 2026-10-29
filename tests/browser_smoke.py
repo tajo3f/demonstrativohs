@@ -1,4 +1,4 @@
-"""Smoke test da V29 em Chromium real."""
+"""Smoke test da V30 em Chromium real."""
 from pathlib import Path
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from threading import Thread
@@ -7,8 +7,8 @@ from urllib.parse import unquote
 from playwright.sync_api import sync_playwright
 
 ROOT=Path(__file__).resolve().parents[1]
-server=ThreadingHTTPServer(('128.0.0.1',0),partial(SimpleHTTPRequestHandler,directory=str(ROOT)))
-url=f'http://128.0.0.1:{server.server_port}/'
+server=ThreadingHTTPServer(('127.0.0.1',0),partial(SimpleHTTPRequestHandler,directory=str(ROOT)))
+url=f'http://127.0.0.1:{server.server_port}/'
 Thread(target=server.serve_forever,daemon=True).start()
 errors=[]
 try:
@@ -41,7 +41,7 @@ try:
                 assert page.locator('[data-fruit-counter]').inner_text().startswith('3/3')
                 assert fruits.nth(3).is_disabled()
                 page.locator('[data-addon-option]').first.check()
-                assert '15,98' in page.locator('[data-detail-price]').inner_text()
+                assert '13,48' in page.locator('[data-detail-price]').inner_text()
                 page.locator('.detail-add').click()
 
                 # Seleta + milho; preço base atualizado para R$ 8,90.
@@ -74,7 +74,7 @@ try:
                 assert 'Troco calculado' in page.locator('#cash-change-result').inner_text()
                 page.fill('#customer-name','Joao Paulo')
                 page.fill('#customer-phone','27999999999')
-                page.fill('#customer-notes','Teste V29')
+                page.fill('#customer-notes','Retirar cebola e entregar no portão lateral')
                 page.evaluate("window.__wa=''; window.open=(u)=>{window.__wa=u; return {closed:false}}")
                 page.locator('#finalize-order').click()
                 wa=page.evaluate('window.__wa')
@@ -93,4 +93,4 @@ try:
         browser.close()
 finally:
     server.shutdown()
-print('BROWSER SMOKE PASS V29')
+print('BROWSER SMOKE PASS V30')

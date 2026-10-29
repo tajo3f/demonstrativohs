@@ -16,7 +16,7 @@
   <link rel="icon" type="image/png" href="./assets/images/icon-64.png" sizes="64x64">
   <link rel="icon" type="image/png" href="./assets/images/icon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="./assets/images/icon-180.png">
-  <link rel="stylesheet" href="./assets/css/app.css?v=29">
+  <link rel="stylesheet" href="./assets/css/app.css?v=30">
   <title>HS Hortigranjeiro Schulz | Pedidos</title>
 </head>
 <body>
@@ -204,7 +204,7 @@
         <label><span>Forma de pagamento</span><select id="customer-payment"><option>Combinar</option><option>Pix</option><option>Dinheiro</option><option>Débito</option><option>Crédito</option></select></label>
         <label class="checkout-full cash-change-field" id="cash-change-field" hidden><span>Troco para qual valor?</span><input id="customer-cash-given" inputmode="decimal" autocomplete="off" placeholder="Ex.: 100,00"><small class="field-hint" id="cash-change-hint">Informe o valor que será entregue em dinheiro. O troco será calculado automaticamente.</small><strong class="cash-change-result" id="cash-change-result" hidden></strong></label>
         <label class="checkout-full delivery-address-field" id="delivery-address-field" hidden><span>Endereço para entrega</span><input id="customer-address" autocomplete="street-address" placeholder="Rua, número, bairro e referência"><small class="field-hint">Este campo aparece somente quando a opção “Entrega” está selecionada.</small></label>
-        <label class="checkout-full"><span>Observações</span><textarea id="customer-notes" rows="3" placeholder="Alguma observação?"></textarea></label>
+        <label class="checkout-full checkout-notes-field"><span>Observações do pedido <em>opcional</em></span><textarea id="customer-notes" rows="4" placeholder="Ex.: retirar algum item, ponto de referência, instrução de entrega ou outra observação."></textarea><small class="field-hint">Use este espaço para informar alterações, preferências ou orientações importantes para o preparo e a entrega.</small></label>
       </div>
       <div class="checkout-preview" id="checkout-preview"></div>
       <div class="checkout-actions">
@@ -229,6 +229,6 @@
   </dialog>
 
   <div class="toast" id="toast" hidden></div>
-  <script src="./assets/js/app.js?v=29" defer></script>
+  <script src="./assets/js/app.js?v=30" defer></script>
 </body>
 </html>
