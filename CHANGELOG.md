@@ -1,3 +1,9 @@
+## V31 — 29/10/2026
+
+- Nova logomarca oficial fornecida pela cliente aplicada ao cabeçalho, menu lateral, telas internas e áreas de instalação.
+- Ícones do PWA atualizados para Android, iPhone/iPad e computador, incluindo Apple Touch Icon, favicon e ícones maskable.
+- Cache da PWA versionado para V31 para evitar que aparelhos instalados continuem exibindo a identidade anterior.
+
 ## V30 — 28/10/2026
 - Atualizados os preços: abacaxi temperado (R$ 8,99), mamão 250 g (R$ 5,99), melão 250 g (R$ 7,99), manga Palmer 250 g (R$ 5,99), kiwi 250 g (R$ 17,35), goiaba 250 g (R$ 7,99) e salada de frutas 200 g (R$ 9,99).
 - Campo de observações do pedido reforçado no checkout para alterações, preferências e instruções de entrega.

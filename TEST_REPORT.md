@@ -1,32 +1,19 @@
-# Relatório de validação — V30
+# Relatório de validação — V31
 
-Data: 28/10/2026
+Data: 29/10/2026
 
 ## Validações concluídas
 - `node --check assets/js/app.js`: aprovado.
 - `node --test tests/app.test.mjs`: 11/11 testes aprovados.
 - Verificação de 40 imagens de produtos locais: aprovado, sem arquivos ausentes.
-- Verificação dos ícones PWA/favicons e identidade visual: aprovado.
-- Verificação via servidor HTTP local com `curl`: index, JavaScript e logomarca retornaram HTTP 200.
-- Varredura de URLs externas: somente o endpoint público `wa.me` usado para envio do pedido.
-- Validação das regras de entrega, retirada, CNPJ, atacado e embalagens industriais no código: aprovado.
+- Nova logomarca oficial aplicada ao cabeçalho, áreas internas, instalação do app e elementos de identidade visual.
+- Ícones PWA atualizados para Android, iPhone/iPad e computador: 180, 192 e 512 px, além de favicon 32/64 e ICO.
+- Manifesto PWA atualizado com ícones `any` e `maskable` para reduzir cortes em ícones adaptativos do Android.
+- Cache da PWA atualizado para V31 e arquivos de identidade versionados para evitar reaproveitamento da marca anterior.
+- Verificação das referências locais do HTML: nenhuma referência ausente.
+- Regras de catálogo, carrinho, checkout, WhatsApp, horários, entrega, retirada e CNPJ preservadas pelos testes existentes.
 
 ## Observação sobre teste visual automatizado
-O smoke test com Chromium/Playwright está incluído no repositório, porém o navegador headless deste ambiente bloqueou navegação local por política administrativa (`ERR_BLOCKED_BY_ADMINISTRATOR`). Por isso, não foi registrado como teste visual executado neste ambiente.
+O smoke test com Chromium/Playwright está incluído no repositório, porém o navegador headless deste ambiente bloqueou a navegação local por política administrativa (`ERR_BLOCKED_BY_ADMINISTRATOR`). Por isso, ele não foi registrado como teste visual concluído neste ambiente.
 
-Antes da publicação definitiva, recomenda-se abrir a V30 em um celular real e em um desktop apenas para a conferência visual final de produção.
-
-## V30 — bloqueio por horário
-- Teste estático confirma configuração de fuso e expediente.
-- Teste confirma existência dos indicadores de disponibilidade em início, carrinho e checkout.
-- Teste confirma que os botões de finalização recebem estado `disabled` quando o atendimento está fechado.
-- Smoke test em Chromium não pôde ser executado neste ambiente por bloqueio administrativo de navegação local; validação de sintaxe e 11 testes automatizados passaram.
-
-- Paridade visual: layout móvel aplicado também ao desktop; sidebar/carrinho lateral desativados na experiência final.
-- Milho verde: imagem reenquadrada e destacada.
-
-## Atualizações validadas na V30
-- Novos preços e pesos de frutas conferidos no catálogo.
-- Campo de observações do pedido mantido no WhatsApp e destacado no checkout.
-- Nova logomarca aplicada aos ícones PWA, Apple Touch Icon, favicon e identidade do aplicativo instalado.
-- Cache da PWA atualizado para evitar permanência de ícones e arquivos antigos após a publicação.
+Para aparelhos que já tinham uma versão anterior instalada, o sistema agora usa arquivos versionados V31. Caso algum Android ou iPhone ainda mantenha o ícone antigo por cache do sistema operacional, remova o atalho/app instalado e instale novamente após a publicação da V31.
