@@ -1,0 +1,14 @@
+HS HORTIGRANJEIRO SCHULZ — V33 | 05/11/2026
+
+- Banner da tela inicial substituído pela arte oficial recebida, preservando seu conteúdo e proporções.
+- Botão "Ver produtos" reposicionado abaixo de "Produtos sempre frescos" na visualização ampla.
+- No celular, botão posicionado em faixa própria abaixo da arte para não encobrir palavras.
+- Faixa informativa alterada para "SISTEMA EM PERÍODO DE TESTE — Nova operação digital HS em fase de implantação e ajustes finais."
+- Cartão informativo da página inicial padronizado com o mesmo status.
+- Imagens adaptativas otimizadas para celular, tablet e desktop.
+- Cache do aplicativo atualizado para forçar a renovação da versão.
+- Catálogo, preços, carrinho, WhatsApp e regras comerciais da V32 preservados.
+
+PUBLICAÇÃO
+Publicar a pasta dist/ em hospedagens estáticas, ou o projeto na raiz onde houver build configurado.
+Em PWA já instalado, pode ser preciso fechar e abrir o aplicativo ou atualizar a página para ativar o novo cache.
