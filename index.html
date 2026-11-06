@@ -16,7 +16,7 @@
   <link rel="icon" type="image/png" href="./assets/images/icon-v31-64.png" sizes="64x64">
   <link rel="icon" type="image/png" href="./assets/images/icon-v31-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="./assets/images/icon-v31-180.png">
-  <link rel="stylesheet" href="./assets/css/app.css?v=33">
+  <link rel="stylesheet" href="./assets/css/app.css?v=34">
   <title>HS Hortigranjeiro Schulz | Pedidos</title>
 </head>
 <body>
@@ -40,7 +40,7 @@
 
     <main class="app-main" id="main">
       <header class="app-header">
-        <button class="header-back" id="header-back" type="button" aria-label="Voltar" hidden>‹</button>
+        <button class="header-back" id="header-back" type="button" aria-label="Voltar" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 18 9 12l6-6"/></svg></button>
         <img src="./assets/images/hs-logo-oficial-v31.png" class="header-logo" alt="HS Hortigranjeiro Schulz">
         <div class="header-actions">
           <button class="icon-button" id="install-header" type="button" aria-label="Instalar aplicativo" title="Instalar aplicativo">
@@ -175,10 +175,10 @@
   </div>
 
   <nav class="bottom-nav" aria-label="Navegação principal">
-    <button class="bottom-link active" data-route="home"><span>⌂</span><b>Início</b></button>
-    <button class="bottom-link" data-route="products"><span>▦</span><b>Produtos</b></button>
-    <button class="bottom-link bottom-cart-link" data-route="cart"><span>🛒</span><i id="bottom-count">0</i><b>Carrinho</b></button>
-    <button class="bottom-link" data-route="more"><span>☰</span><b>Mais</b></button>
+    <button class="bottom-link active" data-route="home"><span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span><b>Início</b></button>
+    <button class="bottom-link" data-route="products"><span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></svg></span><b>Produtos</b></button>
+    <button class="bottom-link bottom-cart-link" data-route="cart"><span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M2 3h3l2.5 12h11.3l2.1-8H6"/></svg></span><i id="bottom-count">0</i><b>Carrinho</b></button>
+    <button class="bottom-link" data-route="more"><span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span><b>Mais</b></button>
   </nav>
 
   <dialog class="product-dialog" id="product-dialog">

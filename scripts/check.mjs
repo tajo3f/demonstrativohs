@@ -7,7 +7,7 @@ const scan=p=>{for(const e of readdirSync(p,{withFileTypes:true})){const f=join(
 scan('assets/js');scan('scripts');scan('tests');
 for(const f of files) execFileSync(process.execPath,['--check',f],{stdio:'pipe'});
 const html=readFileSync('index.html','utf8');
-for(const ref of ['./assets/css/app.css?v=33','./assets/js/app.js?v=33','./assets/images/hero-hs-v33-1672.webp','./manifest.webmanifest']) {
+for(const ref of ['./assets/css/app.css?v=34','./assets/js/app.js?v=33','./assets/images/hero-hs-v33-1672.webp','./manifest.webmanifest']) {
   if(!html.includes(ref))throw Error(`HTML sem referência obrigatória: ${ref}`);
 }
 for(const file of ['sw.js','manifest.webmanifest','privacidade.html','termos.html','politica-de-privacidade.html']) {

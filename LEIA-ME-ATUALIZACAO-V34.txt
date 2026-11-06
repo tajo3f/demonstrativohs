@@ -1,0 +1,34 @@
+HS HORTIGRANJEIRO SCHULZ — CORREÇÃO V34 (PATCH DA V33)
+
+ESTE ZIP CONTÉM APENAS ARQUIVOS MODIFICADOS. NÃO É O SITE COMPLETO.
+A V33 deve permanecer instalada, com todas as imagens e scripts existentes.
+
+OPÇÃO A — PUBLICAÇÃO PELO PROJETO / GITHUB / VERCEL COM BUILD
+Substitua no projeto os seguintes caminhos pelos do ZIP:
+- index.html
+- assets/css/app.css
+- sw.js
+- scripts/check.mjs (checagem de build)
+- tests/app.test.mjs (testes de regressão)
+Depois rode seu processo de publicação normalmente. Se necessário, gere uma nova dist.
+
+OPÇÃO B — PUBLICAÇÃO DIRETA DA PASTA DIST
+Se você publica diretamente a pasta dist ou faz upload de arquivos estáticos:
+- dist/index.html
+- dist/assets/css/app.css
+- dist/sw.js
+Copie os arquivos de DENTRO de dist/ para a pasta publicada, respeitando caminhos.
+
+NÃO é necessário reenviar imagens, produtos, JS do carrinho, logomarcas ou manifest.
+
+V34: botão 'Ver produtos' pequeno, sobreposto à mesma arte no PC e celular,
+abaixo de 'Produtos sempre frescos'; navegação com ícones SVG alinhados,
+símbolo + centralizado, seta Voltar centralizada, correção de elementos hidden.
+O PWA teve versão de cache atualizada.
+
+TESTES: 13 testes Node e 8 larguras no Chromium (320 a 1440 px) aprovados.
+Os testes Chromium foram executados com recursos locais incorporados em página,
+pois a navegação localhost está restrita neste ambiente de execução.
+
+OBS.: para quem já instalou o app, pode ser necessário atualizar e reabrir
+para que o service worker renove o cache da versão 34.

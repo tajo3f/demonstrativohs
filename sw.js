@@ -1,11 +1,11 @@
-const CACHE='hs-final-2026-11-05-v33';
+const CACHE='hs-final-2026-11-05-v34';
 const ASSETS=[
   './',
   './index.html',
   './privacidade.html',
   './termos.html',
   './assets/css/app.css',
-  './assets/css/app.css?v=33',
+  './assets/css/app.css?v=34',
   './assets/js/app.js',
   './assets/js/app.js?v=33',
   './manifest.webmanifest',

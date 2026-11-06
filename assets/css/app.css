@@ -1314,8 +1314,7 @@
 @media(max-width:430px){.promo-banner-cta{min-height:24px!important;padding:0 9px!important;font-size:7px!important}}
 
 /* ==============================================================
-   V33 — Novo banner oficial HS + CTA abaixo dos benefícios
-   A arte é exibida inteira, sem cortes ou imagens sobrepostas.
+   V34 — ajuste mobile do banner HS + alinhamento consistente
    ============================================================== */
 .promo-banner-v33 {
   container-type:inline-size;
@@ -1327,40 +1326,134 @@
   height:auto;
   aspect-ratio:1672 / 941;
   object-fit:contain;
+  object-position:center;
 }
-/* No desktop, botão diretamente abaixo de "Produtos sempre frescos",
-   em área verde vazia do banner original. */
+/* Mesma imagem e CTA sobreposto em todas as telas, abaixo dos
+   três benefícios impressos na arte; nunca criar barra extra. */
 .promo-banner-v33 .promo-banner-cta {
   position:absolute!important;
   left:5.6%!important;
   bottom:3.5%!important;
-  top:auto!important;
   right:auto!important;
+  top:auto!important;
+  margin:0!important;
   transform:none;
   min-height:clamp(25px,3.3cqw,42px)!important;
   padding:0 clamp(12px,1.4cqw,20px)!important;
   font-size:clamp(10px,1.1cqw,14px)!important;
   line-height:1.1!important;
   gap:7px!important;
+  white-space:nowrap;
   background:linear-gradient(110deg,#75df19,#41b909)!important;
-  border:1px solid rgba(255,255,255,.2)!important;
+  border:1px solid rgba(255,255,255,.25)!important;
   border-radius:999px!important;
   box-shadow:0 8px 18px rgba(3,46,13,.22)!important;
 }
-.promo-banner-v33 .promo-banner-cta:hover {transform:translateY(-2px)}
-/* Celulares: botão em faixa própria abaixo da imagem para jamais
-   tampar legendas incorporadas à arte (inclusive no iPhone SE). */
+.promo-banner-v33 .promo-banner-cta:hover{transform:translateY(-2px)}
+/* Em celulares, manter sobre a parte verde inferior da própria imagem.
+   Dimensões proporcionais ao banner, sem tocar em textos ou ícones. */
 @media (max-width:640px) {
   .promo-banner-v33 .promo-banner-cta {
-    position:relative!important;
-    left:auto!important;
+    position:absolute!important;
+    left:5.6%!important;
     right:auto!important;
-    bottom:auto!important;
     top:auto!important;
-    margin:10px 0 12px 5.6%!important;
-    min-height:36px!important;
-    padding:0 17px!important;
-    font-size:12px!important;
+    bottom:.8%!important;
+    margin:0!important;
+    min-height:clamp(16px,4.6cqw,23px)!important;
+    height:clamp(16px,4.6cqw,23px)!important;
+    padding:0 clamp(6px,1.8cqw,10px)!important;
+    font-size:clamp(8px,2.2cqw,9px)!important;
+    gap:clamp(3px,1cqw,5px)!important;
+    box-shadow:0 3px 9px rgba(3,46,13,.25)!important;
   }
-  .promo-banner-v33 {background:#064923}
+  .promo-banner-v33 .promo-banner-cta span{
+    font-size:1.1em;
+    line-height:1;
+  }
 }
+/* Ícones SVG geometricamente alinhados no centro da navegação. */
+.bottom-link{
+  display:flex!important;
+  flex-direction:column;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:3px!important;
+  text-align:center!important;
+  padding:3px 2px!important;
+  line-height:1.2;
+}
+.bottom-nav-icon{
+  flex:0 0 24px;
+  display:grid!important;
+  place-items:center!important;
+  width:24px;
+  height:24px;
+  line-height:0!important;
+}
+.bottom-nav-icon svg{
+  width:21px;
+  height:21px;
+  display:block;
+  overflow:visible;
+}
+.bottom-link>b{
+  display:block;
+  width:100%;
+  line-height:1.25;
+  text-align:center;
+}
+.header-back{
+  display:grid;
+  place-items:center;
+  padding:0;
+}
+.header-back svg{
+  display:block;
+  width:22px;
+  height:22px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.icon-button{display:grid;place-items:center;padding:0}
+.icon-button svg{display:block}
+/* Desenha o sinal de adicionar com duas barras centradas,
+   removendo o deslocamento ótico do caractere tipográfico. */
+.catalog-quick-add-symbol{
+  position:relative;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  font-size:0!important;
+  line-height:0!important;
+  transform:none!important;
+}
+.catalog-quick-add-symbol::before,
+.catalog-quick-add-symbol::after{
+  content:"";
+  position:absolute;
+  top:50%;left:50%;
+  width:16px;
+  height:2.5px;
+  border-radius:3px;
+  background:currentColor;
+  transform:translate(-50%,-50%);
+}
+.catalog-quick-add-symbol::after{
+  transform:translate(-50%,-50%) rotate(90deg);
+}
+.catalog-stepper-button,.line-stepper button,.detail-stepper button{
+  display:grid!important;
+  place-items:center!important;
+  padding:0!important;
+  line-height:1!important;
+}
+.catalog-stepper-button span{display:block;line-height:1;transform:translateY(-.5px)}
+/* Botão e badge do carrinho permanecem visíveis e centralizados. */
+.bottom-cart-link i{display:grid;place-items:center;line-height:1}
+
+/* Atributo hidden sempre prevalece sobre os layouts grid/flex. */
+[hidden]{display:none!important}
