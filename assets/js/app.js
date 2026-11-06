@@ -145,7 +145,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 94.87,
+                "price": 98.82,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -174,7 +174,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 46.0,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -203,7 +203,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 46.0,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -232,7 +232,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 46.0,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -261,7 +261,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 46.0,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -331,7 +331,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 46.0,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -389,7 +389,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 49.45,
+                "price": 34.62,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -447,7 +447,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 29.61,
+                "price": 16.79,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -464,7 +464,24 @@
         "weight": "500 g",
         "image": "./assets/images/batata-doce-rosada-rodelas-500g.webp",
         "badge": "Rodelas",
-        "description": "Batata-doce rosada com casca, cortada em rodelas e pronta para assar ou cozinhar."
+        "description": "Batata-doce rosada com casca, cortada em rodelas e pronta para assar ou cozinhar.",
+        "packageChoices": [
+            {
+                "id": "varejo",
+                "label": "Embalagem padrão • 500 g",
+                "price": 9.35,
+                "weight": "500 g",
+                "summary": "Embalagem padrão • 500 g"
+            },
+            {
+                "id": "industrial",
+                "label": "Embalagem industrial • 5 kg",
+                "price": 60.49,
+                "weight": "5 kg",
+                "summary": "Embalagem industrial • 5 kg • preço exclusivo PJ/CNPJ (tabela 5 kg 15%)",
+                "industrial": true
+            }
+        ]
     },
     {
         "id": "melancia-cubos-250g",
@@ -570,7 +587,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 30.0,
+                "price": 23.69,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -715,7 +732,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 83.95,
+                "price": 83.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -769,6 +786,18 @@
         "image": "./assets/images/mamao-picado-250g.webp",
         "badge": "Picado",
         "description": "Mamão fresco picado, pronto para consumir."
+    },
+    {
+        "id": "abacaxi-sem-tempero-250g",
+        "name": "Abacaxi sem tempero 250 g",
+        "shortName": "Abacaxi sem tempero",
+        "category": "frutas",
+        "categoryLabel": "Frutas",
+        "price": 5.99,
+        "weight": "250 g",
+        "image": "./assets/images/abacaxi-em-cubos-250g.webp",
+        "badge": "Natural",
+        "description": "Abacaxi cortado em cubos, sem tempero. Embalagem de 250 g."
     },
     {
         "id": "abacaxi-limao-sal-rosa-300g",
@@ -863,7 +892,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 77.9,
+                "price": 83.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
                 "industrial": true
@@ -1622,6 +1651,9 @@
   const lineDiscount = (product, quantity, id = product?.id) => qualifiesWholesale(product, quantity, id) ? lineBaseTotal(product, quantity, id) * 0.15 : 0;
   const checkoutItemsSubtotal = () => PRODUCTS.filter(product => cart[product.id]).reduce((sum, product) => sum + lineBaseTotal(product, cart[product.id], product.id), 0);
   const checkoutDiscountTotal = () => PRODUCTS.filter(product => cart[product.id]).reduce((sum, product) => sum + lineDiscount(product, cart[product.id], product.id), 0);
+  const DELIVERY_MINIMUM = 89.90;
+  const deliveryEligible = () => $('#customer-delivery')?.value !== 'Entrega' || (checkoutItemsSubtotal() - checkoutDiscountTotal()) >= DELIVERY_MINIMUM - 0.0001;
+  const deliveryMissing = () => Math.max(0, DELIVERY_MINIMUM - (checkoutItemsSubtotal() - checkoutDiscountTotal()));
   const deliveryFee = () => $('#customer-delivery')?.value === 'Entrega' ? 10 : 0;
   const checkoutGrandTotal = () => checkoutItemsSubtotal() - checkoutDiscountTotal() + deliveryFee();
   const hasIndustrialItems = () => PRODUCTS.some(product => cart[product.id] && isIndustrialPackage(product, product.id));
@@ -1786,6 +1818,7 @@
     const preview = $('#checkout-preview');
     if (preview) preview.textContent = checkoutText().replace(/\*/g, '');
     updateCashChangeResult();
+    if ($('#customer-delivery')?.value === 'Entrega') syncDeliveryRules();
   }
 
   function syncCustomerTypeFields({ focus = false } = {}) {
@@ -1804,7 +1837,7 @@
     const box = $('#delivery-rules');
     if (!box) return;
     if (method === 'Entrega') {
-      box.innerHTML = '<strong>Entrega • R$ 10,00</strong><span>Atendimento: Centro, São Luís e Vila Jetibá até a escola. Entregas às segundas e sextas-feiras. Para segunda-feira, faça o pedido até sexta-feira, às 9h. Para sexta-feira, faça o pedido até quarta-feira, às 9h.</span>';
+      box.innerHTML = `<strong>Entrega • R$ 10,00 • Pedido mínimo R$ 89,90 em produtos</strong><span>${deliveryEligible() ? 'Valor mínimo atingido. ' : `Faltam ${money(deliveryMissing())} em produtos para liberar a entrega. `}Atendimento: Centro, São Luís e Vila Jetibá até a escola. Entregas às segundas e sextas-feiras. Para segunda-feira, faça o pedido até sexta-feira, às 9h. Para sexta-feira, faça o pedido até quarta-feira, às 9h.</span>`;
     } else if (method === 'Retirada') {
       box.innerHTML = '<strong>Retirada no HS Hortigranjeiro Schulz</strong><span>Faça o pedido com 48 horas de antecedência. Pedidos retirados não têm taxa de entrega.</span>';
     } else {
@@ -1878,6 +1911,11 @@
     if (phone && phoneDigits.length < 10) {
       $('#customer-phone').focus();
       toast('Revise o telefone informado ou deixe o campo em branco.');
+      return;
+    }
+    if (!deliveryEligible()) {
+      toast(`Para entrega, adicione mais ${money(deliveryMissing())} em produtos. Pedido mínimo: R$ 89,90 (sem a taxa).`);
+      syncDeliveryRules();
       return;
     }
     if (deliveryMethod === 'Entrega' && !address) {
