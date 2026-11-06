@@ -19,16 +19,16 @@ const sliceProduct = id => {
 test('estrutura, PWA e nova identidade visual estão válidas', () => {
   for (const id of ['view-home','view-products','view-cart','product-dialog','checkout-dialog','install-dialog']) assert.match(html, new RegExp(`id="${id}"`));
   assert.equal(manifest.display, 'standalone');
-  assert.match(sw, /hs-final-2026-10-29-v31/);
+  assert.match(sw, /hs-final-2026-11-05-v33/);
   for (const file of ['hs-logo-oficial-v31.png','hs-app-icon-v31.png','hs-icon-circular-v31.png','icon-v31-32.png','icon-v31-64.png','icon-v31-180.png','icon-v31-192.png','icon-v31-512.png','favicon-v31.ico']) {
     assert.ok(fs.existsSync(new URL(`../assets/images/${file}`, import.meta.url)), file);
   }
-  assert.ok(html.includes('Sistema em fase de implantação'));
+  assert.ok(html.includes('Sistema em período de teste'));
 });
 
-test('catálogo mantém 40 produtos únicos com imagens locais', () => {
-  assert.equal(productImages.length, 40);
-  assert.equal(new Set(productImages).size, 40);
+test('catálogo mantém 41 produtos únicos com imagens locais', () => {
+  assert.equal(productImages.length, 41);
+  assert.equal(new Set(productImages).size, 41);
   for (const filename of productImages) assert.ok(fs.existsSync(new URL(`../assets/images/${filename}`, import.meta.url)), `imagem ausente: ${filename}`);
 });
 
@@ -118,8 +118,8 @@ test('V31 mantém a mesma experiência visual e funcional no celular e no comput
   assert.ok(css.includes('display:grid!important'));
   assert.ok(css.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'));
   assert.ok(css.includes('img[src$="milho-verde-3-espigas.webp"]'));
-  assert.ok(html.includes('app.css?v=31'));
-  assert.ok(html.includes('app.js?v=31'));
+  assert.ok(html.includes('app.css?v=33'));
+  assert.ok(html.includes('app.js?v=33'));
 });
 
 
@@ -141,4 +141,28 @@ test('V31 atualiza preços e pesos das frutas solicitadas e mantém observaçõe
   assert.ok(html.includes('Observações do pedido'));
   assert.ok(js.includes("const notes = $('#customer-notes').value.trim() || 'Sem observações.';"));
   assert.ok(js.includes("'*OBS*'"));
+});
+
+
+test('V32: preço industrial, abacaxi natural e mínimo de entrega', () => {
+  assert.match(js, /"id": "abacaxi-sem-tempero-250g"/);
+  assert.match(js, /"price": 98\.82/);
+  assert.match(js, /"price": 53\.3/);
+  assert.match(js, /const DELIVERY_MINIMUM = 89\.90/);
+  assert.match(js, /if \(!deliveryEligible\(\)\)/);
+  assert.match(js, /hasIndustrialItems\(\)/);
+});
+
+
+test('V33: novo banner preservado e CTA acessível abaixo dos benefícios', () => {
+  assert.ok(html.includes('hero-hs-v33-1672.webp'));
+  assert.ok(html.includes('hero-hs-v33-1200.webp'));
+  assert.ok(html.includes('hero-hs-v33-720.webp'));
+  assert.ok(html.includes('SISTEMA EM PERÍODO DE TESTE'));
+  assert.ok(html.includes('Nova operação digital HS em fase de implantação e ajustes finais.'));
+  assert.ok(css.includes('.promo-banner-v33 .promo-banner-cta'));
+  assert.ok(css.includes('position:relative!important'));
+  for (const file of ['hero-hs-v33-720.webp','hero-hs-v33-1200.webp','hero-hs-v33-1672.webp']) {
+    assert.ok(fs.existsSync(new URL(`../assets/images/${file}`, import.meta.url)), file);
+  }
 });
