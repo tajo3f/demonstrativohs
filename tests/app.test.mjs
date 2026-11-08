@@ -19,7 +19,7 @@ const sliceProduct = id => {
 test('estrutura, PWA e nova identidade visual estão válidas', () => {
   for (const id of ['view-home','view-products','view-cart','product-dialog','checkout-dialog','install-dialog']) assert.match(html, new RegExp(`id="${id}"`));
   assert.equal(manifest.display, 'standalone');
-  assert.match(sw, /hs-final-2026-11-05-v34/);
+  assert.match(sw, /hs-final-2026-11-07-v35/);
   for (const file of ['hs-logo-oficial-v31.png','hs-app-icon-v31.png','hs-icon-circular-v31.png','icon-v31-32.png','icon-v31-64.png','icon-v31-180.png','icon-v31-192.png','icon-v31-512.png','favicon-v31.ico']) {
     assert.ok(fs.existsSync(new URL(`../assets/images/${file}`, import.meta.url)), file);
   }
@@ -57,7 +57,8 @@ test('embalagens industriais aparecem apenas nos produtos configurados pela plan
   assert.match(sliceProduct('casadinho-repolhos-300g'), /"weight": "3 kg"/);
   assert.match(sliceProduct('mix-folhas-1-300g'), /"weight": "3 kg"/);
   assert.doesNotMatch(sliceProduct('salada-de-frutas-250g'), /packageChoices/);
-  assert.ok(js.includes('PJ/CNPJ • desconto de 15% já aplicado'));
+  assert.ok(js.includes('packagePublicPrice'));
+  assert.ok(!js.includes('PJ/CNPJ • desconto de 15% já aplicado'));
 });
 
 test('salada de frutas continua personalizável com até 3 frutas e opcionais', () => {
@@ -69,7 +70,7 @@ test('salada de frutas continua personalizável com até 3 frutas e opcionais', 
 });
 
 test('regras de entrega, retirada e PJ/CNPJ estão visíveis', () => {
-  for (const text of ['Entrega • R$ 10,00','Centro, São Luís','Vila Jetibá','segundas e sextas-feiras','sexta-feira, às 9h','quarta-feira, às 9h','48 horas de antecedência','Retirada no HS Hortigranjeiro Schulz','10 unidades de cada item','15% de desconto']) assert.ok(html.includes(text) || js.includes(text), text);
+  for (const text of ['Entrega • R$ 10,00','Centro, São Luís','Vila Jetibá','segundas e sextas-feiras','sexta-feira, às 9h','quarta-feira, às 9h','48 horas de antecedência','Retirada no HS Hortigranjeiro Schulz','10 unidades do mesmo produto','desconto de 15%']) assert.ok(html.includes(text) || js.includes(text), text);
   assert.match(html, /id="customer-type"/);
   assert.match(html, /id="customer-cnpj"/);
   assert.ok(js.includes('const deliveryFee'));
@@ -118,8 +119,8 @@ test('V31 mantém a mesma experiência visual e funcional no celular e no comput
   assert.ok(css.includes('display:grid!important'));
   assert.ok(css.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'));
   assert.ok(css.includes('img[src$="milho-verde-3-espigas.webp"]'));
-  assert.ok(html.includes('app.css?v=34'));
-  assert.ok(html.includes('app.js?v=33'));
+  assert.ok(html.includes('app.css?v=35'));
+  assert.ok(html.includes('app.js?v=35'));
 });
 
 
@@ -150,7 +151,7 @@ test('V32: preço industrial, abacaxi natural e mínimo de entrega', () => {
   assert.match(js, /"price": 53\.3/);
   assert.match(js, /const DELIVERY_MINIMUM = 89\.90/);
   assert.match(js, /if \(!deliveryEligible\(\)\)/);
-  assert.match(js, /hasIndustrialItems\(\)/);
+  assert.match(js, /hasIndustrialItems/);
 });
 
 
@@ -168,4 +169,25 @@ test('V33: novo banner preservado e CTA acessível abaixo dos benefícios', () =
   for (const file of ['hero-hs-v33-720.webp','hero-hs-v33-1200.webp','hero-hs-v33-1672.webp']) {
     assert.ok(fs.existsSync(new URL(`../assets/images/${file}`, import.meta.url)), file);
   }
+});
+
+
+test('V35: CNPJ libera desconto em 10 unidades iguais e embalagens de 5 kg', () => {
+  assert.ok(js.includes('const hasEligibleCNPJ'));
+  assert.ok(js.includes('Number(quantity) >= 10'));
+  assert.ok(js.includes("choice.weight === '5 kg'"));
+  assert.match(js, /if \(!hasEligibleCNPJ\(\)\) return 0;/);
+  assert.match(js, /return qualifiesWholesale\(product, quantity, id\) \?/);
+  assert.match(html, /Comprar sem CNPJ • preço normal/);
+  assert.ok(!html.includes('desconto de 15% já aplicado'));
+  assert.ok(js.includes('renderAll(); refreshCheckoutPreview();'));
+  assert.ok(!js.includes('As embalagens industriais são destinadas a pessoa jurídica com CNPJ.'));
+});
+
+test('V35: compartilhamento no mobile, desktop e fallback por cópia', () => {
+  for (const id of ['share-header', 'share-more', 'share-side', 'share-dialog', 'share-copy', 'share-whatsapp', 'share-message']) assert.ok(html.includes(`id="${id}"`));
+  assert.ok(js.includes('navigator.share'));
+  assert.ok(js.includes('navigator.clipboard?.writeText'));
+  assert.ok(js.includes('document.execCommand'));
+  assert.ok(js.includes('Conheça o aplicativo de pedidos da HS Hortigranjeiro Schulz!'));
 });

@@ -1,0 +1,21 @@
+HS HORTIGRANJEIRO SCHULZ — PATCH V35 (PARA QUEM JÁ POSSUI A V34)
+
+ATENÇÃO: ESSE ZIP CONTÉM SOMENTE OS ARQUIVOS MODIFICADOS.
+
+OPÇÃO 1 — você publica pelo projeto principal no GitHub/Vercel:
+Copie os arquivos da raiz deste ZIP para a raiz do projeto, mantendo a estrutura de pastas.
+Em seguida, faça o build/deploy conforme sua hospedagem.
+
+OPÇÃO 2 — você publica o conteúdo da pasta dist/:
+Copie os arquivos contidos em dist/ para a pasta publicada do site, preservando os caminhos.
+
+NÃO EXCLUA arquivos antigos de produtos, imagens, ícones ou manifesto. Eles continuam sendo necessários.
+
+Principais mudanças:
+• Atacado: 15% para CNPJ com pelo menos 10 unidades do mesmo produto.
+• Embalagens industriais de 5 kg: desconto após CNPJ; sem CNPJ, preço normal.
+• Preço com desconto não aparece antes do CNPJ.
+• Compartilhamento do app no celular e no computador, com opção WhatsApp ou cópia da mensagem.
+• Correção de sincronização da entrega no checkout.
+
+IMPORTANTE: CNPJ é informativo. A HS deve confirmar o CNPJ e a elegibilidade comercial antes de aceitar o pedido.

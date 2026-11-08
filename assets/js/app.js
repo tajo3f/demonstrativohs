@@ -28,7 +28,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 37.5,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -82,7 +82,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 109.2,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -147,7 +147,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 98.82,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -176,7 +176,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 53.3,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -205,7 +205,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 53.3,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -234,7 +234,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 53.3,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -263,7 +263,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 53.3,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -292,7 +292,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 74.17,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -333,7 +333,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 53.3,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -362,7 +362,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 37.5,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -391,7 +391,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 34.62,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -420,7 +420,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 64.95,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -449,7 +449,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 16.79,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -478,7 +478,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 60.49,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço exclusivo PJ/CNPJ (tabela 5 kg 15%)",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -531,7 +531,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 86.25,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -560,7 +560,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 128.8,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -589,7 +589,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 23.69,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -618,7 +618,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 125.92,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -647,7 +647,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 89.1,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -676,7 +676,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 128.8,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -705,7 +705,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 92.0,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -734,7 +734,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 83.49,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -835,7 +835,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 80.5,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -865,7 +865,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 106.6,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -894,7 +894,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 83.49,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -923,7 +923,7 @@
                 "label": "Embalagem industrial • 3 kg",
                 "price": 40.25,
                 "weight": "3 kg",
-                "summary": "Embalagem industrial • 3 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 3 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -970,7 +970,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 82.25,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -999,7 +999,7 @@
                 "label": "Embalagem industrial • 5 kg",
                 "price": 63.25,
                 "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -1028,7 +1028,7 @@
                 "label": "Embalagem industrial • 3 kg",
                 "price": 31.05,
                 "weight": "3 kg",
-                "summary": "Embalagem industrial • 3 kg • preço PJ/CNPJ com 15% já aplicado",
+                "summary": "Embalagem industrial • 3 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
             }
         ]
@@ -1086,6 +1086,16 @@
   const $$ = (q, root = document) => [...root.querySelectorAll(q)];
   const money = value => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
   const byId = id => PRODUCTS.find(product => product.id === id);
+  const roundMoney = value => Math.round((value + Number.EPSILON) * 100) / 100;
+  const DISCOUNT_RATE = 0.15;
+  const isPJCustomer = () => $('#customer-type')?.value === 'pj';
+  const cnpjDigits = () => ($('#customer-cnpj')?.value || '').replace(/\D/g, '');
+  const hasEligibleCNPJ = () => isPJCustomer() && cnpjDigits().length === 14;
+  // As prices imported from the last HS table are already the industrial PJ values,
+  // the undiscounted value is recovered for customer-facing display.
+  const packagePublicPrice = choice => choice?.industrial && choice.weight === '5 kg' ? roundMoney(choice.price / (1 - DISCOUNT_RATE)) : choice?.price;
+  const packageFinalPrice = choice => choice?.industrial && choice.weight === '5 kg' && hasEligibleCNPJ() ? choice.price : packagePublicPrice(choice);
+
   const normalizeText = value => (value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const cardName = product => product.shortName || product.name.replace(/\s+\d+\s*(g|kg)$/i, '');
   const needsDetail = product => Boolean(product?.customizable || product?.optionChoices?.length || product?.addonChoices?.length || product?.packageChoices?.length);
@@ -1111,17 +1121,22 @@
   const unitPrice = (product, id = product?.id) => {
     if (!Number.isFinite(product?.price)) return null;
     const packagePrice = selectedPackage(product, id)?.price;
-    const base = Number.isFinite(packagePrice) ? packagePrice : product.price;
+    const base = Number.isFinite(packagePrice) ? packagePublicPrice(selectedPackage(product, id)) : product.price;
     return base + (selectedOption(product, id)?.priceDelta || 0) + addonCost(product, id);
   };
   const priceLabel = (product, id = product?.id) => {
     if (!Number.isFinite(product?.price)) return 'Preço a confirmar';
     if (product?.optionChoices?.some(choice => choice.priceDelta > 0) || product?.addonChoices?.some(choice => choice.priceDelta > 0)) return `A partir de ${money(product.price)}`;
+    const qty = cart[product.id] || 0;
+    if (qty > 0 && hasEligibleCNPJ() && (isIndustrialPackage(product, id) || qty >= 10)) {
+      const effective = (unitPrice(product, id) * qty - lineDiscount(product, qty, id)) / qty;
+      return money(roundMoney(effective));
+    }
     return money(unitPrice(product, id));
   };
   const itemPriceLabel = (product, quantity = 1, id = product?.id) => {
     const unit = unitPrice(product, id);
-    return Number.isFinite(unit) ? money(unit * quantity) : 'A confirmar';
+    return Number.isFinite(unit) ? money(roundMoney(unit * quantity - lineDiscount(product, quantity, id))) : 'A confirmar';
   };
 
   function customSummary(id) {
@@ -1134,7 +1149,7 @@
       .filter(Boolean);
     if (addons.length) notes.push(`Opcionais: ${addons.join(', ')}`);
     const pack = selectedPackage(product, id);
-    if (pack?.industrial) notes.push(pack.summary || pack.label);
+    if (pack?.industrial) notes.push(pack.label);
     const option = selectedOption(product, id);
     if (option) notes.push(option.summary || option.label);
     return notes.join(' • ');
@@ -1167,11 +1182,11 @@
 
   const count = () => Object.values(cart).reduce((sum, quantity) => sum + Number(quantity || 0), 0);
   const hasPendingPrices = () => PRODUCTS.some(product => cart[product.id] && !Number.isFinite(product.price));
-  const total = () => Object.entries(cart).reduce((sum, [id, quantity]) => {
+  const total = () => roundMoney(Object.entries(cart).reduce((sum, [id, quantity]) => {
     const product = byId(id);
     const unit = unitPrice(product, id);
-    return sum + (Number.isFinite(unit) ? unit * quantity : 0);
-  }, 0);
+    return sum + (Number.isFinite(unit) ? unit * quantity - lineDiscount(product, quantity, id) : 0);
+  }, 0));
   const toast = message => {
     const target = $('#toast');
     target.textContent = message;
@@ -1525,7 +1540,7 @@
   function packagePickerHtml(product, id) {
     if (!product.packageChoices?.length) return '';
     const current = selectedPackage(product, id)?.id || product.packageChoices[0].id;
-    return `<fieldset class="question-card package-customizer"><legend>Embalagem</legend><div class="fruit-customizer-title"><strong>Escolha o tamanho da embalagem</strong><small>As embalagens industriais são destinadas a pessoa jurídica com CNPJ. O preço industrial exibido já considera o desconto de 15% informado pela HS.</small></div><div class="package-options">${product.packageChoices.map(choice => `<label class="package-option"><input type="radio" name="detail-package" value="${choice.id}" ${choice.id === current ? 'checked' : ''}><span><strong>${choice.label}</strong><small>${choice.industrial ? 'PJ/CNPJ • desconto de 15% já aplicado' : 'Varejo'}</small><b>${money(choice.price)}</b></span></label>`).join('')}</div></fieldset>`;
+    return `<fieldset class="question-card package-customizer"><legend>Embalagem</legend><div class="fruit-customizer-title"><strong>Escolha o tamanho da embalagem</strong><small>O preço especial para pessoa jurídica é liberado após informar o CNPJ na finalização. Você também pode comprar pelo preço normal.</small></div><div class="package-options">${product.packageChoices.map(choice => `<label class="package-option"><input type="radio" name="detail-package" value="${choice.id}" ${choice.id === current ? 'checked' : ''}><span><strong>${choice.label}</strong><small>${choice.industrial && choice.weight === '5 kg' ? (hasEligibleCNPJ() ? 'Preço empresarial liberado' : 'Preço normal • informe o CNPJ para condição PJ') : choice.industrial ? 'Embalagem especial' : 'Embalagem padrão'}</small><b>${money(packageFinalPrice(choice))}</b></span></label>`).join('')}</div></fieldset>`;
   }
 
   function optionPickerHtml(product, id) {
@@ -1536,7 +1551,7 @@
   function defaultDetailTip(product) {
     if (product.tip) return product.tip;
     if (product.customizable) return 'Escolha de 1 a 3 frutas. Cada opcional custa R$ 3,49 e será identificado no pedido.';
-    if (product.packageChoices?.length) return 'Embalagens industriais são destinadas a pessoa jurídica com CNPJ. Para atacado, consulte também a regra de 10 unidades de cada item.';
+    if (product.packageChoices?.length) return 'Você pode comprar pelo preço normal. Com CNPJ informado, a condição PJ é aplicada às embalagens industriais e a pedidos com 10 ou mais unidades idênticas.';
     if (product.optionChoices?.length) return 'Você pode escolher a versão sem milho ou adicionar 80 g de milho verde em conserva.';
     return 'Produto higienizado e preparado para facilitar sua rotina.';
   }
@@ -1557,10 +1572,12 @@
     $('[data-minus]', detail).onclick = () => {
       tempQuantity = Math.max(1, tempQuantity - 1);
       quantityTarget.textContent = tempQuantity;
+      syncDetailPrice();
     };
     $('[data-plus]', detail).onclick = () => {
-      tempQuantity += 1;
+      tempQuantity = Math.min(99, tempQuantity + 1);
       quantityTarget.textContent = tempQuantity;
+      syncDetailPrice();
     };
 
     $$('.detail-thumb', detail).forEach(button => button.addEventListener('click', () => {
@@ -1578,8 +1595,10 @@
       const addons = $$('[data-addon-option]:checked', detail)
         .map(input => product.addonChoices?.find(item => item.id === input.value)?.priceDelta || 0)
         .reduce((sum, value) => sum + value, 0);
-      const base = Number.isFinite(pack?.price) ? pack.price : (Number.isFinite(product.price) ? product.price : 0);
-      return base + (option?.priceDelta || 0) + addons;
+      const base = Number.isFinite(pack?.price) ? packageFinalPrice(pack) : (Number.isFinite(product.price) ? product.price : 0);
+      const unit = base + (option?.priceDelta || 0) + addons;
+      if (!pack?.industrial && hasEligibleCNPJ() && tempQuantity >= 10) return roundMoney(unit * (1 - DISCOUNT_RATE));
+      return unit;
     };
     const syncDetailPrice = () => {
       priceTarget.textContent = money(liveUnitPrice());
@@ -1641,21 +1660,26 @@
     $('#product-dialog').showModal();
   }
 
-  const isPJCustomer = () => $('#customer-type')?.value === 'pj';
-  const cnpjDigits = () => ($('#customer-cnpj')?.value || '').replace(/\D/g, '');
-  const qualifiesWholesale = (product, quantity, id = product?.id) => isPJCustomer() && cnpjDigits().length === 14 && !isIndustrialPackage(product, id) && Number(quantity) >= 10;
+  const qualifiesWholesale = (product, quantity, id = product?.id) => hasEligibleCNPJ() && !isIndustrialPackage(product, id) && Number(quantity) >= 10;
   const lineBaseTotal = (product, quantity, id = product?.id) => {
     const unit = unitPrice(product, id);
     return Number.isFinite(unit) ? unit * quantity : 0;
   };
-  const lineDiscount = (product, quantity, id = product?.id) => qualifiesWholesale(product, quantity, id) ? lineBaseTotal(product, quantity, id) * 0.15 : 0;
+  const lineDiscount = (product, quantity, id = product?.id) => {
+    if (!hasEligibleCNPJ()) return 0;
+    if (isIndustrialPackage(product, id)) {
+      const pack = selectedPackage(product, id);
+      return pack.weight === '5 kg' ? roundMoney((packagePublicPrice(pack) - pack.price) * quantity) : 0;
+    }
+    return qualifiesWholesale(product, quantity, id) ? roundMoney(lineBaseTotal(product, quantity, id) * DISCOUNT_RATE) : 0;
+  };
   const checkoutItemsSubtotal = () => PRODUCTS.filter(product => cart[product.id]).reduce((sum, product) => sum + lineBaseTotal(product, cart[product.id], product.id), 0);
-  const checkoutDiscountTotal = () => PRODUCTS.filter(product => cart[product.id]).reduce((sum, product) => sum + lineDiscount(product, cart[product.id], product.id), 0);
+  const checkoutDiscountTotal = () => roundMoney(PRODUCTS.filter(product => cart[product.id]).reduce((sum, product) => sum + lineDiscount(product, cart[product.id], product.id), 0));
   const DELIVERY_MINIMUM = 89.90;
   const deliveryEligible = () => $('#customer-delivery')?.value !== 'Entrega' || (checkoutItemsSubtotal() - checkoutDiscountTotal()) >= DELIVERY_MINIMUM - 0.0001;
   const deliveryMissing = () => Math.max(0, DELIVERY_MINIMUM - (checkoutItemsSubtotal() - checkoutDiscountTotal()));
   const deliveryFee = () => $('#customer-delivery')?.value === 'Entrega' ? 10 : 0;
-  const checkoutGrandTotal = () => checkoutItemsSubtotal() - checkoutDiscountTotal() + deliveryFee();
+  const checkoutGrandTotal = () => roundMoney(checkoutItemsSubtotal() - checkoutDiscountTotal() + deliveryFee());
   const hasIndustrialItems = () => PRODUCTS.some(product => cart[product.id] && isIndustrialPackage(product, product.id));
 
   function checkoutText() {
@@ -1669,7 +1693,7 @@
       lines.push(`• *${quantity}x ${product.name}*`);
       lines.push(`  ${displayWeight(product, product.id)} • ${Number.isFinite(lineTotal) ? money(lineTotal) : 'A confirmar'}`);
       if (details) lines.push(`  ${details}`);
-      if (discount > 0) lines.push(`  Desconto PJ atacado (15%): -${money(discount)}`);
+      if (discount > 0) lines.push(`  Condição PJ (15%): -${money(discount)}`);
       lines.push('');
     });
     if (lines[lines.length - 1] === '') lines.pop();
@@ -1829,6 +1853,7 @@
     input.disabled = !isPJ;
     field.classList.toggle('is-visible', isPJ);
     if (isPJ && focus) window.setTimeout(() => input.focus({ preventScroll: false }), 60);
+    renderAll();
     refreshCheckoutPreview();
   }
 
@@ -1843,7 +1868,6 @@
     } else {
       box.innerHTML = '<strong>Escolha entrega ou retirada</strong><span>As regras e os prazos aparecerão aqui para facilitar sua compra.</span>';
     }
-    refreshCheckoutPreview();
   }
 
   function closeCheckout() {
@@ -1874,9 +1898,9 @@
     toast('Carrinho mantido. Você pode continuar adicionando produtos.');
   });
 
-  $('#customer-delivery').addEventListener('change', () => { syncDeliveryFields({ focus: true }); syncDeliveryRules(); });
+  $('#customer-delivery').addEventListener('change', () => { syncDeliveryFields({ focus: true }); refreshCheckoutPreview(); });
   $('#customer-type').addEventListener('change', () => syncCustomerTypeFields({ focus: true }));
-  $('#customer-cnpj').addEventListener('input', event => { const d=event.target.value.replace(/\D/g,'').slice(0,14); event.target.value=d.length>12?`${d.slice(0,2)}.${d.slice(2,5)}.${d.slice(5,8)}/${d.slice(8,12)}-${d.slice(12)}`:d; refreshCheckoutPreview(); });
+  $('#customer-cnpj').addEventListener('input', event => { const d=event.target.value.replace(/\D/g,'').slice(0,14); event.target.value=d.length>12?`${d.slice(0,2)}.${d.slice(2,5)}.${d.slice(5,8)}/${d.slice(8,12)}-${d.slice(12)}`:d; renderAll(); refreshCheckoutPreview(); });
   $('#customer-payment').addEventListener('change', () => syncPaymentFields({ focus: true }));
   $('#customer-cash-given').addEventListener('input', updateCashChangeResult);
   $('#customer-cash-given').addEventListener('blur', event => {
@@ -1928,12 +1952,6 @@
       syncCustomerTypeFields();
       $('#customer-cnpj').focus();
       toast('Informe um CNPJ com 14 dígitos para usar as condições de pessoa jurídica.');
-      return;
-    }
-    if (hasIndustrialItems() && (!isPJCustomer() || cnpjDigits().length !== 14)) {
-      $('#customer-type').value = 'pj';
-      syncCustomerTypeFields({ focus: true });
-      toast('As embalagens industriais são destinadas a pessoa jurídica com CNPJ.');
       return;
     }
     if ($('#customer-payment').value === 'Dinheiro') {
@@ -1994,6 +2012,46 @@
     syncHomeCategoryPills();
     route('products');
   }));
+
+  // Compartilhamento nativo no celular e cópia acessível no computador/PWA.
+  const sharingURL = () => new URL('./', document.baseURI).href;
+  const sharingText = 'Conheça o aplicativo de pedidos da HS Hortigranjeiro Schulz! Confira nossa linha de hortifrúti higienizado e processado, escolha seus produtos e envie seu pedido com praticidade. Acesse o catálogo digital:';
+  const sharePayload = () => `${sharingText}\n\n${sharingURL()}`;
+  function showShareDialog() {
+    $('#share-message').value = sharePayload();
+    if (!$('#share-dialog').open) $('#share-dialog').showModal();
+  }
+  async function shareApp() {
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: 'HS Hortigranjeiro Schulz | Pedidos', text: sharingText, url: sharingURL() });
+        return;
+      } catch (error) {
+        if (error?.name === 'AbortError') return;
+      }
+    }
+    showShareDialog();
+  }
+  ['#share-header', '#share-more', '#share-side'].forEach(selector => $(selector)?.addEventListener('click', shareApp));
+  $('#share-close').addEventListener('click', () => $('#share-dialog').close());
+  $('#share-dialog').addEventListener('click', event => { if (event.target === $('#share-dialog')) $('#share-dialog').close(); });
+  $('#share-whatsapp').addEventListener('click', () => {
+    const url = `https://wa.me/?text=${encodeURIComponent(sharePayload())}`;
+    const opened = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!opened) window.location.href = url;
+  });
+  $('#share-copy').addEventListener('click', async () => {
+    const message = sharePayload();
+    let copied = false;
+    try { if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(message); copied = true; } } catch {}
+    if (!copied) {
+      const textarea = $('#share-message');
+      textarea.focus(); textarea.select();
+      try { copied = document.execCommand('copy'); } catch {}
+    }
+    if (copied) { toast('Mensagem e link copiados!'); $('#share-dialog').close(); }
+    else toast('Selecione e copie a mensagem para compartilhar.');
+  });
 
   $('#about-catalog').addEventListener('click', () => {
     toast('Catálogo oficial da linha de produtos processados, higienizados e prontos para o preparo.');

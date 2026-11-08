@@ -16,7 +16,7 @@
   <link rel="icon" type="image/png" href="./assets/images/icon-v31-64.png" sizes="64x64">
   <link rel="icon" type="image/png" href="./assets/images/icon-v31-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="./assets/images/icon-v31-180.png">
-  <link rel="stylesheet" href="./assets/css/app.css?v=34">
+  <link rel="stylesheet" href="./assets/css/app.css?v=35">
   <title>HS Hortigranjeiro Schulz | Pedidos</title>
 </head>
 <body>
@@ -30,6 +30,7 @@
         <button class="side-link" data-route="products"><span class="nav-icon">▦</span><span>Produtos</span></button>
         <button class="side-link" data-route="cart"><span class="nav-icon">🛒</span><span>Carrinho</span><b class="nav-badge" id="side-count">0</b></button>
       </nav>
+      <button type="button" class="share-side-action" id="share-side">Compartilhar aplicativo <span aria-hidden="true">↗</span></button>
       <div class="side-install">
         <img src="./assets/images/hs-app-icon-v31.png" alt="" aria-hidden="true">
         <div><strong>Instale o app</strong><span>Acesso rápido pelo celular.</span></div>
@@ -43,6 +44,9 @@
         <button class="header-back" id="header-back" type="button" aria-label="Voltar" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 18 9 12l6-6"/></svg></button>
         <img src="./assets/images/hs-logo-oficial-v31.png" class="header-logo" alt="HS Hortigranjeiro Schulz">
         <div class="header-actions">
+          <button class="icon-button" id="share-header" type="button" aria-label="Compartilhar aplicativo HS" title="Compartilhar aplicativo">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="18" cy="19" r="2"/><path d="M8 11l8-5M8 13l8 5"/></svg>
+          </button>
           <button class="icon-button" id="install-header" type="button" aria-label="Instalar aplicativo" title="Instalar aplicativo">
             <svg viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3"/></svg>
           </button>
@@ -101,7 +105,7 @@
             <div class="service-rules-grid">
               <article><b>Entrega • R$ 10,00</b><p>Centro, São Luís e Vila Jetibá até a escola. Entregas às segundas e sextas-feiras.</p><small>Segunda: pedir até sexta-feira, às 9h. Sexta: pedir até quarta-feira, às 9h.</small></article>
               <article><b>Retirada no HS Hortigranjeiro Schulz</b><p>Faça o pedido com 48 horas de antecedência.</p><small>Pedidos retirados não têm taxa de entrega.</small></article>
-              <article><b>Pessoa jurídica • CNPJ</b><p>15% de desconto no atacado a partir de 10 unidades de cada item e nas embalagens industriais.</p><small>Embalagens industriais não possuem quantidade mínima.</small></article>
+              <article><b>Pessoa jurídica • CNPJ</b><p>Com CNPJ, você recebe condições especiais no atacado ao comprar pelo menos 10 unidades do mesmo produto ou escolher embalagens industriais.</p><small>Sem CNPJ, você pode comprar normalmente, sem desconto. Não há quantidade mínima para embalagens industriais.</small></article>
             </div>
           </section>
 
@@ -158,6 +162,7 @@
           <h1>HS Hortigranjeiro Schulz</h1>
           <p>Aplicativo web da nova linha de produtos processados e higienizados.</p><div class="more-status"><strong>Sistema em período de teste</strong><span>Nova operação digital HS em implantação assistida e ajustes finais.</span></div>
           <button class="more-card" id="install-more" type="button"><span>📲</span><div><strong>Instalar no celular</strong><small>Adicione o HS à sua tela inicial.</small></div><b>›</b></button>
+          <button class="more-card" id="share-more" type="button"><span aria-hidden="true">↗</span><div><strong>Compartilhar aplicativo</strong><small>Envie o catálogo HS para outras pessoas.</small></div><b>›</b></button>
           <button class="more-card" type="button" id="about-catalog"><span>ℹ️</span><div><strong>Sobre o catálogo</strong><small>Conheça a proposta da nova linha HS.</small></div><b>›</b></button>
           <a class="more-card" href="./privacidade.html"><span>🔒</span><div><strong>Privacidade</strong><small>Consulte como seus dados são tratados.</small></div><b>›</b></a>
           <a class="more-card" href="./termos.html"><span>📄</span><div><strong>Termos</strong><small>Consulte as condições de uso do catálogo.</small></div><b>›</b></a>
@@ -197,8 +202,8 @@
       <div class="checkout-steps">
         <label><span>Nome <em>opcional</em></span><input id="customer-name" autocomplete="name" placeholder="Seu nome"></label>
         <label><span>Telefone / WhatsApp <em>opcional</em></span><input id="customer-phone" inputmode="tel" autocomplete="tel" placeholder="(27) 99999-9999"></label>
-        <label><span>Tipo de cliente</span><select id="customer-type"><option value="pf">Pessoa física</option><option value="pj">Pessoa jurídica (CNPJ)</option></select></label>
-        <label class="customer-cnpj-field" id="customer-cnpj-field" hidden><span>CNPJ</span><input id="customer-cnpj" inputmode="numeric" autocomplete="off" placeholder="00.000.000/0000-00"><small class="field-hint">Necessário para as condições de atacado e embalagens industriais.</small></label>
+        <label><span>Tipo de cliente</span><select id="customer-type"><option value="pf">Comprar sem CNPJ • preço normal</option><option value="pj">Pessoa jurídica • informar CNPJ</option></select></label>
+        <label class="customer-cnpj-field" id="customer-cnpj-field" hidden><span>CNPJ</span><input id="customer-cnpj" inputmode="numeric" autocomplete="off" placeholder="00.000.000/0000-00"><small class="field-hint">Informe o CNPJ para liberar o desconto de 15% em 10 unidades idênticas do mesmo produto e nas embalagens industriais. Sem CNPJ, o preço normal será mantido.</small></label>
         <label><span>Forma de recebimento</span><select id="customer-delivery"><option value="Combinar">Escolher depois</option><option value="Retirada">Retirada no HS Hortigranjeiro Schulz</option><option value="Entrega">Entrega</option></select></label>
         <div class="checkout-full delivery-rules" id="delivery-rules"><strong>Escolha entrega ou retirada</strong><span>As regras e os prazos aparecerão aqui para facilitar sua compra.</span></div>
         <label><span>Forma de pagamento</span><select id="customer-payment"><option>Combinar</option><option>Pix</option><option>Dinheiro</option><option>Débito</option><option>Crédito</option></select></label>
@@ -215,6 +220,19 @@
     </form>
   </dialog>
 
+  <dialog class="share-dialog" id="share-dialog" aria-labelledby="share-title">
+    <div class="share-sheet">
+      <button type="button" class="share-close close-sheet" id="share-close" aria-label="Fechar compartilhamento">×</button>
+      <span class="page-kicker">INDIQUE A HS</span>
+      <h2 id="share-title">Compartilhe praticidade</h2>
+      <p>Envie o aplicativo de pedidos da HS Hortigranjeiro Schulz para quem valoriza qualidade e frescor.</p>
+      <label for="share-message">Mensagem pronta para compartilhar</label>
+      <textarea id="share-message" rows="6" readonly spellcheck="false"></textarea>
+      <button id="share-whatsapp" type="button" class="share-whatsapp">Compartilhar pelo WhatsApp</button>
+      <button id="share-copy" type="button" class="share-copy">Copiar mensagem e link</button>
+    </div>
+  </dialog>
+
   <dialog class="install-dialog" id="install-dialog">
     <div class="install-sheet">
       <button class="close-sheet install-close" type="button" aria-label="Fechar">×</button>
@@ -229,6 +247,6 @@
   </dialog>
 
   <div class="toast" id="toast" hidden></div>
-  <script src="./assets/js/app.js?v=33" defer></script>
+  <script src="./assets/js/app.js?v=35" defer></script>
 </body>
 </html>

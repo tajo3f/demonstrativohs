@@ -1,4 +1,4 @@
-# HS Hortigranjeiro Schulz — Catálogo Digital V31
+# HS Hortigranjeiro Schulz — Catálogo Digital V35
 
 Aplicação web estática/PWA para catálogo e pedidos da nova linha HS.
 
@@ -10,10 +10,11 @@ Pode ser publicada em GitHub Pages, Vercel ou hospedagem estática equivalente. 
 - Carrinho persistente no navegador.
 - Personalização da salada de frutas e da seleta.
 - Embalagens industriais conforme planilha da HS.
-- Fluxo de pessoa jurídica/CNPJ e atacado.
+- Fluxo de pessoa jurídica/CNPJ: desconto de 15% para 10 unidades do mesmo item e embalagens de 5 kg, liberado somente após CNPJ informado. Pessoa física compra sem desconto.
 - Retirada e entrega com regras e taxa informadas.
 - Pedido formatado para o WhatsApp oficial da HS.
 - PWA com a identidade visual oficial atualizada.
+- Compartilhamento do aplicativo via folha nativa (iOS/Android) e cópia de mensagem com link no computador.
 
 ## Testes
 ```bash
