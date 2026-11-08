@@ -1,0 +1,11 @@
+HS HORTIGRANJEIRO SCHULZ — V36 — ÍCONES PROFISSIONAIS
+
+Atualizações:
+- Substituídos os 4 símbolos/emoji da seção de benefícios por ícones verdes profissionais fornecidos na conversa.
+- Novo tratamento visual para o aviso "Praticidade para a sua rotina" e os três cards.
+- Espaçamento, alinhamento, tipografia e responsividade refinados para celular e desktop.
+- Ícones convertidos para WebP otimizado, com transparência preservada.
+- Atualizados cache PWA e identificadores de versões dos arquivos CSS/JS para atualização segura.
+
+Para atualizar a V35: substitua os arquivos do ZIP "APENAS_ATUALIZACAO" na raiz publicada (incluindo assets/images).
+Para publicação completa: use o conteúdo da pasta dist/.

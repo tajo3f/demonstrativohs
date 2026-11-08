@@ -1,4 +1,4 @@
-# HS Hortigranjeiro Schulz — Catálogo Digital V35
+# HS Hortigranjeiro Schulz — Catálogo Digital V36
 
 Aplicação web estática/PWA para catálogo e pedidos da nova linha HS.
 
@@ -29,3 +29,6 @@ python tests/browser_smoke.py
 - Domingo: fechado.
 - Fora desses horários, o catálogo e o carrinho continuam disponíveis, mas a finalização do pedido fica bloqueada e os controles de envio ficam cinza.
 - O controle usa `America/Sao_Paulo` e é reavaliado automaticamente a cada minuto.
+
+### V36 — acabamento da tela inicial
+Ícones de praticidade, seleção de produtos, pedidos e rapidez renovados com imagens verdes WebP otimizadas.

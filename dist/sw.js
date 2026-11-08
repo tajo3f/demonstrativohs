@@ -1,13 +1,13 @@
-const CACHE='hs-final-2026-11-07-v35';
+const CACHE='hs-final-2026-11-07-v36';
 const ASSETS=[
   './',
   './index.html',
   './privacidade.html',
   './termos.html',
   './assets/css/app.css',
-  './assets/css/app.css?v=35',
+  './assets/css/app.css?v=36',
   './assets/js/app.js',
-  './assets/js/app.js?v=35',
+  './assets/js/app.js?v=36',
   './manifest.webmanifest',
   './assets/images/abacaxi-em-cubos-250g.webp',
   './assets/images/abacaxi-limao-sal-rosa-300g.webp',
@@ -30,6 +30,10 @@ const ASSETS=[
   './assets/images/favicon-v31.ico',
   './assets/images/goiaba-fatiada-300g.webp',
   './assets/images/hero-hs-v33-720.webp',
+  './assets/images/beneficio-praticidade.webp',
+  './assets/images/beneficio-produtos.webp',
+  './assets/images/beneficio-pedido.webp',
+  './assets/images/beneficio-agilidade.webp',
   './assets/images/hero-hs-v33-1200.webp',
   './assets/images/hero-hs-v33-1672.webp',
   './assets/images/hero-hs-v20-1664.webp',

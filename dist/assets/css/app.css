@@ -1475,3 +1475,62 @@
 
 .share-whatsapp{width:100%;min-height:46px;background:#eef9ea;border:1px solid #96d283;color:#155c28;border-radius:14px;font:inherit;font-weight:800;cursor:pointer}
 .share-whatsapp:hover{background:#e3f4d9}
+
+
+/* V36 — ícones oficiais da seção de benefícios HS (desktop + mobile) */
+.info-banner{
+  grid-template-columns:54px minmax(0,1fr);
+  gap:14px;
+  padding:17px 20px;
+  border-radius:20px;
+  border:1px solid #d9e9ce;
+  background:linear-gradient(105deg,#eef8e5 0%,#f6fbf1 100%);
+  box-shadow:0 5px 20px rgba(38,104,28,.035);
+}
+.info-banner .info-icon,
+.home-benefits .benefit-mark{
+  flex:0 0 auto;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border-radius:16px;
+  background:linear-gradient(135deg,#e1f3d1,#f0f8e9);
+  border:1px solid rgba(151,194,117,.18);
+}
+.info-banner .info-icon{width:54px;height:54px}
+.info-banner .info-icon img{display:block;width:46px;height:46px;object-fit:contain}
+.info-banner .info-banner-copy{min-width:0}
+.info-banner .info-banner-copy strong{
+  color:#1c5726;font-size:13px;line-height:1.3;font-weight:850;letter-spacing:-.01em;
+}
+.info-banner .info-banner-copy span{
+  display:block;color:#526756;font-size:11px;line-height:1.55;margin-top:4px;
+}
+.home-benefits{gap:12px;margin-top:14px;align-items:stretch}
+.home-benefits article{
+  display:flex;align-items:center;gap:13px;min-width:0;min-height:96px;
+  padding:15px;border-radius:18px;border:1px solid #e4ebe1;
+  background:#fff;box-shadow:0 5px 18px rgba(39,67,32,.035);
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.home-benefits article:hover{border-color:#b9daa7;box-shadow:0 9px 28px rgba(39,67,32,.08)}
+.home-benefits article .benefit-mark{width:52px;height:52px}
+.home-benefits article .benefit-mark img{display:block;width:44px;height:44px;object-fit:contain}
+.home-benefits article>div{min-width:0}
+.home-benefits article strong{color:var(--navy);font-size:12px;line-height:1.3;letter-spacing:-.01em}
+.home-benefits article small{display:block;margin-top:5px;color:#69766c;font-size:10.5px;line-height:1.5}
+@media(max-width:850px){
+  .home-benefits{grid-template-columns:1fr!important;gap:10px}
+  .home-benefits article{min-height:82px;padding:12px 14px}
+  .info-banner{padding:15px 14px}
+}
+@media(max-width:380px){
+  .info-banner{grid-template-columns:48px minmax(0,1fr);gap:10px;padding:12px}
+  .info-banner .info-icon{width:48px;height:48px}
+  .info-banner .info-icon img{width:42px;height:42px}
+  .home-benefits article .benefit-mark{width:46px;height:46px}
+  .home-benefits article .benefit-mark img{width:40px;height:40px}
+  .home-benefits article{gap:10px}
+  .home-benefits article strong{font-size:11.5px}
+  .home-benefits article small{font-size:10px}
+}
