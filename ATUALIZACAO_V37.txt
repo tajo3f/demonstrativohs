@@ -1,0 +1,20 @@
+HS HORTIGRANJEIRO SCHULZ — V37 — ATUALIZAÇÃO EXCLUSIVA DE PREÇOS LARANJA
+
+ORIGEM: imagem da tabela de 03/11/2026 fornecida pela cliente.
+
+VALORES DE VAREJO EM LARANJA (SUGESTÃO):
+- Abobrinha italiana, todos os cinco cortes de 500 g do catálogo: R$ 5,75.
+- Aipim cortado e congelado 500 g: R$ 3,99.
+- Batata-doce rosada em rodelas 500 g: R$ 6,49.
+- Laranja pera, 2 unidades: R$ 3,99.
+
+VALORES INDUSTRIAIS EM LARANJA (5 KG 15%):
+- Abobrinha italiana: R$ 53,30; aipim: R$ 34,62; batata-doce: R$ 60,49; batata-inglesa: R$ 48,99; beterraba: R$ 23,69; chuchu: R$ 16,79; inhame cará: R$ 83,49; inhame chinês: R$ 83,49; quiabo: R$ 98,82.
+- Todos os valores já estavam corretos na V36, exceto batata-inglesa 5 kg, que foi atualizada de R$ 64,95 para R$ 48,99.
+
+Nenhuma outra mudança em produtos, funcionamento, layout ou promoções.
+
+COMO PUBLICAR:
+- Usando Vercel ou GitHub a partir da raiz do projeto: substitua na raiz index.html, sw.js e assets/js/app.js.
+- Usando pasta dist: publique os três arquivos equivalentes existentes dentro de dist/.
+- Aguarde a atualização do PWA; se necessário feche e reabra o aplicativo.

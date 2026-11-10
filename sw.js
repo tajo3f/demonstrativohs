@@ -1,4 +1,4 @@
-const CACHE='hs-final-2026-11-07-v36';
+const CACHE='hs-final-2026-11-10-v37';
 const ASSETS=[
   './',
   './index.html',
@@ -7,7 +7,7 @@ const ASSETS=[
   './assets/css/app.css',
   './assets/css/app.css?v=36',
   './assets/js/app.js',
-  './assets/js/app.js?v=36',
+  './assets/js/app.js?v=37',
   './manifest.webmanifest',
   './assets/images/abacaxi-em-cubos-250g.webp',
   './assets/images/abacaxi-limao-sal-rosa-300g.webp',

@@ -51,7 +51,7 @@
         "shortName": "Laranja pera",
         "category": "frutas",
         "categoryLabel": "Frutas",
-        "price": 5.99,
+        "price": 3.99,
         "weight": "Aprox. 500 g",
         "image": "./assets/images/laranja-pera-2-frutas-500g.webp",
         "badge": "2 frutas",
@@ -158,7 +158,7 @@
         "shortName": "Abobrinha para lasanha",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 4.99,
+        "price": 5.75,
         "weight": "500 g",
         "image": "./assets/images/abobrinha-laminas-lasanha-500g.webp",
         "badge": "Lâminas",
@@ -167,7 +167,7 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 4.99,
+                "price": 5.75,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
@@ -187,7 +187,7 @@
         "shortName": "Abobrinha fatiada",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 4.99,
+        "price": 5.75,
         "weight": "500 g",
         "image": "./assets/images/abobrinha-fatiada-rodelas-500g.webp",
         "badge": "Fatiada",
@@ -196,7 +196,7 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 4.99,
+                "price": 5.75,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
@@ -216,7 +216,7 @@
         "shortName": "Abobrinha em meia-lua",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 4.99,
+        "price": 5.75,
         "weight": "500 g",
         "image": "./assets/images/abobrinha-meia-lua-500g.webp",
         "badge": "Meia-lua",
@@ -225,7 +225,7 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 4.99,
+                "price": 5.75,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
@@ -245,7 +245,7 @@
         "shortName": "Abobrinha picada",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 4.99,
+        "price": 5.75,
         "weight": "500 g",
         "image": "./assets/images/abobrinha-picada-500g.webp",
         "badge": "Picada",
@@ -254,7 +254,7 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 4.99,
+                "price": 5.75,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
@@ -315,7 +315,7 @@
         "shortName": "Abobrinha em rodelas",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 4.99,
+        "price": 5.75,
         "weight": "500 g",
         "image": "./assets/images/abobrinha-rodelas-500g.webp",
         "badge": "Rodelas",
@@ -324,7 +324,7 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 4.99,
+                "price": 5.75,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
@@ -373,7 +373,7 @@
         "shortName": "Aipim cortado",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 4.99,
+        "price": 3.99,
         "weight": "500 g",
         "image": "./assets/images/aipim-cortado-congelado-500g.webp",
         "badge": "Congelado",
@@ -382,7 +382,7 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 4.99,
+                "price": 3.99,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
@@ -418,7 +418,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 64.95,
+                "price": 48.99,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -460,7 +460,7 @@
         "shortName": "Batata-doce em rodelas",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 9.35,
+        "price": 6.49,
         "weight": "500 g",
         "image": "./assets/images/batata-doce-rosada-rodelas-500g.webp",
         "badge": "Rodelas",
@@ -469,7 +469,7 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 9.35,
+                "price": 6.49,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
