@@ -800,6 +800,18 @@
         "description": "Abacaxi cortado em cubos, sem tempero. Embalagem de 250 g."
     },
     {
+        "id": "abacaxi-temperado-limao-sal-rosa-300g",
+        "name": "Abacaxi temperado com limão e sal rosa 300 g",
+        "shortName": "Abacaxi temperado com limão e sal rosa",
+        "category": "frutas",
+        "categoryLabel": "Frutas",
+        "price": 8.99,
+        "weight": "300 g",
+        "image": "./assets/images/abacaxi-em-cubos-250g.webp",
+        "badge": "Temperado",
+        "description": "Abacaxi em cubos, temperado com limão e sal rosa. Embalagem de 300 g."
+    },
+    {
         "id": "kit-maionese-1kg",
         "name": "Kit Maionese: cenoura, vagem, chuchu e batata-inglesa 500 g",
         "shortName": "Kit Maionese",

@@ -1,0 +1,12 @@
+HS HORTIGRANJEIRO SCHULZ — V41 | Dois produtos de abacaxi
+
+Atualização pontual sobre a V40:
+- Abacaxi SEM TEMPERO: 250 g, R$ 5,99.
+- Abacaxi TEMPERADO com limão e sal rosa: 300 g, R$ 8,99.
+- Ambos os produtos usam exatamente a mesma foto que já estava no catálogo: assets/images/abacaxi-em-cubos-250g.webp.
+- Os produtos são independentes: carrinho e pedido do WhatsApp discriminam corretamente cada um.
+- Preservados os demais produtos, condições PJ, entrega e identidade visual.
+- Atualizados o cache PWA e a versão da URL do aplicativo para evitar exibir o catálogo anterior.
+
+Para atualizar a V40, substitua os arquivos contidos no ZIP 'APENAS_ATUALIZACAO'.
+O ZIP COMPLETO tem o código-fonte e uma pasta dist/ atualizada para publicação.
