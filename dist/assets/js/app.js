@@ -26,7 +26,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 37.5,
+                "price": 43.13,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -80,7 +80,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 109.2,
+                "price": 125.58,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -145,7 +145,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 98.82,
+                "price": 113.64,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -174,7 +174,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
+                "price": 61.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -203,7 +203,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
+                "price": 61.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -232,7 +232,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
+                "price": 61.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -261,7 +261,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
+                "price": 61.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -290,7 +290,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 74.17,
+                "price": 85.30,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -331,7 +331,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
+                "price": 61.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -360,7 +360,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 37.5,
+                "price": 43.13,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -389,7 +389,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 34.62,
+                "price": 39.81,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -418,7 +418,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 48.99,
+                "price": 56.34,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -447,7 +447,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 16.79,
+                "price": 19.31,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -476,7 +476,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 60.49,
+                "price": 69.56,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -529,7 +529,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 86.25,
+                "price": 99.19,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -558,7 +558,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 128.8,
+                "price": 148.12,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -587,7 +587,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 23.69,
+                "price": 27.24,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -616,7 +616,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 125.92,
+                "price": 144.81,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -645,7 +645,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 89.1,
+                "price": 102.47,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -674,7 +674,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 128.8,
+                "price": 148.12,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -703,7 +703,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 92.0,
+                "price": 105.80,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -732,7 +732,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 83.49,
+                "price": 96.01,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -821,7 +821,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 80.5,
+                "price": 92.58,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -851,7 +851,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 106.6,
+                "price": 122.59,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -880,7 +880,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 83.49,
+                "price": 96.01,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -956,7 +956,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 82.25,
+                "price": 94.59,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -985,7 +985,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 63.25,
+                "price": 72.74,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -1079,7 +1079,7 @@
   const isPJCustomer = () => $('#customer-type')?.value === 'pj';
   const cnpjDigits = () => ($('#customer-cnpj')?.value || '').replace(/\D/g, '');
   const hasEligibleCNPJ = () => isPJCustomer() && cnpjDigits().length === 14;
-  // A tabela HS guarda o preço normal de cada embalagem. Nunca antecipar os 15%.
+  // Valor público das embalagens de 5 kg: valor da V39 + 15%, a pedido da HS. Nunca antecipar o desconto PJ.
   // O desconto PJ de 5 kg é calculado apenas após selecionar PJ e informar 14 dígitos de CNPJ.
   const packagePublicPrice = choice => choice?.price;
   const packageFinalPrice = choice => choice?.industrial && choice.weight === '5 kg' && hasEligibleCNPJ()
@@ -1098,6 +1098,15 @@
     return product.packageChoices.find(choice => choice.id === saved) || product.packageChoices[0];
   };
   const displayWeight = (product, id = product?.id) => selectedPackage(product, id)?.weight || product?.weight || '';
+  const displayName = (product, id = product?.id, choice = selectedPackage(product, id)) => {
+    const chosenWeight = choice?.weight || product?.weight || '';
+    const baseName = product?.name || '';
+    if (!choice || !chosenWeight || choice.id === 'varejo') return baseName;
+    const baseWeight = product.weight || '';
+    // Troca apenas o peso final para evitar títulos como '500 g' com embalagem de '5 kg'.
+    if (baseWeight && baseName.endsWith(baseWeight)) return `${baseName.slice(0, -baseWeight.length).trim()} ${chosenWeight}`;
+    return `${baseName} • ${chosenWeight}`;
+  };
   const isIndustrialPackage = (product, id = product?.id) => Boolean(selectedPackage(product, id)?.industrial);
   const addonCost = (product, id) => selectedAddons(id).reduce((sum, addonId) => {
     const addon = product?.addonChoices?.find(item => item.id === addonId);
@@ -1407,7 +1416,7 @@
     const quantity = cart[product.id] || 0;
     const article = document.createElement('article');
     article.className = 'catalog-card';
-    article.innerHTML = `<div class="catalog-image"><img src="${product.image}" alt="${product.name}" loading="lazy"><span>${product.badge}</span></div><div class="catalog-body"><h3 title="${product.name}">${cardName(product)}</h3><small>${product.weight} • ${product.categoryLabel}</small><div class="catalog-price"><strong>${priceLabel(product, product.id)}</strong><div class="action-host"></div></div></div>`;
+    article.innerHTML = `<div class="catalog-image"><img src="${product.image}" alt="${product.name}" loading="lazy"><span>${product.badge}</span></div><div class="catalog-body"><h3 title="${displayName(product)}">${cardName(product)}</h3><small>${displayWeight(product)} • ${product.categoryLabel}</small><div class="catalog-price"><strong>${priceLabel(product, product.id)}</strong><div class="action-host"></div></div></div>`;
     article.querySelector('.catalog-image').addEventListener('click', () => openDetail(product.id));
     article.querySelector('.catalog-body h3').addEventListener('click', () => openDetail(product.id));
     const host = article.querySelector('.action-host');
@@ -1455,7 +1464,7 @@
     const article = document.createElement('article');
     article.className = 'cart-line';
     const details = customSummary(product.id);
-    article.innerHTML = `<img src="${product.image}" alt="${product.name}"><div class="cart-line-info"><strong>${product.name}</strong><small>${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small><b>${itemPriceLabel(product, quantity, product.id)}</b></div><div class="cart-line-side"><button class="remove-line" aria-label="Remover ${product.name}">×</button><div class="line-stepper"><button aria-label="Diminuir">−</button><span>${quantity}</span><button aria-label="Aumentar">+</button></div>${needsDetail(product) ? '<button class="edit-custom" type="button">Editar</button>' : ''}</div>`;
+    article.innerHTML = `<img src="${product.image}" alt="${product.name}"><div class="cart-line-info"><strong>${displayName(product)}</strong><small>${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small><b>${itemPriceLabel(product, quantity, product.id)}</b></div><div class="cart-line-side"><button class="remove-line" aria-label="Remover ${product.name}">×</button><div class="line-stepper"><button aria-label="Diminuir">−</button><span>${quantity}</span><button aria-label="Aumentar">+</button></div>${needsDetail(product) ? '<button class="edit-custom" type="button">Editar</button>' : ''}</div>`;
     const buttons = article.querySelectorAll('button');
     buttons[0].onclick = () => setQty(product.id, 0);
     buttons[1].onclick = () => remove(product.id);
@@ -1492,7 +1501,7 @@
       const element = document.createElement('div');
       element.className = 'desktop-cart-line';
       const details = customSummary(product.id);
-      element.innerHTML = `<img src="${product.image}" alt="${product.name}"><div class="desktop-cart-line-info"><strong>${product.name}</strong><small>${quantity}x • ${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small></div><div class="desktop-cart-actions"><b>${itemPriceLabel(product, quantity, product.id)}</b><button class="desktop-remove" type="button" aria-label="Remover ${product.name} do carrinho"><span aria-hidden="true">×</span> Remover</button></div>`;
+      element.innerHTML = `<img src="${product.image}" alt="${product.name}"><div class="desktop-cart-line-info"><strong>${displayName(product)}</strong><small>${quantity}x • ${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small></div><div class="desktop-cart-actions"><b>${itemPriceLabel(product, quantity, product.id)}</b><button class="desktop-remove" type="button" aria-label="Remover ${product.name} do carrinho"><span aria-hidden="true">×</span> Remover</button></div>`;
       element.querySelector('.desktop-remove').addEventListener('click', () => setQty(product.id, 0));
       host.append(element);
     });
@@ -1555,7 +1564,7 @@
     const currentAddons = selectedAddons(id);
     const gallery = product.gallery?.length ? product.gallery : [product.image];
     const detail = $('#product-detail');
-    detail.innerHTML = `<button type="button" class="detail-close" aria-label="Fechar">×</button><div class="detail-image"><img data-detail-main src="${gallery[0]}" alt="${product.name}"></div>${gallery.length > 1 ? `<div class="detail-gallery">${gallery.map((src, index) => `<button type="button" class="detail-thumb${index === 0 ? ' active' : ''}" data-gallery-src="${src}" aria-label="Ver foto ${index + 1} de ${product.name}"><img src="${src}" alt=""></button>`).join('')}</div>` : ''}<div class="detail-body"><span>${product.categoryLabel.toUpperCase()}</span><h2>${product.name}</h2><small data-detail-weight>${displayWeight(product, id)}</small><div class="detail-price" data-detail-price>${priceLabel(product, id)}</div><p class="detail-description">${product.description}</p>${product.packageChoices?.length ? packagePickerHtml(product, id) : ''}${product.optionChoices?.length ? optionPickerHtml(product, id) : ''}${product.customizable ? fruitPickerHtml(currentFruits, product) : ''}${product.addonChoices?.length ? addonPickerHtml(product, currentAddons) : ''}<div class="detail-benefits"><div><span>◒</span><b>Seleção HS</b></div><div><span>✓</span><b>Higienizado</b></div><div><span>◷</span><b>Pronto para o dia a dia</b></div></div><div class="detail-actions"><div class="detail-stepper"><button type="button" data-minus>−</button><span data-detail-qty>${quantity}</span><button type="button" data-plus>+</button></div><button type="button" class="detail-add">${needsDetail(product) ? 'Salvar e adicionar' : 'Adicionar ao carrinho'}</button></div><div class="tip-card"><strong>Informação importante</strong><br>${defaultDetailTip(product)}</div></div>`;
+    detail.innerHTML = `<button type="button" class="detail-close" aria-label="Fechar">×</button><div class="detail-image"><img data-detail-main src="${gallery[0]}" alt="${product.name}"></div>${gallery.length > 1 ? `<div class="detail-gallery">${gallery.map((src, index) => `<button type="button" class="detail-thumb${index === 0 ? ' active' : ''}" data-gallery-src="${src}" aria-label="Ver foto ${index + 1} de ${product.name}"><img src="${src}" alt=""></button>`).join('')}</div>` : ''}<div class="detail-body"><span>${product.categoryLabel.toUpperCase()}</span><h2 data-detail-name>${displayName(product, id)}</h2><small data-detail-weight>${displayWeight(product, id)}</small><div class="detail-price" data-detail-price>${priceLabel(product, id)}</div><p class="detail-description">${product.description}</p>${product.packageChoices?.length ? packagePickerHtml(product, id) : ''}${product.optionChoices?.length ? optionPickerHtml(product, id) : ''}${product.customizable ? fruitPickerHtml(currentFruits, product) : ''}${product.addonChoices?.length ? addonPickerHtml(product, currentAddons) : ''}<div class="detail-benefits"><div><span>◒</span><b>Seleção HS</b></div><div><span>✓</span><b>Higienizado</b></div><div><span>◷</span><b>Pronto para o dia a dia</b></div></div><div class="detail-actions"><div class="detail-stepper"><button type="button" data-minus>−</button><span data-detail-qty>${quantity}</span><button type="button" data-plus>+</button></div><button type="button" class="detail-add">${needsDetail(product) ? 'Salvar e adicionar' : 'Adicionar ao carrinho'}</button></div><div class="tip-card"><strong>Informação importante</strong><br>${defaultDetailTip(product)}</div></div>`;
 
     let tempQuantity = quantity;
     const quantityTarget = $('[data-detail-qty]', detail);
@@ -1595,6 +1604,8 @@
       const packageId = $('input[name="detail-package"]:checked', detail)?.value;
       const pack = product.packageChoices?.find(item => item.id === packageId);
       if (weightTarget) weightTarget.textContent = pack?.weight || product.weight;
+      const nameTarget = $('[data-detail-name]', detail);
+      if (nameTarget) nameTarget.textContent = displayName(product, id, pack);
     };
     $$('input[name="detail-package"], input[name="detail-option"], [data-addon-option]', detail).forEach(input => input.addEventListener('change', syncDetailPrice));
 
@@ -1680,7 +1691,7 @@
       const baseTotal = lineBaseTotal(product, quantity, product.id);
       const discount = lineDiscount(product, quantity, product.id);
       const lineTotal = baseTotal - discount;
-      lines.push(`• *${quantity}x ${product.name}*`);
+      lines.push(`• *${quantity}x ${displayName(product, product.id)}*`);
       lines.push(`  ${displayWeight(product, product.id)} • ${Number.isFinite(lineTotal) ? money(lineTotal) : 'A confirmar'}`);
       if (details) lines.push(`  ${details}`);
       if (discount > 0) lines.push(`  Condição PJ (15%): -${money(discount)}`);

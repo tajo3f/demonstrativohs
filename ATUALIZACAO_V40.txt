@@ -1,0 +1,14 @@
+HS HORTIGRANJEIRO SCHULZ — V40 | Preço público das embalagens de 5 kg
+
+1. Ajustados os preços públicos de 27 opções de embalagens de 5 kg, acrescentando 15% ao preço anteriormente exibido na V39 (arredondamento em centavos).
+2. O catálogo exibe o novo valor CHEIO ao cliente PF e à PJ antes de informar um CNPJ completo.
+3. A redução de 15% é aplicada SOMENTE ao selecionar pessoa jurídica e informar CNPJ com 14 dígitos na finalização.
+4. Exemplo: Batata-inglesa em canoas, 5 kg: R$ 48,99 (V39) -> R$ 56,34 (V40, público); com CNPJ -> R$ 47,89.
+5. Selecionando embalagem de 5 kg, título do produto, carrinho e WhatsApp passam a mostrar 5 kg, sem exibir 500 g incorretamente.
+6. Embalagens de 3 kg não foram alteradas. Os preços das embalagens comuns também permanecem iguais.
+7. PWA e app.js receberam nova identificação de cache V40.
+8. IMPORTANTE: O CNPJ é aceito pelo preenchimento de 14 dígitos; a situação na Receita não é consultada.
+9. A regra de atacado de 10 itens iguais e CNPJ foi preservada.
+
+PUBLICAÇÃO: Se a versão V39 já está no GitHub, aplique o ZIP de atualização sobre os arquivos existentes (preservando as imagens); ou publique o ZIP completo, apontando o root para a pasta V40.
+ATENÇÃO: O novo preço foi calculado literalmente como V39 + 15%; o preço com desconto de 15% sobre esse novo valor não é exatamente igual ao antigo preço da V39.
