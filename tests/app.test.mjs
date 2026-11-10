@@ -19,16 +19,16 @@ const sliceProduct = id => {
 test('estrutura, PWA e nova identidade visual estão válidas', () => {
   for (const id of ['view-home','view-products','view-cart','product-dialog','checkout-dialog','install-dialog']) assert.match(html, new RegExp(`id="${id}"`));
   assert.equal(manifest.display, 'standalone');
-  assert.match(sw, /hs-final-2026-11-07-v35/);
+  assert.match(sw, /hs-final-2026-11-10-v39/);
   for (const file of ['hs-logo-oficial-v31.png','hs-app-icon-v31.png','hs-icon-circular-v31.png','icon-v31-32.png','icon-v31-64.png','icon-v31-180.png','icon-v31-192.png','icon-v31-512.png','favicon-v31.ico']) {
     assert.ok(fs.existsSync(new URL(`../assets/images/${file}`, import.meta.url)), file);
   }
   assert.ok(html.includes('Sistema em período de teste'));
 });
 
-test('catálogo mantém 41 produtos únicos com imagens locais', () => {
-  assert.equal(productImages.length, 41);
-  assert.equal(new Set(productImages).size, 41);
+test('catálogo mantém 40 produtos únicos com imagens locais', () => {
+  assert.equal(productImages.length, 40);
+  assert.equal(new Set(productImages).size, 40);
   for (const filename of productImages) assert.ok(fs.existsSync(new URL(`../assets/images/${filename}`, import.meta.url)), `imagem ausente: ${filename}`);
 });
 
@@ -119,14 +119,13 @@ test('V31 mantém a mesma experiência visual e funcional no celular e no comput
   assert.ok(css.includes('display:grid!important'));
   assert.ok(css.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'));
   assert.ok(css.includes('img[src$="milho-verde-3-espigas.webp"]'));
-  assert.ok(html.includes('app.css?v=35'));
-  assert.ok(html.includes('app.js?v=35'));
+  assert.ok(html.includes('app.css?v=36'));
+  assert.ok(html.includes('app.js?v=39'));
 });
 
 
 test('V31 atualiza preços e pesos das frutas solicitadas e mantém observações no checkout', () => {
   const expected = {
-    'abacaxi-limao-sal-rosa-300g': ['"price": 8.99', '"weight": "300 g"'],
     'mamao-picado-250g': ['"price": 5.99', '"weight": "250 g"'],
     'melao-picado-250g': ['"price": 7.99', '"weight": "250 g"'],
     'manga-palmer-cubos-250g': ['"price": 5.99', '"weight": "250 g"'],
@@ -190,4 +189,78 @@ test('V35: compartilhamento no mobile, desktop e fallback por cópia', () => {
   assert.ok(js.includes('navigator.clipboard?.writeText'));
   assert.ok(js.includes('document.execCommand'));
   assert.ok(js.includes('Conheça o aplicativo de pedidos da HS Hortigranjeiro Schulz!'));
+});
+
+test('V36: os quatro ícones da seção de benefícios são imagens locais otimizadas', () => {
+  const assets=['beneficio-praticidade.webp','beneficio-produtos.webp','beneficio-pedido.webp','beneficio-agilidade.webp'];
+  for(const file of assets){
+    assert.ok(html.includes(`assets/images/${file}`),`imagem ausente na tela inicial: ${file}`);
+    assert.ok(fs.existsSync(new URL(`../assets/images/${file}`,import.meta.url)),`imagem ausente no pacote: ${file}`);
+    assert.ok(sw.includes(file),`imagem ausente no cache PWA: ${file}`);
+  }
+  assert.match(css,/V36 — ícones oficiais da seção de benefícios HS/);
+  assert.ok(html.includes('class="benefit-mark"'));
+});
+
+
+test('V37: apenas as células laranja da tabela de 03/11/2026 são usadas para os novos preços', () => {
+  // SUGESTÃO (laranja): preço de venda exibido ao público.
+  for (const id of [
+    'abobrinha-laminas-lasanha-500g', 'abobrinha-fatiada-rodelas-500g',
+    'abobrinha-meia-lua-500g', 'abobrinha-picada-500g', 'abobrinha-rodelas-500g'
+  ]) {
+    assert.match(sliceProduct(id), /"price": 5\.75/);
+    assert.match(sliceProduct(id), /"weight": "5 kg",\s*"summary": [^\n]+/);
+  }
+  for (const [id, price] of [
+    ['aipim-cortado-congelado-500g', 3.99],
+    ['batata-doce-rosada-rodelas-500g', 6.49],
+    ['laranja-pera-2-frutas-500g', 3.99]
+  ]) assert.match(sliceProduct(id), new RegExp(`"price": ${price.toString().replace('.', '\\.')}[,\\n]`));
+
+  // 5 KG 15% (laranja): valores base para pessoa jurídica.
+  for (const [id, industrialPrice] of [
+    ['abobrinha-laminas-lasanha-500g', 53.30],
+    ['abobrinha-fatiada-rodelas-500g', 53.30],
+    ['abobrinha-meia-lua-500g', 53.30],
+    ['abobrinha-picada-500g', 53.30],
+    ['abobrinha-rodelas-500g', 53.30],
+    ['aipim-cortado-congelado-500g', 34.62],
+    ['batata-doce-rosada-rodelas-500g', 60.49],
+    ['batata-inglesa-canoa-500g', 48.99],
+    ['beterraba-cubos-pequenos-500g', 23.69],
+    ['chuchu-paysanne-500g', 16.79],
+    ['inhame-cara-500g', 83.49],
+    ['inhame-chines-cubos-500g', 83.49],
+    ['quiabo-fatiado-500g', 98.82]
+  ]) {
+    const obj = sliceProduct(id);
+    const industrialSection = obj.split('"id": "industrial"')[1];
+    assert.ok(industrialSection, `Embalagem industrial não encontrada em ${id}`);
+    assert.match(industrialSection, new RegExp(`"price": ${industrialPrice.toString().replace('.', '\\.')}[,\\n]`));
+  }
+  assert.match(sw, /hs-final-2026-11-10-v39/);
+});
+
+test('V38: existe apenas abacaxi natural sem tempero, 250 g, por R$ 5,99', () => {
+  const product = sliceProduct('abacaxi-sem-tempero-250g');
+  assert.match(product, /"price": 5\.99/);
+  assert.match(product, /"weight": "250 g"/);
+  assert.match(product, /"image": "\.\/assets\/images\/abacaxi-em-cubos-250g\.webp"/);
+  assert.doesNotMatch(js, /abacaxi-limao-sal-rosa-300g/);
+  assert.doesNotMatch(sw, /abacaxi-limao-sal-rosa-300g/);
+});
+
+
+test('V39: valor nominal de 5 kg permanece integral até existir CNPJ', () => {
+  assert.match(js, /const packagePublicPrice = choice => choice\?\.price;/);
+  assert.match(js, /const packageFinalPrice = choice => choice\?\.industrial && choice\.weight === '5 kg' && hasEligibleCNPJ\(\)/);
+  assert.match(js, /roundMoney\(packagePublicPrice\(choice\) \* \(1 - DISCOUNT_RATE\)\)/);
+  assert.doesNotMatch(js, /choice\.price \/ \(1 - DISCOUNT_RATE\)/);
+  assert.match(js, /pack\.weight === '5 kg' \? roundMoney\(\(packagePublicPrice\(pack\) - packageFinalPrice\(pack\)\) \* quantity\)/);
+  assert.match(html, /app\.js\?v=39/);
+  assert.match(sw, /hs-final-2026-11-10-v39/);
+  // Os dados HS são preços nominais: não devem ser alterados na atualização da regra PJ.
+  assert.match(sliceProduct('abobrinha-laminas-lasanha-500g'), /"price": 53\.3/);
+  assert.match(sliceProduct('mix-de-forno-700g'), /"price": 109\.2/);
 });

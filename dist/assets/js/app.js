@@ -800,18 +800,6 @@
         "description": "Abacaxi cortado em cubos, sem tempero. Embalagem de 250 g."
     },
     {
-        "id": "abacaxi-limao-sal-rosa-300g",
-        "name": "Abacaxi temperado com limão e sal rosa 300 g",
-        "shortName": "Abacaxi temperado",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 8.99,
-        "weight": "300 g",
-        "image": "./assets/images/abacaxi-limao-sal-rosa-300g.webp",
-        "badge": "Temperado",
-        "description": "Abacaxi preparado com limão e sal rosa, pronto para consumir."
-    },
-    {
         "id": "kit-maionese-1kg",
         "name": "Kit Maionese: cenoura, vagem, chuchu e batata-inglesa 500 g",
         "shortName": "Kit Maionese",
@@ -1091,10 +1079,12 @@
   const isPJCustomer = () => $('#customer-type')?.value === 'pj';
   const cnpjDigits = () => ($('#customer-cnpj')?.value || '').replace(/\D/g, '');
   const hasEligibleCNPJ = () => isPJCustomer() && cnpjDigits().length === 14;
-  // As prices imported from the last HS table are already the industrial PJ values,
-  // the undiscounted value is recovered for customer-facing display.
-  const packagePublicPrice = choice => choice?.industrial && choice.weight === '5 kg' ? roundMoney(choice.price / (1 - DISCOUNT_RATE)) : choice?.price;
-  const packageFinalPrice = choice => choice?.industrial && choice.weight === '5 kg' && hasEligibleCNPJ() ? choice.price : packagePublicPrice(choice);
+  // A tabela HS guarda o preço normal de cada embalagem. Nunca antecipar os 15%.
+  // O desconto PJ de 5 kg é calculado apenas após selecionar PJ e informar 14 dígitos de CNPJ.
+  const packagePublicPrice = choice => choice?.price;
+  const packageFinalPrice = choice => choice?.industrial && choice.weight === '5 kg' && hasEligibleCNPJ()
+    ? roundMoney(packagePublicPrice(choice) * (1 - DISCOUNT_RATE))
+    : packagePublicPrice(choice);
 
   const normalizeText = value => (value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const cardName = product => product.shortName || product.name.replace(/\s+\d+\s*(g|kg)$/i, '');
@@ -1540,7 +1530,7 @@
   function packagePickerHtml(product, id) {
     if (!product.packageChoices?.length) return '';
     const current = selectedPackage(product, id)?.id || product.packageChoices[0].id;
-    return `<fieldset class="question-card package-customizer"><legend>Embalagem</legend><div class="fruit-customizer-title"><strong>Escolha o tamanho da embalagem</strong><small>O preço especial para pessoa jurídica é liberado após informar o CNPJ na finalização. Você também pode comprar pelo preço normal.</small></div><div class="package-options">${product.packageChoices.map(choice => `<label class="package-option"><input type="radio" name="detail-package" value="${choice.id}" ${choice.id === current ? 'checked' : ''}><span><strong>${choice.label}</strong><small>${choice.industrial && choice.weight === '5 kg' ? (hasEligibleCNPJ() ? 'Preço empresarial liberado' : 'Preço normal • informe o CNPJ para condição PJ') : choice.industrial ? 'Embalagem especial' : 'Embalagem padrão'}</small><b>${money(packageFinalPrice(choice))}</b></span></label>`).join('')}</div></fieldset>`;
+    return `<fieldset class="question-card package-customizer"><legend>Embalagem</legend><div class="fruit-customizer-title"><strong>Escolha o tamanho da embalagem</strong><small>O preço do catálogo é o preço normal. Com CNPJ informado na finalização, o desconto de 15% é aplicado às embalagens de 5 kg.</small></div><div class="package-options">${product.packageChoices.map(choice => `<label class="package-option"><input type="radio" name="detail-package" value="${choice.id}" ${choice.id === current ? 'checked' : ''}><span><strong>${choice.label}</strong><small>${choice.industrial && choice.weight === '5 kg' ? (hasEligibleCNPJ() ? 'Preço empresarial liberado' : 'Preço normal • informe o CNPJ para condição PJ') : choice.industrial ? 'Embalagem especial' : 'Embalagem padrão'}</small><b>${money(packageFinalPrice(choice))}</b></span></label>`).join('')}</div></fieldset>`;
   }
 
   function optionPickerHtml(product, id) {
@@ -1551,7 +1541,7 @@
   function defaultDetailTip(product) {
     if (product.tip) return product.tip;
     if (product.customizable) return 'Escolha de 1 a 3 frutas. Cada opcional custa R$ 3,49 e será identificado no pedido.';
-    if (product.packageChoices?.length) return 'Você pode comprar pelo preço normal. Com CNPJ informado, a condição PJ é aplicada às embalagens industriais e a pedidos com 10 ou mais unidades idênticas.';
+    if (product.packageChoices?.length) return 'Você pode comprar pelo preço normal. Com CNPJ informado, a condição PJ é aplicada às embalagens de 5 kg e a pedidos com 10 ou mais unidades idênticas.';
     if (product.optionChoices?.length) return 'Você pode escolher a versão sem milho ou adicionar 80 g de milho verde em conserva.';
     return 'Produto higienizado e preparado para facilitar sua rotina.';
   }
@@ -1669,7 +1659,7 @@
     if (!hasEligibleCNPJ()) return 0;
     if (isIndustrialPackage(product, id)) {
       const pack = selectedPackage(product, id);
-      return pack.weight === '5 kg' ? roundMoney((packagePublicPrice(pack) - pack.price) * quantity) : 0;
+      return pack.weight === '5 kg' ? roundMoney((packagePublicPrice(pack) - packageFinalPrice(pack)) * quantity) : 0;
     }
     return qualifiesWholesale(product, quantity, id) ? roundMoney(lineBaseTotal(product, quantity, id) * DISCOUNT_RATE) : 0;
   };

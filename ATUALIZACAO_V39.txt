@@ -1,0 +1,11 @@
+HS HORTIGRANJEIRO SCHULZ — V39 | Preço nominal de 5 kg e desconto condicionado ao CNPJ
+
+1. Cada preço de embalagem industrial de 5 kg exibido ao público corresponde exatamente ao preço cadastrado no catálogo da HS, sem acréscimo ou desconto antecipado.
+2. Após o cliente selecionar pessoa jurídica e informar um CNPJ com 14 dígitos, aplica-se automaticamente 15% aos itens selecionados na embalagem de 5 kg, sem quantidade mínima.
+3. Para produtos de embalagens comuns: 15% no atacado somente com CNPJ informado e a partir de 10 unidades do MESMO produto.
+4. Embalagens de 3 kg não recebem o desconto exclusivo de 5 kg, salvo compras com 10 unidades idênticas (regra de atacado atual trata 3 kg como industrial, portanto não recebe desconto).
+5. Totais, troco, pedido mínimo e texto enviado pelo WhatsApp são recalculados de acordo com a condição PJ.
+6. Sem PJ/CNPJ, ou com CNPJ incompleto, o preço original não é reduzido.
+7. Forçar atualização do cache PWA por versão v39; arquivo app.js?v=39.
+
+OBS.: O campo faz conferência de 14 dígitos do CNPJ, não consulta autenticidade ou situação cadastral na Receita Federal.

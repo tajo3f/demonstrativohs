@@ -105,7 +105,7 @@
             <div class="service-rules-grid">
               <article><b>Entrega • R$ 10,00</b><p>Centro, São Luís e Vila Jetibá até a escola. Entregas às segundas e sextas-feiras.</p><small>Segunda: pedir até sexta-feira, às 9h. Sexta: pedir até quarta-feira, às 9h.</small></article>
               <article><b>Retirada no HS Hortigranjeiro Schulz</b><p>Faça o pedido com 48 horas de antecedência.</p><small>Pedidos retirados não têm taxa de entrega.</small></article>
-              <article><b>Pessoa jurídica • CNPJ</b><p>Com CNPJ, você recebe condições especiais no atacado ao comprar pelo menos 10 unidades do mesmo produto ou escolher embalagens industriais.</p><small>Sem CNPJ, você pode comprar normalmente, sem desconto. Não há quantidade mínima para embalagens industriais.</small></article>
+              <article><b>Pessoa jurídica • CNPJ</b><p>Com CNPJ informado, você recebe 15% de desconto ao comprar pelo menos 10 unidades do mesmo produto ou escolher embalagens de 5 kg.</p><small>Sem CNPJ, você pode comprar normalmente, sem desconto. Não há quantidade mínima para embalagens industriais.</small></article>
             </div>
           </section>
 
@@ -202,7 +202,7 @@
         <label><span>Nome <em>opcional</em></span><input id="customer-name" autocomplete="name" placeholder="Seu nome"></label>
         <label><span>Telefone / WhatsApp <em>opcional</em></span><input id="customer-phone" inputmode="tel" autocomplete="tel" placeholder="(27) 99999-9999"></label>
         <label><span>Tipo de cliente</span><select id="customer-type"><option value="pf">Comprar sem CNPJ • preço normal</option><option value="pj">Pessoa jurídica • informar CNPJ</option></select></label>
-        <label class="customer-cnpj-field" id="customer-cnpj-field" hidden><span>CNPJ</span><input id="customer-cnpj" inputmode="numeric" autocomplete="off" placeholder="00.000.000/0000-00"><small class="field-hint">Informe o CNPJ para liberar o desconto de 15% em 10 unidades idênticas do mesmo produto e nas embalagens industriais. Sem CNPJ, o preço normal será mantido.</small></label>
+        <label class="customer-cnpj-field" id="customer-cnpj-field" hidden><span>CNPJ</span><input id="customer-cnpj" inputmode="numeric" autocomplete="off" placeholder="00.000.000/0000-00"><small class="field-hint">Informe o CNPJ para liberar 15% de desconto na compra de 10 unidades idênticas do mesmo produto ou nas embalagens de 5 kg. Sem CNPJ, o preço cadastrado será mantido.</small></label>
         <label><span>Forma de recebimento</span><select id="customer-delivery"><option value="Combinar">Escolher depois</option><option value="Retirada">Retirada no HS Hortigranjeiro Schulz</option><option value="Entrega">Entrega</option></select></label>
         <div class="checkout-full delivery-rules" id="delivery-rules"><strong>Escolha entrega ou retirada</strong><span>As regras e os prazos aparecerão aqui para facilitar sua compra.</span></div>
         <label><span>Forma de pagamento</span><select id="customer-payment"><option>Combinar</option><option>Pix</option><option>Dinheiro</option><option>Débito</option><option>Crédito</option></select></label>
@@ -246,6 +246,6 @@
   </dialog>
 
   <div class="toast" id="toast" hidden></div>
-  <script src="./assets/js/app.js?v=37" defer></script>
+  <script src="./assets/js/app.js?v=39" defer></script>
 </body>
 </html>
