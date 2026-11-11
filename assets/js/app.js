@@ -26,7 +26,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 43.13,
+                "price": 37.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -80,7 +80,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 125.58,
+                "price": 109.2,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -145,7 +145,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 113.64,
+                "price": 98.82,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -174,7 +174,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -203,7 +203,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -232,7 +232,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -261,7 +261,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -290,7 +290,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 85.30,
+                "price": 74.17,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -331,7 +331,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 53.3,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -360,7 +360,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 43.13,
+                "price": 37.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -389,7 +389,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 39.81,
+                "price": 34.62,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -418,7 +418,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 56.34,
+                "price": 48.99,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -447,7 +447,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 19.31,
+                "price": 16.79,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -476,7 +476,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 69.56,
+                "price": 60.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -529,7 +529,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 99.19,
+                "price": 86.25,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -558,7 +558,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 148.12,
+                "price": 128.8,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -587,7 +587,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 27.24,
+                "price": 23.69,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -616,7 +616,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 144.81,
+                "price": 125.66,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -645,7 +645,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 102.47,
+                "price": 89.1,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -674,7 +674,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 148.12,
+                "price": 128.8,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -703,7 +703,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 105.80,
+                "price": 92.0,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -732,7 +732,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 96.01,
+                "price": 83.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -833,7 +833,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 92.58,
+                "price": 80.5,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -863,7 +863,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 122.59,
+                "price": 106.6,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -892,7 +892,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 96.01,
+                "price": 83.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -968,7 +968,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 94.59,
+                "price": 82.25,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -997,7 +997,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 72.74,
+                "price": 63.25,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -1091,8 +1091,9 @@
   const isPJCustomer = () => $('#customer-type')?.value === 'pj';
   const cnpjDigits = () => ($('#customer-cnpj')?.value || '').replace(/\D/g, '');
   const hasEligibleCNPJ = () => isPJCustomer() && cnpjDigits().length === 14;
-  // Valor público das embalagens de 5 kg: valor da V39 + 15%, a pedido da HS. Nunca antecipar o desconto PJ.
-  // O desconto PJ de 5 kg é calculado apenas após selecionar PJ e informar 14 dígitos de CNPJ.
+  // Valor público das embalagens de 5 kg: exatamente a coluna "5 KG 15%" da planilha de 03/11/2026.
+  // A coluna é a REFERÊNCIA DE PREÇO, não um desconto para antecipar na vitrine.
+  // O desconto PJ de 15% é adicional e só é calculado após selecionar PJ e informar CNPJ com 14 dígitos.
   const packagePublicPrice = choice => choice?.price;
   const packageFinalPrice = choice => choice?.industrial && choice.weight === '5 kg' && hasEligibleCNPJ()
     ? roundMoney(packagePublicPrice(choice) * (1 - DISCOUNT_RATE))

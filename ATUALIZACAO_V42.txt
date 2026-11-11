@@ -1,0 +1,19 @@
+HS HORTIGRANJEIRO SCHULZ — V42 | ALINHAMENTO DE PREÇOS INDUSTRIAIS
+
+REFERÊNCIA: coluna "5 KG 15%" da tabela oficial HS de 03/11/2026, enviada pelo cliente.
+
+- Corrigidos os preços de TODAS as 27 opções de embalagem de 5 kg do catálogo, usando os valores EXATOS daquela coluna.
+- Antes do CNPJ, os valores da coluna aparecem integralmente, sem desconto; o cliente PF também vê o preço integral.
+- Selecionando Pessoa Jurídica e informando CNPJ com 14 dígitos, o checkout calcula mais 15% DE DESCONTO sobre o preço indicado nessa coluna.
+- Exemplo: batata-inglesa em canoas 5 kg => preço público R$ 48,99; PJ com CNPJ => R$ 41,64.
+- Exemplo: mix de forno 5 kg => preço público R$ 109,20; PJ com CNPJ => R$ 92,82.
+- Os preços e pesos das demais embalagens, inclusive as duas opções de 3 kg, não foram alterados.
+- O desconto PJ em lote de 10 unidades do mesmo produto continua conforme versão anterior.
+- O catálogo mantém os dois abacaxis separados: temperado 300 g R$ 8,99; sem tempero 250 g R$ 5,99.
+- Atualizados cache PWA e versão do script: V42.
+- Sem alteração das imagens, WhatsApp de pedidos, horários, carrinho, layout ou regras de entrega.
+
+IMPORTANTE: é conferido o preenchimento do CNPJ com 14 dígitos; não há consulta à Receita Federal.
+
+ATUALIZAÇÃO RÁPIDA SOBRE V41: substituir na raiz os arquivos do ZIP "APENAS_ATUALIZACAO".
+PUBLICAÇÃO COMPLETA: a pasta dist/ do ZIP COMPLETO contém a versão pronta para deploy estático.
