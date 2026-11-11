@@ -1,0 +1,27 @@
+HS HORTIGRANJEIRO SCHULZ — V43 | PREÇO CHEIO + FOTO PENDENTE
+
+ATUALIZAÇÃO DE PREÇOS:
+- Corrigidas as 27 embalagens de 5 kg.
+- Os valores da coluna “5 KG 15%” da tabela HS (03/11/2026) serão os valores FINAIS depois do desconto empresarial, NÃO os preços vistos antes do CNPJ.
+- Antes de informar o CNPJ, a vitrine, os detalhes e o carrinho exibem o preço cheio.
+- Ao selecionar Pessoa Jurídica e informar CNPJ com 14 dígitos, aplica-se 15% de desconto e cada embalagem industrial de 5 kg chega exatamente ao valor daquela coluna.
+- Exemplo: batata-inglesa 5 kg R$ 57,64 (público) -> R$ 48,99 (PJ com CNPJ).
+- Exemplo: mix de forno 5 kg R$ 128,47 (público) -> R$ 109,20 (PJ com CNPJ).
+- Mantido o desconto PJ para 10 ou mais unidades iguais conforme regra existente.
+- PREÇOS DE 3 KG E DOS DEMAIS PRODUTOS INALTERADOS.
+
+FOTO DO ABACAXI:
+- Abacaxi sem tempero 250 g — R$ 5,99: foto removida do catálogo, da tela de detalhes e de ambos os carrinhos, com indicação discreta “Foto em breve”.
+- Abacaxi temperado com limão e sal rosa 300 g — R$ 8,99: mantém sua foto existente.
+- O produto sem tempero permanece à venda, aguardando a foto oficial.
+
+IMPLANTAÇÃO:
+- Versão 43 do script, CSS e cache PWA; atualizar o site e recarregar o aplicativo, se necessário.
+- Atualização rápida: usar o ZIP APENAS_ATUALIZACAO_V43, mantendo os demais arquivos do projeto.
+- Site completo: usar o ZIP V43_COMPLETO, preferencialmente publicando o conteúdo de dist/.
+
+TESTES:
+- node --check assets/js/app.js
+- npm run check
+- Checar visualmente no ambiente publicado o catálogo com/sem CNPJ e a foto pendente.
+- O preenchimento de CNPJ valida 14 dígitos, mas não consulta bases oficiais para verificar titularidade/validade.

@@ -4,1036 +4,1036 @@
   // Catálogo oficial revisado em 26/10/2026 com a nova identidade visual, preços destacados, embalagens industriais e regras comerciais fornecidas pela HS.
 
   const PRODUCTS = [
-    {
-        "id": "abobora-japonesa-com-casca-fatias-assar-500g",
-        "name": "Abóbora japonesa com casca em fatias para assar 500 g",
-        "shortName": "Abóbora japonesa em fatias",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 5.99,
-        "weight": "500 g",
-        "image": "./assets/images/abobora-japonesa-com-casca-fatias-assar-500g.webp",
-        "badge": "Para assar",
-        "description": "Abóbora japonesa com casca, cortada em fatias e pronta para assar.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 5.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 37.49,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "milho-verde-3-espigas",
-        "name": "Milho verde com 3 espigas",
-        "shortName": "Milho verde",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 4.99,
-        "weight": "3 espigas",
-        "image": "./assets/images/milho-verde-3-espigas.webp",
-        "badge": "Sazonal",
-        "description": "Milho verde embalado com 3 espigas. Produto sazonal, sujeito à disponibilidade."
-    },
-    {
-        "id": "laranja-pera-2-frutas-500g",
-        "name": "Laranja pera — 2 frutas",
-        "shortName": "Laranja pera",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 3.99,
-        "weight": "Aprox. 500 g",
-        "image": "./assets/images/laranja-pera-2-frutas-500g.webp",
-        "badge": "2 frutas",
-        "description": "Duas laranjas pera, com peso aproximado de 500 g, prontas para consumo ou preparo de sucos."
-    },
-    {
-        "id": "mix-de-forno-700g",
-        "name": "Mix de forno 700 g",
-        "shortName": "Mix de forno",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 15.99,
-        "weight": "700 g",
-        "image": "./assets/images/mix-de-forno-700g.webp",
-        "badge": "Forno",
-        "tip": "A embalagem pode ir ao forno sem a tampa.",
-        "description": "Mix com abóbora japonesa, batata-inglesa, batata-doce, cenoura, abobrinha, couve-flor, brócolis e cebola roxa.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 700 g",
-                "price": 15.99,
-                "weight": "700 g",
-                "summary": "Embalagem padrão • 700 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 109.2,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "salada-de-frutas-250g",
-        "name": "Salada de frutas 200 g",
-        "shortName": "Salada de frutas",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 9.99,
-        "weight": "200 g",
-        "image": "./assets/images/salada-de-frutas-250g.webp",
-        "badge": "Personalize",
-        "customizable": true,
-        "maxFruits": 3,
-        "addonChoices": [
-            {
-                "id": "mel",
-                "label": "Mel",
-                "priceDelta": 3.49
-            },
-            {
-                "id": "granola",
-                "label": "Granola",
-                "priceDelta": 3.49
-            },
-            {
-                "id": "leite-po",
-                "label": "Leite em pó",
-                "priceDelta": 3.49
-            },
-            {
-                "id": "leite-condensado",
-                "label": "Leite condensado",
-                "priceDelta": 3.49
-            }
-        ],
-        "description": "Monte sua salada escolhendo até 3 frutas. Você também pode adicionar complementos opcionais."
-    },
-    {
-        "id": "quiabo-fatiado-500g",
-        "name": "Quiabo fatiado 500 g",
-        "shortName": "Quiabo fatiado",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 9.99,
-        "weight": "500 g",
-        "image": "./assets/images/quiabo-fatiado-500g.webp",
-        "badge": "Fatiado",
-        "description": "Quiabo higienizado e fatiado, pronto para o preparo.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 9.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 98.82,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "abobrinha-laminas-lasanha-500g",
-        "name": "Abobrinha em lâminas para lasanha 500 g",
-        "shortName": "Abobrinha para lasanha",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 5.75,
-        "weight": "500 g",
-        "image": "./assets/images/abobrinha-laminas-lasanha-500g.webp",
-        "badge": "Lâminas",
-        "description": "Abobrinha cortada em lâminas, ideal para lasanhas e outros preparos.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 5.75,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "abobrinha-fatiada-rodelas-500g",
-        "name": "Abobrinha fatiada em rodelas 500 g",
-        "shortName": "Abobrinha fatiada",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 5.75,
-        "weight": "500 g",
-        "image": "./assets/images/abobrinha-fatiada-rodelas-500g.webp",
-        "badge": "Fatiada",
-        "description": "Abobrinha fatiada em rodelas, prática para refogados, grelhados e acompanhamentos.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 5.75,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "abobrinha-meia-lua-500g",
-        "name": "Abobrinha em meia-lua 500 g",
-        "shortName": "Abobrinha em meia-lua",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 5.75,
-        "weight": "500 g",
-        "image": "./assets/images/abobrinha-meia-lua-500g.webp",
-        "badge": "Meia-lua",
-        "description": "Abobrinha cortada em meia-lua, pronta para refogar ou cozinhar.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 5.75,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "abobrinha-picada-500g",
-        "name": "Abobrinha picada 500 g",
-        "shortName": "Abobrinha picada",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 5.75,
-        "weight": "500 g",
-        "image": "./assets/images/abobrinha-picada-500g.webp",
-        "badge": "Picada",
-        "description": "Abobrinha picada em cubos, higienizada e pronta para o uso.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 5.75,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "kit-sopa-500g",
-        "name": "Kit para sopa: inhame-chinês, chuchu, batata-inglesa e cenoura 500 g",
-        "shortName": "Kit para sopa",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 8.1,
-        "weight": "500 g",
-        "image": "./assets/images/kit-sopa-inhame-chines-chuchu-batata-cenoura-500g.webp",
-        "badge": "Sopa",
-        "description": "Kit para sopa com inhame-chinês, chuchu, batata-inglesa e cenoura, pronto para cozinhar.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 8.1,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 74.17,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "abobora-jacare-fatias-assar-500g",
-        "name": "Abóbora jacaré em fatias para assar 500 g",
-        "shortName": "Abóbora jacaré em fatias",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 3.99,
-        "weight": "500 g",
-        "image": "./assets/images/abobora-jacare-fatias-assar-500g.webp",
-        "badge": "Para assar",
-        "description": "Abóbora jacaré cortada em fatias, pronta para assar."
-    },
-    {
-        "id": "abobrinha-rodelas-500g",
-        "name": "Abobrinha em rodelas 500 g",
-        "shortName": "Abobrinha em rodelas",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 5.75,
-        "weight": "500 g",
-        "image": "./assets/images/abobrinha-rodelas-500g.webp",
-        "badge": "Rodelas",
-        "description": "Abobrinha em rodelas, higienizada e pronta para diferentes receitas.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 5.75,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 53.3,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "abobora-japonesa-sem-casca-cubos-500g",
-        "name": "Abóbora japonesa sem casca em cubos 500 g",
-        "shortName": "Abóbora japonesa em cubos",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 5.99,
-        "weight": "500 g",
-        "image": "./assets/images/abobora-japonesa-sem-casca-cubos-500g.webp",
-        "badge": "Cubos",
-        "description": "Abóbora japonesa sem casca, cortada em cubos e pronta para o preparo.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 5.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 37.49,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "aipim-cortado-congelado-500g",
-        "name": "Aipim cortado e congelado 500 g",
-        "shortName": "Aipim cortado",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 3.99,
-        "weight": "500 g",
-        "image": "./assets/images/aipim-cortado-congelado-500g.webp",
-        "badge": "Congelado",
-        "description": "Aipim cortado e congelado, pronto para cozinhar.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 3.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 34.62,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "batata-inglesa-canoa-500g",
-        "name": "Batata-inglesa em canoas 500 g",
-        "shortName": "Batata-inglesa em canoas",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 6.9,
-        "weight": "500 g",
-        "image": "./assets/images/batata-inglesa-canoa-500g.webp",
-        "badge": "Canoas",
-        "description": "Batata-inglesa cortada em canoas, ideal para forno, fritura ou air fryer.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 6.9,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 48.99,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "chuchu-paysanne-500g",
-        "name": "Chuchu em corte paysanne 500 g",
-        "shortName": "Chuchu corte paysanne",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 3.99,
-        "weight": "500 g",
-        "image": "./assets/images/chuchu-paysanne-500g.webp",
-        "badge": "Paysanne",
-        "description": "Chuchu em corte paysanne, com fatias finas e irregulares, pronto para o preparo.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 3.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 16.79,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "batata-doce-rosada-rodelas-500g",
-        "name": "Batata-doce rosada com casca em rodelas 500 g",
-        "shortName": "Batata-doce em rodelas",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 6.49,
-        "weight": "500 g",
-        "image": "./assets/images/batata-doce-rosada-rodelas-500g.webp",
-        "badge": "Rodelas",
-        "description": "Batata-doce rosada com casca, cortada em rodelas e pronta para assar ou cozinhar.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 6.49,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 60.49,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "melancia-cubos-250g",
-        "name": "Melancia em cubos 250 g",
-        "shortName": "Melancia em cubos",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 3.99,
-        "weight": "250 g",
-        "image": "./assets/images/melancia-cubos-250g.webp",
-        "badge": "Cubos",
-        "description": "Melancia fresca em cubos, pronta para consumir."
-    },
-    {
-        "id": "goiaba-fatiada-300g",
-        "name": "Goiaba fatiada 250 g",
-        "shortName": "Goiaba fatiada",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 7.99,
-        "weight": "250 g",
-        "image": "./assets/images/goiaba-fatiada-300g.webp",
-        "badge": "Fatiada",
-        "description": "Goiaba fresca fatiada, pronta para consumir."
-    },
-    {
-        "id": "combinado-cenoura-vagem-cubos-500g",
-        "name": "Combinado de cenoura e vagem em cubos pequenos 500 g",
-        "shortName": "Cenoura + vagem",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 9.35,
-        "weight": "500 g",
-        "image": "./assets/images/combinado-cenoura-vagem-cubos-500g.webp",
-        "badge": "Combinado",
-        "description": "Combinado de cenoura e vagem em cubos pequenos, pronto para facilitar o preparo.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 9.35,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 86.25,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "kit-primavera-01-500g",
-        "name": "Kit Primavera 01: couve-flor, brócolis, batata-inglesa e cenoura 500 g",
-        "shortName": "Kit Primavera 01",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 13.6,
-        "weight": "500 g",
-        "image": "./assets/images/kit-primavera-01-500g.webp",
-        "badge": "Primavera",
-        "description": "Kit com couve-flor, brócolis, batata-inglesa e cenoura.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 13.6,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 128.8,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "beterraba-cubos-pequenos-500g",
-        "name": "Beterraba em cubos pequenos 500 g",
-        "shortName": "Beterraba em cubos",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 5.99,
-        "weight": "500 g",
-        "image": "./assets/images/beterraba-cubos-pequenos-500g.webp",
-        "badge": "Cubos",
-        "description": "Beterraba cortada em cubos pequenos, higienizada e pronta para o preparo.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 5.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 23.69,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "vagem-verde-bastonetes-500g",
-        "name": "Vagem verde cortada em bastonetes 500 g",
-        "shortName": "Vagem em bastonetes",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 12.99,
-        "weight": "500 g",
-        "image": "./assets/images/vagem-verde-bastonetes-500g.webp",
-        "badge": "Bastonetes",
-        "description": "Vagem verde cortada em bastonetes, pronta para saladas, refogados e acompanhamentos.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 12.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 125.66,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "kit-refogado-500g",
-        "name": "Kit Refogado: abobrinha em meia-lua, cenoura em rodelas e vagem em bastonetes 500 g",
-        "shortName": "Kit Refogado",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 10.49,
-        "weight": "500 g",
-        "image": "./assets/images/kit-refogado-abobrinha-cenoura-vagem-500g.webp",
-        "badge": "Refogado",
-        "description": "Kit com abobrinha em meia-lua, cenoura em rodelas e vagem em bastonetes.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 10.49,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 89.1,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "kit-primavera-02-500g",
-        "name": "Kit Primavera 02: couve-flor, brócolis, vagem e cenoura 500 g",
-        "shortName": "Kit Primavera 02",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 13.6,
-        "weight": "500 g",
-        "image": "./assets/images/kit-primavera-02-500g.webp",
-        "badge": "Primavera",
-        "description": "Kit com couve-flor, brócolis, vagem e cenoura.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 13.6,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 128.8,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "kit-buque-couve-brocolis-500g",
-        "name": "Kit Buquê: couve e brócolis 500 g",
-        "shortName": "Kit Buquê",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 9.99,
-        "weight": "500 g",
-        "image": "./assets/images/kit-buque-couve-brocolis-500g.webp",
-        "badge": "Buquê",
-        "description": "Kit Buquê com couve e brócolis, higienizados e prontos para o preparo.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 9.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 92.0,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "inhame-chines-cubos-500g",
-        "name": "Inhame-chinês em cubos 500 g",
-        "shortName": "Inhame-chinês em cubos",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 8.99,
-        "weight": "500 g",
-        "image": "./assets/images/inhame-chines-cubos-500g.webp",
-        "badge": "Cubos",
-        "description": "Inhame-chinês em cubos, higienizado e pronto para cozinhar.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 8.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 83.49,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "kiwi-fatiado-300g",
-        "name": "Kiwi fatiado 250 g",
-        "shortName": "Kiwi fatiado",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 17.35,
-        "weight": "250 g",
-        "image": "./assets/images/kiwi-fatiado-300g.webp",
-        "badge": "Fatiado",
-        "description": "Kiwi fresco fatiado, pronto para consumir."
-    },
-    {
-        "id": "manga-palmer-cubos-250g",
-        "name": "Manga Palmer em cubos 250 g",
-        "shortName": "Manga Palmer em cubos",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 5.99,
-        "weight": "250 g",
-        "image": "./assets/images/manga-palmer-cubos-250g.webp",
-        "badge": "Cubos",
-        "description": "Manga Palmer fresca em cubos, pronta para consumir."
-    },
-    {
-        "id": "melao-picado-250g",
-        "name": "Melão picado 250 g",
-        "shortName": "Melão picado",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 7.99,
-        "weight": "250 g",
-        "image": "./assets/images/melao-picado-250g.webp",
-        "badge": "Picado",
-        "description": "Melão fresco picado, pronto para consumir."
-    },
-    {
-        "id": "mamao-picado-250g",
-        "name": "Mamão picado 250 g",
-        "shortName": "Mamão picado",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 5.99,
-        "weight": "250 g",
-        "image": "./assets/images/mamao-picado-250g.webp",
-        "badge": "Picado",
-        "description": "Mamão fresco picado, pronto para consumir."
-    },
-    {
-        "id": "abacaxi-sem-tempero-250g",
-        "name": "Abacaxi sem tempero 250 g",
-        "shortName": "Abacaxi sem tempero",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 5.99,
-        "weight": "250 g",
-        "image": "./assets/images/abacaxi-em-cubos-250g.webp",
-        "badge": "Natural",
-        "description": "Abacaxi cortado em cubos, sem tempero. Embalagem de 250 g."
-    },
-    {
-        "id": "abacaxi-temperado-limao-sal-rosa-300g",
-        "name": "Abacaxi temperado com limão e sal rosa 300 g",
-        "shortName": "Abacaxi temperado com limão e sal rosa",
-        "category": "frutas",
-        "categoryLabel": "Frutas",
-        "price": 8.99,
-        "weight": "300 g",
-        "image": "./assets/images/abacaxi-em-cubos-250g.webp",
-        "badge": "Temperado",
-        "description": "Abacaxi em cubos, temperado com limão e sal rosa. Embalagem de 300 g."
-    },
-    {
-        "id": "kit-maionese-1kg",
-        "name": "Kit Maionese: cenoura, vagem, chuchu e batata-inglesa 500 g",
-        "shortName": "Kit Maionese",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 8.99,
-        "weight": "500 g",
-        "image": "./assets/images/kit-maionese-1kg.webp",
-        "badge": "500 g",
-        "description": "Kit com cenoura, vagem, chuchu e batata-inglesa, pronto para o preparo de maionese e saladas.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 8.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 80.5,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "kit-yakisoba-500g",
-        "name": "Kit Yakisoba 500 g",
-        "shortName": "Kit Yakisoba",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 12.99,
-        "weight": "500 g",
-        "image": "./assets/images/kit-yakisoba-500g.webp",
-        "badge": "Yakisoba",
-        "tip": "A cebola é enviada separadamente.",
-        "description": "Kit com pimentão vermelho e amarelo, brócolis, couve-flor, repolho roxo e branco e cenoura. A cebola acompanha separada.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 12.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 106.6,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "inhame-cara-500g",
-        "name": "Inhame cará 500 g",
-        "shortName": "Inhame cará",
-        "category": "processados",
-        "categoryLabel": "Processados",
-        "price": 8.99,
-        "weight": "500 g",
-        "image": "./assets/images/inhame-cara-500g.webp",
-        "badge": "Cortado",
-        "description": "Inhame cará higienizado e cortado, pronto para cozinhar.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 8.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 83.49,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "casadinho-repolhos-300g",
-        "name": "Casadinho de repolhos: branco e roxo 300 g",
-        "shortName": "Casadinho de repolhos",
-        "category": "saladas",
-        "categoryLabel": "Saladas",
-        "price": 5.75,
-        "weight": "300 g",
-        "image": "./assets/images/casadinho-repolhos-300g.webp",
-        "badge": "Fatiado",
-        "description": "Repolho branco e repolho roxo fatiados, prontos para saladas e acompanhamentos.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 300 g",
-                "price": 5.75,
-                "weight": "300 g",
-                "summary": "Embalagem padrão • 300 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 3 kg",
-                "price": 40.25,
-                "weight": "3 kg",
-                "summary": "Embalagem industrial • 3 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "seleta-de-legumes-500g",
-        "name": "Seleta de legumes — corte brunoise 500 g",
-        "shortName": "Seleta de legumes",
-        "category": "kits",
-        "categoryLabel": "Kits",
-        "price": 8.9,
-        "weight": "500 g",
-        "image": "./assets/images/seleta-de-legumes-500g.webp",
-        "gallery": [
-            "./assets/images/seleta-de-legumes-500g.webp",
-            "./assets/images/seleta-de-legumes-opcao-milho.webp"
-        ],
-        "badge": "Brunoise",
-        "optionChoices": [
-            {
-                "id": "sem-milho",
-                "label": "Sem milho verde em conserva",
-                "priceDelta": 0,
-                "summary": "Sem milho verde em conserva"
-            },
-            {
-                "id": "com-milho",
-                "label": "Com milho verde em conserva (+80 g)",
-                "priceDelta": 3.49,
-                "summary": "Com milho verde em conserva • 80 g"
-            }
-        ],
-        "description": "Seleta em corte brunoise (cubos pequenos), com batata-inglesa, chuchu, cenoura e vagem. Escolha a versão com ou sem milho verde em conserva.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 8.9,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 82.25,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "espaguete-abobrinha-cenoura-500g",
-        "name": "Espaguete de abobrinha e cenoura 500 g",
-        "shortName": "Espaguete de legumes",
-        "category": "saladas",
-        "categoryLabel": "Saladas",
-        "price": 7.99,
-        "weight": "500 g",
-        "image": "./assets/images/espaguete-abobrinha-cenoura-500g.webp",
-        "badge": "Espaguete",
-        "description": "Abobrinha e cenoura em corte fino tipo espaguete, prontas para saladas, refogados e pratos leves.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 500 g",
-                "price": 7.99,
-                "weight": "500 g",
-                "summary": "Embalagem padrão • 500 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 5 kg",
-                "price": 63.25,
-                "weight": "5 kg",
-                "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    },
-    {
-        "id": "mix-folhas-1-300g",
-        "name": "Mix de folhas 1: repolho branco, repolho roxo e couve 300 g",
-        "shortName": "Mix de folhas 1",
-        "category": "saladas",
-        "categoryLabel": "Saladas",
-        "price": 4.99,
-        "weight": "300 g",
-        "image": "./assets/images/mix-folhas-1-300g.webp",
-        "badge": "Mix",
-        "description": "Mix de repolho branco, repolho roxo e couve, higienizado e pronto para servir.",
-        "packageChoices": [
-            {
-                "id": "varejo",
-                "label": "Embalagem padrão • 300 g",
-                "price": 4.99,
-                "weight": "300 g",
-                "summary": "Embalagem padrão • 300 g"
-            },
-            {
-                "id": "industrial",
-                "label": "Embalagem industrial • 3 kg",
-                "price": 31.05,
-                "weight": "3 kg",
-                "summary": "Embalagem industrial • 3 kg • preço empresarial disponível após informar CNPJ",
-                "industrial": true
-            }
-        ]
-    }
-];
+      {
+          "id": "abobora-japonesa-com-casca-fatias-assar-500g",
+          "name": "Abóbora japonesa com casca em fatias para assar 500 g",
+          "shortName": "Abóbora japonesa em fatias",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 5.99,
+          "weight": "500 g",
+          "image": "./assets/images/abobora-japonesa-com-casca-fatias-assar-500g.webp",
+          "badge": "Para assar",
+          "description": "Abóbora japonesa com casca, cortada em fatias e pronta para assar.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 5.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 44.11,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "milho-verde-3-espigas",
+          "name": "Milho verde com 3 espigas",
+          "shortName": "Milho verde",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 4.99,
+          "weight": "3 espigas",
+          "image": "./assets/images/milho-verde-3-espigas.webp",
+          "badge": "Sazonal",
+          "description": "Milho verde embalado com 3 espigas. Produto sazonal, sujeito à disponibilidade."
+      },
+      {
+          "id": "laranja-pera-2-frutas-500g",
+          "name": "Laranja pera — 2 frutas",
+          "shortName": "Laranja pera",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 3.99,
+          "weight": "Aprox. 500 g",
+          "image": "./assets/images/laranja-pera-2-frutas-500g.webp",
+          "badge": "2 frutas",
+          "description": "Duas laranjas pera, com peso aproximado de 500 g, prontas para consumo ou preparo de sucos."
+      },
+      {
+          "id": "mix-de-forno-700g",
+          "name": "Mix de forno 700 g",
+          "shortName": "Mix de forno",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 15.99,
+          "weight": "700 g",
+          "image": "./assets/images/mix-de-forno-700g.webp",
+          "badge": "Forno",
+          "tip": "A embalagem pode ir ao forno sem a tampa.",
+          "description": "Mix com abóbora japonesa, batata-inglesa, batata-doce, cenoura, abobrinha, couve-flor, brócolis e cebola roxa.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 700 g",
+                  "price": 15.99,
+                  "weight": "700 g",
+                  "summary": "Embalagem padrão • 700 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 128.47,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "salada-de-frutas-250g",
+          "name": "Salada de frutas 200 g",
+          "shortName": "Salada de frutas",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 9.99,
+          "weight": "200 g",
+          "image": "./assets/images/salada-de-frutas-250g.webp",
+          "badge": "Personalize",
+          "customizable": true,
+          "maxFruits": 3,
+          "addonChoices": [
+              {
+                  "id": "mel",
+                  "label": "Mel",
+                  "priceDelta": 3.49
+              },
+              {
+                  "id": "granola",
+                  "label": "Granola",
+                  "priceDelta": 3.49
+              },
+              {
+                  "id": "leite-po",
+                  "label": "Leite em pó",
+                  "priceDelta": 3.49
+              },
+              {
+                  "id": "leite-condensado",
+                  "label": "Leite condensado",
+                  "priceDelta": 3.49
+              }
+          ],
+          "description": "Monte sua salada escolhendo até 3 frutas. Você também pode adicionar complementos opcionais."
+      },
+      {
+          "id": "quiabo-fatiado-500g",
+          "name": "Quiabo fatiado 500 g",
+          "shortName": "Quiabo fatiado",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 9.99,
+          "weight": "500 g",
+          "image": "./assets/images/quiabo-fatiado-500g.webp",
+          "badge": "Fatiado",
+          "description": "Quiabo higienizado e fatiado, pronto para o preparo.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 9.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 116.26,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "abobrinha-laminas-lasanha-500g",
+          "name": "Abobrinha em lâminas para lasanha 500 g",
+          "shortName": "Abobrinha para lasanha",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 5.75,
+          "weight": "500 g",
+          "image": "./assets/images/abobrinha-laminas-lasanha-500g.webp",
+          "badge": "Lâminas",
+          "description": "Abobrinha cortada em lâminas, ideal para lasanhas e outros preparos.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 5.75,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 62.71,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "abobrinha-fatiada-rodelas-500g",
+          "name": "Abobrinha fatiada em rodelas 500 g",
+          "shortName": "Abobrinha fatiada",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 5.75,
+          "weight": "500 g",
+          "image": "./assets/images/abobrinha-fatiada-rodelas-500g.webp",
+          "badge": "Fatiada",
+          "description": "Abobrinha fatiada em rodelas, prática para refogados, grelhados e acompanhamentos.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 5.75,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 62.71,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "abobrinha-meia-lua-500g",
+          "name": "Abobrinha em meia-lua 500 g",
+          "shortName": "Abobrinha em meia-lua",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 5.75,
+          "weight": "500 g",
+          "image": "./assets/images/abobrinha-meia-lua-500g.webp",
+          "badge": "Meia-lua",
+          "description": "Abobrinha cortada em meia-lua, pronta para refogar ou cozinhar.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 5.75,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 62.71,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "abobrinha-picada-500g",
+          "name": "Abobrinha picada 500 g",
+          "shortName": "Abobrinha picada",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 5.75,
+          "weight": "500 g",
+          "image": "./assets/images/abobrinha-picada-500g.webp",
+          "badge": "Picada",
+          "description": "Abobrinha picada em cubos, higienizada e pronta para o uso.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 5.75,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 62.71,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "kit-sopa-500g",
+          "name": "Kit para sopa: inhame-chinês, chuchu, batata-inglesa e cenoura 500 g",
+          "shortName": "Kit para sopa",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 8.1,
+          "weight": "500 g",
+          "image": "./assets/images/kit-sopa-inhame-chines-chuchu-batata-cenoura-500g.webp",
+          "badge": "Sopa",
+          "description": "Kit para sopa com inhame-chinês, chuchu, batata-inglesa e cenoura, pronto para cozinhar.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 8.1,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 87.26,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "abobora-jacare-fatias-assar-500g",
+          "name": "Abóbora jacaré em fatias para assar 500 g",
+          "shortName": "Abóbora jacaré em fatias",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 3.99,
+          "weight": "500 g",
+          "image": "./assets/images/abobora-jacare-fatias-assar-500g.webp",
+          "badge": "Para assar",
+          "description": "Abóbora jacaré cortada em fatias, pronta para assar."
+      },
+      {
+          "id": "abobrinha-rodelas-500g",
+          "name": "Abobrinha em rodelas 500 g",
+          "shortName": "Abobrinha em rodelas",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 5.75,
+          "weight": "500 g",
+          "image": "./assets/images/abobrinha-rodelas-500g.webp",
+          "badge": "Rodelas",
+          "description": "Abobrinha em rodelas, higienizada e pronta para diferentes receitas.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 5.75,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 62.71,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "abobora-japonesa-sem-casca-cubos-500g",
+          "name": "Abóbora japonesa sem casca em cubos 500 g",
+          "shortName": "Abóbora japonesa em cubos",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 5.99,
+          "weight": "500 g",
+          "image": "./assets/images/abobora-japonesa-sem-casca-cubos-500g.webp",
+          "badge": "Cubos",
+          "description": "Abóbora japonesa sem casca, cortada em cubos e pronta para o preparo.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 5.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 44.11,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "aipim-cortado-congelado-500g",
+          "name": "Aipim cortado e congelado 500 g",
+          "shortName": "Aipim cortado",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 3.99,
+          "weight": "500 g",
+          "image": "./assets/images/aipim-cortado-congelado-500g.webp",
+          "badge": "Congelado",
+          "description": "Aipim cortado e congelado, pronto para cozinhar.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 3.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 40.73,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "batata-inglesa-canoa-500g",
+          "name": "Batata-inglesa em canoas 500 g",
+          "shortName": "Batata-inglesa em canoas",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 6.9,
+          "weight": "500 g",
+          "image": "./assets/images/batata-inglesa-canoa-500g.webp",
+          "badge": "Canoas",
+          "description": "Batata-inglesa cortada em canoas, ideal para forno, fritura ou air fryer.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 6.9,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 57.64,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "chuchu-paysanne-500g",
+          "name": "Chuchu em corte paysanne 500 g",
+          "shortName": "Chuchu corte paysanne",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 3.99,
+          "weight": "500 g",
+          "image": "./assets/images/chuchu-paysanne-500g.webp",
+          "badge": "Paysanne",
+          "description": "Chuchu em corte paysanne, com fatias finas e irregulares, pronto para o preparo.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 3.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 19.75,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "batata-doce-rosada-rodelas-500g",
+          "name": "Batata-doce rosada com casca em rodelas 500 g",
+          "shortName": "Batata-doce em rodelas",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 6.49,
+          "weight": "500 g",
+          "image": "./assets/images/batata-doce-rosada-rodelas-500g.webp",
+          "badge": "Rodelas",
+          "description": "Batata-doce rosada com casca, cortada em rodelas e pronta para assar ou cozinhar.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 6.49,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 71.16,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "melancia-cubos-250g",
+          "name": "Melancia em cubos 250 g",
+          "shortName": "Melancia em cubos",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 3.99,
+          "weight": "250 g",
+          "image": "./assets/images/melancia-cubos-250g.webp",
+          "badge": "Cubos",
+          "description": "Melancia fresca em cubos, pronta para consumir."
+      },
+      {
+          "id": "goiaba-fatiada-300g",
+          "name": "Goiaba fatiada 250 g",
+          "shortName": "Goiaba fatiada",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 7.99,
+          "weight": "250 g",
+          "image": "./assets/images/goiaba-fatiada-300g.webp",
+          "badge": "Fatiada",
+          "description": "Goiaba fresca fatiada, pronta para consumir."
+      },
+      {
+          "id": "combinado-cenoura-vagem-cubos-500g",
+          "name": "Combinado de cenoura e vagem em cubos pequenos 500 g",
+          "shortName": "Cenoura + vagem",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 9.35,
+          "weight": "500 g",
+          "image": "./assets/images/combinado-cenoura-vagem-cubos-500g.webp",
+          "badge": "Combinado",
+          "description": "Combinado de cenoura e vagem em cubos pequenos, pronto para facilitar o preparo.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 9.35,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 101.47,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "kit-primavera-01-500g",
+          "name": "Kit Primavera 01: couve-flor, brócolis, batata-inglesa e cenoura 500 g",
+          "shortName": "Kit Primavera 01",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 13.6,
+          "weight": "500 g",
+          "image": "./assets/images/kit-primavera-01-500g.webp",
+          "badge": "Primavera",
+          "description": "Kit com couve-flor, brócolis, batata-inglesa e cenoura.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 13.6,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 151.53,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "beterraba-cubos-pequenos-500g",
+          "name": "Beterraba em cubos pequenos 500 g",
+          "shortName": "Beterraba em cubos",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 5.99,
+          "weight": "500 g",
+          "image": "./assets/images/beterraba-cubos-pequenos-500g.webp",
+          "badge": "Cubos",
+          "description": "Beterraba cortada em cubos pequenos, higienizada e pronta para o preparo.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 5.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 27.87,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "vagem-verde-bastonetes-500g",
+          "name": "Vagem verde cortada em bastonetes 500 g",
+          "shortName": "Vagem em bastonetes",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 12.99,
+          "weight": "500 g",
+          "image": "./assets/images/vagem-verde-bastonetes-500g.webp",
+          "badge": "Bastonetes",
+          "description": "Vagem verde cortada em bastonetes, pronta para saladas, refogados e acompanhamentos.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 12.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 147.84,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "kit-refogado-500g",
+          "name": "Kit Refogado: abobrinha em meia-lua, cenoura em rodelas e vagem em bastonetes 500 g",
+          "shortName": "Kit Refogado",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 10.49,
+          "weight": "500 g",
+          "image": "./assets/images/kit-refogado-abobrinha-cenoura-vagem-500g.webp",
+          "badge": "Refogado",
+          "description": "Kit com abobrinha em meia-lua, cenoura em rodelas e vagem em bastonetes.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 10.49,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 104.82,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "kit-primavera-02-500g",
+          "name": "Kit Primavera 02: couve-flor, brócolis, vagem e cenoura 500 g",
+          "shortName": "Kit Primavera 02",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 13.6,
+          "weight": "500 g",
+          "image": "./assets/images/kit-primavera-02-500g.webp",
+          "badge": "Primavera",
+          "description": "Kit com couve-flor, brócolis, vagem e cenoura.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 13.6,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 151.53,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "kit-buque-couve-brocolis-500g",
+          "name": "Kit Buquê: couve e brócolis 500 g",
+          "shortName": "Kit Buquê",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 9.99,
+          "weight": "500 g",
+          "image": "./assets/images/kit-buque-couve-brocolis-500g.webp",
+          "badge": "Buquê",
+          "description": "Kit Buquê com couve e brócolis, higienizados e prontos para o preparo.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 9.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 108.24,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "inhame-chines-cubos-500g",
+          "name": "Inhame-chinês em cubos 500 g",
+          "shortName": "Inhame-chinês em cubos",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 8.99,
+          "weight": "500 g",
+          "image": "./assets/images/inhame-chines-cubos-500g.webp",
+          "badge": "Cubos",
+          "description": "Inhame-chinês em cubos, higienizado e pronto para cozinhar.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 8.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 98.22,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "kiwi-fatiado-300g",
+          "name": "Kiwi fatiado 250 g",
+          "shortName": "Kiwi fatiado",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 17.35,
+          "weight": "250 g",
+          "image": "./assets/images/kiwi-fatiado-300g.webp",
+          "badge": "Fatiado",
+          "description": "Kiwi fresco fatiado, pronto para consumir."
+      },
+      {
+          "id": "manga-palmer-cubos-250g",
+          "name": "Manga Palmer em cubos 250 g",
+          "shortName": "Manga Palmer em cubos",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 5.99,
+          "weight": "250 g",
+          "image": "./assets/images/manga-palmer-cubos-250g.webp",
+          "badge": "Cubos",
+          "description": "Manga Palmer fresca em cubos, pronta para consumir."
+      },
+      {
+          "id": "melao-picado-250g",
+          "name": "Melão picado 250 g",
+          "shortName": "Melão picado",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 7.99,
+          "weight": "250 g",
+          "image": "./assets/images/melao-picado-250g.webp",
+          "badge": "Picado",
+          "description": "Melão fresco picado, pronto para consumir."
+      },
+      {
+          "id": "mamao-picado-250g",
+          "name": "Mamão picado 250 g",
+          "shortName": "Mamão picado",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 5.99,
+          "weight": "250 g",
+          "image": "./assets/images/mamao-picado-250g.webp",
+          "badge": "Picado",
+          "description": "Mamão fresco picado, pronto para consumir."
+      },
+      {
+          "id": "abacaxi-sem-tempero-250g",
+          "name": "Abacaxi sem tempero 250 g",
+          "shortName": "Abacaxi sem tempero",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 5.99,
+          "weight": "250 g",
+          "image": null,
+          "badge": "Foto em breve",
+          "description": "Abacaxi cortado em cubos, sem tempero. Embalagem de 250 g."
+      },
+      {
+          "id": "abacaxi-temperado-limao-sal-rosa-300g",
+          "name": "Abacaxi temperado com limão e sal rosa 300 g",
+          "shortName": "Abacaxi temperado com limão e sal rosa",
+          "category": "frutas",
+          "categoryLabel": "Frutas",
+          "price": 8.99,
+          "weight": "300 g",
+          "image": "./assets/images/abacaxi-em-cubos-250g.webp",
+          "badge": "Temperado",
+          "description": "Abacaxi em cubos, temperado com limão e sal rosa. Embalagem de 300 g."
+      },
+      {
+          "id": "kit-maionese-1kg",
+          "name": "Kit Maionese: cenoura, vagem, chuchu e batata-inglesa 500 g",
+          "shortName": "Kit Maionese",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 8.99,
+          "weight": "500 g",
+          "image": "./assets/images/kit-maionese-1kg.webp",
+          "badge": "500 g",
+          "description": "Kit com cenoura, vagem, chuchu e batata-inglesa, pronto para o preparo de maionese e saladas.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 8.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 94.71,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "kit-yakisoba-500g",
+          "name": "Kit Yakisoba 500 g",
+          "shortName": "Kit Yakisoba",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 12.99,
+          "weight": "500 g",
+          "image": "./assets/images/kit-yakisoba-500g.webp",
+          "badge": "Yakisoba",
+          "tip": "A cebola é enviada separadamente.",
+          "description": "Kit com pimentão vermelho e amarelo, brócolis, couve-flor, repolho roxo e branco e cenoura. A cebola acompanha separada.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 12.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 125.41,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "inhame-cara-500g",
+          "name": "Inhame cará 500 g",
+          "shortName": "Inhame cará",
+          "category": "processados",
+          "categoryLabel": "Processados",
+          "price": 8.99,
+          "weight": "500 g",
+          "image": "./assets/images/inhame-cara-500g.webp",
+          "badge": "Cortado",
+          "description": "Inhame cará higienizado e cortado, pronto para cozinhar.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 8.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 98.22,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "casadinho-repolhos-300g",
+          "name": "Casadinho de repolhos: branco e roxo 300 g",
+          "shortName": "Casadinho de repolhos",
+          "category": "saladas",
+          "categoryLabel": "Saladas",
+          "price": 5.75,
+          "weight": "300 g",
+          "image": "./assets/images/casadinho-repolhos-300g.webp",
+          "badge": "Fatiado",
+          "description": "Repolho branco e repolho roxo fatiados, prontos para saladas e acompanhamentos.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 300 g",
+                  "price": 5.75,
+                  "weight": "300 g",
+                  "summary": "Embalagem padrão • 300 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 3 kg",
+                  "price": 40.25,
+                  "weight": "3 kg",
+                  "summary": "Embalagem industrial • 3 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "seleta-de-legumes-500g",
+          "name": "Seleta de legumes — corte brunoise 500 g",
+          "shortName": "Seleta de legumes",
+          "category": "kits",
+          "categoryLabel": "Kits",
+          "price": 8.9,
+          "weight": "500 g",
+          "image": "./assets/images/seleta-de-legumes-500g.webp",
+          "gallery": [
+              "./assets/images/seleta-de-legumes-500g.webp",
+              "./assets/images/seleta-de-legumes-opcao-milho.webp"
+          ],
+          "badge": "Brunoise",
+          "optionChoices": [
+              {
+                  "id": "sem-milho",
+                  "label": "Sem milho verde em conserva",
+                  "priceDelta": 0,
+                  "summary": "Sem milho verde em conserva"
+              },
+              {
+                  "id": "com-milho",
+                  "label": "Com milho verde em conserva (+80 g)",
+                  "priceDelta": 3.49,
+                  "summary": "Com milho verde em conserva • 80 g"
+              }
+          ],
+          "description": "Seleta em corte brunoise (cubos pequenos), com batata-inglesa, chuchu, cenoura e vagem. Escolha a versão com ou sem milho verde em conserva.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 8.9,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 96.76,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "espaguete-abobrinha-cenoura-500g",
+          "name": "Espaguete de abobrinha e cenoura 500 g",
+          "shortName": "Espaguete de legumes",
+          "category": "saladas",
+          "categoryLabel": "Saladas",
+          "price": 7.99,
+          "weight": "500 g",
+          "image": "./assets/images/espaguete-abobrinha-cenoura-500g.webp",
+          "badge": "Espaguete",
+          "description": "Abobrinha e cenoura em corte fino tipo espaguete, prontas para saladas, refogados e pratos leves.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 500 g",
+                  "price": 7.99,
+                  "weight": "500 g",
+                  "summary": "Embalagem padrão • 500 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 5 kg",
+                  "price": 74.41,
+                  "weight": "5 kg",
+                  "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      },
+      {
+          "id": "mix-folhas-1-300g",
+          "name": "Mix de folhas 1: repolho branco, repolho roxo e couve 300 g",
+          "shortName": "Mix de folhas 1",
+          "category": "saladas",
+          "categoryLabel": "Saladas",
+          "price": 4.99,
+          "weight": "300 g",
+          "image": "./assets/images/mix-folhas-1-300g.webp",
+          "badge": "Mix",
+          "description": "Mix de repolho branco, repolho roxo e couve, higienizado e pronto para servir.",
+          "packageChoices": [
+              {
+                  "id": "varejo",
+                  "label": "Embalagem padrão • 300 g",
+                  "price": 4.99,
+                  "weight": "300 g",
+                  "summary": "Embalagem padrão • 300 g"
+              },
+              {
+                  "id": "industrial",
+                  "label": "Embalagem industrial • 3 kg",
+                  "price": 31.05,
+                  "weight": "3 kg",
+                  "summary": "Embalagem industrial • 3 kg • preço empresarial disponível após informar CNPJ",
+                  "industrial": true
+              }
+          ]
+      }
+  ];
 
   const FRUIT_OPTIONS = ['Uva preta sem semente', 'Uva verde sem semente', 'Manga', 'Kiwi', 'Morango', 'Mamão', 'Melão', 'Maçã', 'Banana prata'];
   const HOME_FEATURE_IDS = [
@@ -1091,9 +1091,9 @@
   const isPJCustomer = () => $('#customer-type')?.value === 'pj';
   const cnpjDigits = () => ($('#customer-cnpj')?.value || '').replace(/\D/g, '');
   const hasEligibleCNPJ = () => isPJCustomer() && cnpjDigits().length === 14;
-  // Valor público das embalagens de 5 kg: exatamente a coluna "5 KG 15%" da planilha de 03/11/2026.
-  // A coluna é a REFERÊNCIA DE PREÇO, não um desconto para antecipar na vitrine.
-  // O desconto PJ de 15% é adicional e só é calculado após selecionar PJ e informar CNPJ com 14 dígitos.
+  // V43: a coluna "5 KG 15%" corresponde ao VALOR FINAL PJ após aplicar 15%.
+  // Catálogo apresenta o preço normal, calculado por preço PJ / 0,85 e arredondado em centavos.
+  // A condição PJ é liberada somente após escolher Pessoa Jurídica e informar 14 dígitos do CNPJ.
   const packagePublicPrice = choice => choice?.price;
   const packageFinalPrice = choice => choice?.industrial && choice.weight === '5 kg' && hasEligibleCNPJ()
     ? roundMoney(packagePublicPrice(choice) * (1 - DISCOUNT_RATE))
@@ -1367,13 +1367,18 @@
   }));
   $('#header-back').addEventListener('click', () => route(lastRoute || 'home'));
 
+  // Quando a foto oficial ainda não foi fornecida, não reutilizar a foto de outro produto.
+  const productPhoto = (product, extra = '') => product.image
+    ? `<img ${extra} src="${product.image}" alt="${product.name}" loading="lazy">`
+    : `<div class="product-photo-pending" role="img" aria-label="Foto do produto em breve"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1-2h6l1 2"/></svg><small>Foto em breve</small></div>`;
+
   function productMini(product) {
     const article = document.createElement('article');
     article.className = 'mini-product';
     article.tabIndex = 0;
     article.setAttribute('role', 'button');
     article.setAttribute('aria-label', `Ver ${product.name}`);
-    article.innerHTML = `<div class="mini-product-media"><img src="${product.image}" alt="${product.name}" loading="lazy"><span>${product.badge}</span></div><div class="mini-product-info"><strong>${cardName(product)}</strong><small>${product.weight}</small><b>${priceLabel(product, product.id)}</b></div><button class="mini-quick-add" type="button" aria-label="${needsDetail(product) ? `Ver opções de ${product.name}` : `Adicionar ${product.name} ao carrinho`}">+</button>`;
+    article.innerHTML = `<div class="mini-product-media">${productPhoto(product)}<span>${product.badge}</span></div><div class="mini-product-info"><strong>${cardName(product)}</strong><small>${product.weight}</small><b>${priceLabel(product, product.id)}</b></div><button class="mini-quick-add" type="button" aria-label="${needsDetail(product) ? `Ver opções de ${product.name}` : `Adicionar ${product.name} ao carrinho`}">+</button>`;
     const open = () => openDetail(product.id);
     article.addEventListener('click', open);
     article.addEventListener('keydown', event => {
@@ -1429,7 +1434,7 @@
     const quantity = cart[product.id] || 0;
     const article = document.createElement('article');
     article.className = 'catalog-card';
-    article.innerHTML = `<div class="catalog-image"><img src="${product.image}" alt="${product.name}" loading="lazy"><span>${product.badge}</span></div><div class="catalog-body"><h3 title="${displayName(product)}">${cardName(product)}</h3><small>${displayWeight(product)} • ${product.categoryLabel}</small><div class="catalog-price"><strong>${priceLabel(product, product.id)}</strong><div class="action-host"></div></div></div>`;
+    article.innerHTML = `<div class="catalog-image">${productPhoto(product)}<span>${product.badge}</span></div><div class="catalog-body"><h3 title="${displayName(product)}">${cardName(product)}</h3><small>${displayWeight(product)} • ${product.categoryLabel}</small><div class="catalog-price"><strong>${priceLabel(product, product.id)}</strong><div class="action-host"></div></div></div>`;
     article.querySelector('.catalog-image').addEventListener('click', () => openDetail(product.id));
     article.querySelector('.catalog-body h3').addEventListener('click', () => openDetail(product.id));
     const host = article.querySelector('.action-host');
@@ -1477,7 +1482,7 @@
     const article = document.createElement('article');
     article.className = 'cart-line';
     const details = customSummary(product.id);
-    article.innerHTML = `<img src="${product.image}" alt="${product.name}"><div class="cart-line-info"><strong>${displayName(product)}</strong><small>${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small><b>${itemPriceLabel(product, quantity, product.id)}</b></div><div class="cart-line-side"><button class="remove-line" aria-label="Remover ${product.name}">×</button><div class="line-stepper"><button aria-label="Diminuir">−</button><span>${quantity}</span><button aria-label="Aumentar">+</button></div>${needsDetail(product) ? '<button class="edit-custom" type="button">Editar</button>' : ''}</div>`;
+    article.innerHTML = `${productPhoto(product)}<div class="cart-line-info"><strong>${displayName(product)}</strong><small>${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small><b>${itemPriceLabel(product, quantity, product.id)}</b></div><div class="cart-line-side"><button class="remove-line" aria-label="Remover ${product.name}">×</button><div class="line-stepper"><button aria-label="Diminuir">−</button><span>${quantity}</span><button aria-label="Aumentar">+</button></div>${needsDetail(product) ? '<button class="edit-custom" type="button">Editar</button>' : ''}</div>`;
     const buttons = article.querySelectorAll('button');
     buttons[0].onclick = () => setQty(product.id, 0);
     buttons[1].onclick = () => remove(product.id);
@@ -1514,7 +1519,7 @@
       const element = document.createElement('div');
       element.className = 'desktop-cart-line';
       const details = customSummary(product.id);
-      element.innerHTML = `<img src="${product.image}" alt="${product.name}"><div class="desktop-cart-line-info"><strong>${displayName(product)}</strong><small>${quantity}x • ${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small></div><div class="desktop-cart-actions"><b>${itemPriceLabel(product, quantity, product.id)}</b><button class="desktop-remove" type="button" aria-label="Remover ${product.name} do carrinho"><span aria-hidden="true">×</span> Remover</button></div>`;
+      element.innerHTML = `${productPhoto(product)}<div class="desktop-cart-line-info"><strong>${displayName(product)}</strong><small>${quantity}x • ${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small></div><div class="desktop-cart-actions"><b>${itemPriceLabel(product, quantity, product.id)}</b><button class="desktop-remove" type="button" aria-label="Remover ${product.name} do carrinho"><span aria-hidden="true">×</span> Remover</button></div>`;
       element.querySelector('.desktop-remove').addEventListener('click', () => setQty(product.id, 0));
       host.append(element);
     });
@@ -1575,9 +1580,9 @@
     const quantity = cart[id] || 1;
     const currentFruits = selectedFruits(id);
     const currentAddons = selectedAddons(id);
-    const gallery = product.gallery?.length ? product.gallery : [product.image];
+    const gallery = product.gallery?.length ? product.gallery : (product.image ? [product.image] : []);
     const detail = $('#product-detail');
-    detail.innerHTML = `<button type="button" class="detail-close" aria-label="Fechar">×</button><div class="detail-image"><img data-detail-main src="${gallery[0]}" alt="${product.name}"></div>${gallery.length > 1 ? `<div class="detail-gallery">${gallery.map((src, index) => `<button type="button" class="detail-thumb${index === 0 ? ' active' : ''}" data-gallery-src="${src}" aria-label="Ver foto ${index + 1} de ${product.name}"><img src="${src}" alt=""></button>`).join('')}</div>` : ''}<div class="detail-body"><span>${product.categoryLabel.toUpperCase()}</span><h2 data-detail-name>${displayName(product, id)}</h2><small data-detail-weight>${displayWeight(product, id)}</small><div class="detail-price" data-detail-price>${priceLabel(product, id)}</div><p class="detail-description">${product.description}</p>${product.packageChoices?.length ? packagePickerHtml(product, id) : ''}${product.optionChoices?.length ? optionPickerHtml(product, id) : ''}${product.customizable ? fruitPickerHtml(currentFruits, product) : ''}${product.addonChoices?.length ? addonPickerHtml(product, currentAddons) : ''}<div class="detail-benefits"><div><span>◒</span><b>Seleção HS</b></div><div><span>✓</span><b>Higienizado</b></div><div><span>◷</span><b>Pronto para o dia a dia</b></div></div><div class="detail-actions"><div class="detail-stepper"><button type="button" data-minus>−</button><span data-detail-qty>${quantity}</span><button type="button" data-plus>+</button></div><button type="button" class="detail-add">${needsDetail(product) ? 'Salvar e adicionar' : 'Adicionar ao carrinho'}</button></div><div class="tip-card"><strong>Informação importante</strong><br>${defaultDetailTip(product)}</div></div>`;
+    detail.innerHTML = `<button type="button" class="detail-close" aria-label="Fechar">×</button><div class="detail-image">${gallery.length ? `<img data-detail-main src="${gallery[0]}" alt="${product.name}">` : productPhoto(product)}</div>${gallery.length > 1 ? `<div class="detail-gallery">${gallery.map((src, index) => `<button type="button" class="detail-thumb${index === 0 ? ' active' : ''}" data-gallery-src="${src}" aria-label="Ver foto ${index + 1} de ${product.name}"><img src="${src}" alt=""></button>`).join('')}</div>` : ''}<div class="detail-body"><span>${product.categoryLabel.toUpperCase()}</span><h2 data-detail-name>${displayName(product, id)}</h2><small data-detail-weight>${displayWeight(product, id)}</small><div class="detail-price" data-detail-price>${priceLabel(product, id)}</div><p class="detail-description">${product.description}</p>${product.packageChoices?.length ? packagePickerHtml(product, id) : ''}${product.optionChoices?.length ? optionPickerHtml(product, id) : ''}${product.customizable ? fruitPickerHtml(currentFruits, product) : ''}${product.addonChoices?.length ? addonPickerHtml(product, currentAddons) : ''}<div class="detail-benefits"><div><span>◒</span><b>Seleção HS</b></div><div><span>✓</span><b>Higienizado</b></div><div><span>◷</span><b>Pronto para o dia a dia</b></div></div><div class="detail-actions"><div class="detail-stepper"><button type="button" data-minus>−</button><span data-detail-qty>${quantity}</span><button type="button" data-plus>+</button></div><button type="button" class="detail-add">${needsDetail(product) ? 'Salvar e adicionar' : 'Adicionar ao carrinho'}</button></div><div class="tip-card"><strong>Informação importante</strong><br>${defaultDetailTip(product)}</div></div>`;
 
     let tempQuantity = quantity;
     const quantityTarget = $('[data-detail-qty]', detail);
