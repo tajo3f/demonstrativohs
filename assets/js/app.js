@@ -129,7 +129,7 @@
           "shortName": "Quiabo fatiado",
           "category": "processados",
           "categoryLabel": "Processados",
-          "price": 9.99,
+          "price": 10.49,
           "weight": "500 g",
           "image": "./assets/images/quiabo-fatiado-500g.webp",
           "badge": "Fatiado",
@@ -138,7 +138,7 @@
               {
                   "id": "varejo",
                   "label": "Embalagem padrão • 500 g",
-                  "price": 9.99,
+                  "price": 10.49,
                   "weight": "500 g",
                   "summary": "Embalagem padrão • 500 g"
               },
@@ -344,7 +344,7 @@
           "shortName": "Abóbora japonesa em cubos",
           "category": "processados",
           "categoryLabel": "Processados",
-          "price": 5.99,
+          "price": 7.99,
           "weight": "500 g",
           "image": "./assets/images/abobora-japonesa-sem-casca-cubos-500g.webp",
           "badge": "Cubos",
@@ -353,14 +353,14 @@
               {
                   "id": "varejo",
                   "label": "Embalagem padrão • 500 g",
-                  "price": 5.99,
+                  "price": 7.99,
                   "weight": "500 g",
                   "summary": "Embalagem padrão • 500 g"
               },
               {
                   "id": "industrial",
                   "label": "Embalagem industrial • 5 kg",
-                  "price": 44.11,
+                  "price": 81.99,
                   "weight": "5 kg",
                   "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                   "industrial": true
@@ -418,7 +418,7 @@
               {
                   "id": "industrial",
                   "label": "Embalagem industrial • 5 kg",
-                  "price": 57.64,
+                  "price": 65.75,
                   "weight": "5 kg",
                   "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                   "industrial": true
@@ -447,7 +447,7 @@
               {
                   "id": "industrial",
                   "label": "Embalagem industrial • 5 kg",
-                  "price": 19.75,
+                  "price": 23.81,
                   "weight": "5 kg",
                   "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                   "industrial": true
@@ -571,7 +571,7 @@
           "shortName": "Beterraba em cubos",
           "category": "processados",
           "categoryLabel": "Processados",
-          "price": 5.99,
+          "price": 6.99,
           "weight": "500 g",
           "image": "./assets/images/beterraba-cubos-pequenos-500g.webp",
           "badge": "Cubos",
@@ -580,14 +580,14 @@
               {
                   "id": "varejo",
                   "label": "Embalagem padrão • 500 g",
-                  "price": 5.99,
+                  "price": 6.99,
                   "weight": "500 g",
                   "summary": "Embalagem padrão • 500 g"
               },
               {
                   "id": "industrial",
                   "label": "Embalagem industrial • 5 kg",
-                  "price": 27.87,
+                  "price": 71.16,
                   "weight": "5 kg",
                   "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                   "industrial": true
