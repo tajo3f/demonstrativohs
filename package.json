@@ -8,6 +8,6 @@
     "test:browser": "python tests/browser_smoke.py"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=26"
   }
 }
