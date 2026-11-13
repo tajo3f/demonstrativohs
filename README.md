@@ -1,3 +1,18 @@
+# HS Hortigranjeiro Schulz — pacote COMPLETO V44.2 (13/11/2026)
+
+**Este ZIP reúne o repositório completo** com os preços oficiais da V44.
+**Leia primeiro `INSTRUCOES_PUBLICAR_HS_V44_2.txt`.**
+
+O deploy da Vercel executa `npm run build` e serve a pasta `dist` gerada
+novamente a partir da raiz. Altere preços somente em `assets/js/app.js`.
+**Não apague todo o repositório sem backup.**
+
+> A foto `assets/images/abacaxi-em-cubos-250g.webp` não constava no repositório
+> fornecido. Será preciso acrescentar a foto original depois; os preços não
+> dependem desse arquivo.
+
+---
+
 # CORREÇÃO TÉCNICA V44.1 — LEIA PRIMEIRO
 
 Este pacote é uma atualização **PARCIAL** do HS V44: não inclui as fotos,

@@ -1,12 +1,13 @@
 {
   "name": "hs-hortigranjeiro-oficial",
-  "version": "44.1.0",
+  "version": "44.2.0",
   "private": true,
   "scripts": {
-    "test": "node --test tests/pricing_v44.test.mjs tests/deployment_v441.test.mjs",
-    "check": "node --check assets/js/app.js && node --check dist/assets/js/app.js && node --check sw.js && node --check dist/sw.js && node --test tests/pricing_v44.test.mjs tests/deployment_v441.test.mjs",
+    "test": "node --test tests/pricing_v44.test.mjs tests/deployment_v441.test.mjs tests/build_v442.test.mjs",
+    "check": "npm run build && node --check assets/js/app.js && node --check sw.js && node --test tests/pricing_v44.test.mjs tests/deployment_v441.test.mjs tests/build_v442.test.mjs",
     "verify:assets": "node tests/check_required_assets.mjs",
-    "test:browser": "python tests/browser_prices_v44.py"
+    "test:browser": "python tests/browser_prices_v44.py",
+    "build": "node scripts/build_static.mjs"
   },
   "engines": {
     "node": "24.x"

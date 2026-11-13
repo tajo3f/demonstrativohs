@@ -1,12 +1,12 @@
-/* HS Hortigranjeiro Schulz — atualização técnica V44.1, preços V44 inalterados.
+/* HS Hortigranjeiro Schulz — publicação V44.2, tabela de preços da V44 preservada.
    Documento, JS e CSS priorizam a versão da rede. Somente respostas válidas
    entram no cache; arquivos ausentes não impedem a ativação do Service Worker. */
-const CACHE = 'hs-catalog-v44-1-2026-11-13';
+const CACHE = 'hs-catalog-v44-2-2026-11-13';
 const CORE = [
   './',
   './index.html',
-  './assets/css/app.css?v=44.1.0',
-  './assets/js/app.js?v=44.1.0'
+  './assets/css/app.css?v=44.2.0',
+  './assets/js/app.js?v=44.2.0'
 ];
 
 self.addEventListener('install', event => {

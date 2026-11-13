@@ -1,0 +1,60 @@
+HS HORTIGRANJEIRO SCHULZ — PACOTE COMPLETO DE PUBLICAÇÃO V44.2
+13/11/2026 | TAJO DIGITAL 3F
+
+O QUE FOI IDENTIFICADO
+O ZIP completo que você enviou JÁ continha os 20 preços V44 em assets/js/app.js.
+O erro principal no repositório era a pasta dist incompleta: havia fotos, páginas
+legais e manifest ausentes. Se a Vercel publicava dist, o site não recebia
+todos os recursos e podia parecer uma versão errada/antiga.
+
+O QUE FOI FEITO
+- Preservados 41 produtos e TODOS os preços e descontos da atualização V44.
+- Mantidos o carrinho, pedidos via WhatsApp, HTML, CSS e identidade visual.
+- Build automático 'npm run build': a cada deploy, copia TODO o site para dist.
+- vercel.json seleciona o build e Output Directory 'dist'.
+- Versão V44.2 no HTML e nos arquivos com versão na URL.
+- Service Worker usa novo cache de versão e prioriza a rede.
+- Node.js 24.x definido em package.json.
+- Testes que comparam a tabela CSV oficial aos preços do catálogo e do dist.
+
+COMO SUBSTITUIR NO GITHUB — SEM APAGAR NADA ANTES
+1. Baixe um backup do seu repositório atual antes da atualização.
+2. Extraia este ZIP. Entre na pasta demonstrativohs-main que está dentro dele.
+3. Abra o repositório GitHub de produção e confirme a branch main.
+4. Recomenda-se usar GitHub Desktop ou Git: substitua os arquivos e pastas
+   pelos arquivos DE DENTRO de demonstrativohs-main; não envie a pasta-pai
+   como subpasta do repositório. Commit: 'Publicar HS V44.2 preços V44'.
+5. NÃO exclua assets, index.html, sw.js, manifest ou páginas legais.
+6. Pode deixar dist no repositório: em cada deploy será regenerada automaticamente.
+
+VERCEL: PROJECT > SETTINGS > BUILD AND DEPLOYMENT
+  Framework Preset: Other
+  Root Directory: . (raiz com vercel.json e package.json)
+  Build Command: npm run build (definido pelo vercel.json)
+  Output Directory: dist (definido pelo vercel.json)
+  Node.js Version: 24.x
+  Production Branch: main
+Publique novo commit na main e em Deployments confirme Ready / Production.
+Se não aparecer, verifique qual commit foi publicado e confira o Root Directory.
+Redeploy sem usar o build cache se necessário.
+
+TESTE DE VERSÃO
+- Abra o domínio em navegador anônimo ONLINE.
+- Em 'Mais' aparecerá 'v44.2'.
+- Acesse DOMINIO/assets/js/app.js?v=44.2.0 e busque por
+  '"id": "quiabo-fatiado-500g"' e '"price": 10.49'.
+- Verifique os valores das embalagens industriais também.
+- Se o site tiver sido instalado como PWA, feche e reabra com internet.
+  Em último caso, após backup dos dados do carrinho, remova e reinstale
+  o atalho: o carrinho fica no armazenamento local e pode ser apagado.
+
+IMPORTANTE
+Sem banco de dados, NÃO existe edição remota dos preços em tempo real.
+Ao alterar os preços, modifique assets/js/app.js na raiz e publique novo commit.
+O build atualizará dist automaticamente. Não edite somente dist.
+
+LIMITE IDENTIFICADO NO ZIP ORIGINAL
+O arquivo 'assets/images/abacaxi-em-cubos-250g.webp' NÃO foi incluído no
+repositório recebido e permanece faltando neste pacote. Isso pode deixar
+uma foto de produto ausente, mas não impede a atualização dos preços.
+Para restaurá-la, envie a foto correta do produto com esse nome no GitHub.
