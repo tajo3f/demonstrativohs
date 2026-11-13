@@ -1,81 +1,58 @@
-const CACHE='hs-final-2026-11-12-v44';
-const ASSETS=[
+/* HS Hortigranjeiro Schulz — atualização técnica V44.1, preços V44 inalterados.
+   Documento, JS e CSS priorizam a versão da rede. Somente respostas válidas
+   entram no cache; arquivos ausentes não impedem a ativação do Service Worker. */
+const CACHE = 'hs-catalog-v44-1-2026-11-13';
+const CORE = [
   './',
   './index.html',
-  './privacidade.html',
-  './termos.html',
-  './assets/css/app.css',
-  './assets/css/app.css?v=44',
-  './assets/js/app.js',
-  './assets/js/app.js?v=44',
-  './manifest.webmanifest',
-  './assets/images/abacaxi-em-cubos-250g.webp',
-  './assets/images/abobora-jacare-fatias-assar-500g.webp',
-  './assets/images/abobora-japonesa-com-casca-fatias-assar-500g.webp',
-  './assets/images/abobora-japonesa-sem-casca-cubos-500g.webp',
-  './assets/images/abobrinha-fatiada-rodelas-500g.webp',
-  './assets/images/abobrinha-laminas-lasanha-500g.webp',
-  './assets/images/abobrinha-meia-lua-500g.webp',
-  './assets/images/abobrinha-picada-500g.webp',
-  './assets/images/abobrinha-rodelas-500g.webp',
-  './assets/images/aipim-cortado-congelado-500g.webp',
-  './assets/images/batata-doce-rosada-rodelas-500g.webp',
-  './assets/images/batata-inglesa-canoa-500g.webp',
-  './assets/images/beterraba-cubos-pequenos-500g.webp',
-  './assets/images/casadinho-repolhos-300g.webp',
-  './assets/images/chuchu-paysanne-500g.webp',
-  './assets/images/combinado-cenoura-vagem-cubos-500g.webp',
-  './assets/images/espaguete-abobrinha-cenoura-500g.webp',
-  './assets/images/favicon-v31.ico',
-  './assets/images/goiaba-fatiada-300g.webp',
-  './assets/images/hero-hs-v33-720.webp',
-  './assets/images/beneficio-praticidade.webp',
-  './assets/images/beneficio-produtos.webp',
-  './assets/images/beneficio-pedido.webp',
-  './assets/images/beneficio-agilidade.webp',
-  './assets/images/hero-hs-v33-1200.webp',
-  './assets/images/hero-hs-v33-1672.webp',
-  './assets/images/hero-hs-v20-1664.webp',
-  './assets/images/hero-hs-v20-720.webp',
-  './assets/images/hs-app-icon-v31.png',
-  './assets/images/hs-icon-circular-v31.png',
-  './assets/images/hs-logo-oficial-v31.png',
-  './assets/images/icon-v31-180.png',
-  './assets/images/icon-v31-192.png',
-  './assets/images/icon-v31-512.png',
-  './assets/images/icon-v31-32.png',
-  './assets/images/icon-v31-64.png',
-  './assets/images/inhame-cara-500g.webp',
-  './assets/images/inhame-chines-cubos-500g.webp',
-  './assets/images/kit-buque-couve-brocolis-500g.webp',
-  './assets/images/kit-maionese-1kg.webp',
-  './assets/images/kit-primavera-01-500g.webp',
-  './assets/images/kit-primavera-02-500g.webp',
-  './assets/images/kit-refogado-abobrinha-cenoura-vagem-500g.webp',
-  './assets/images/kit-sopa-inhame-chines-chuchu-batata-cenoura-500g.webp',
-  './assets/images/kit-yakisoba-500g.webp',
-  './assets/images/kiwi-fatiado-300g.webp',
-  './assets/images/laranja-pera-2-frutas-500g.webp',
-  './assets/images/mamao-picado-250g.webp',
-  './assets/images/manga-palmer-cubos-250g.webp',
-  './assets/images/melancia-cubos-250g.webp',
-  './assets/images/melao-picado-250g.webp',
-  './assets/images/milho-verde-3-espigas.webp',
-  './assets/images/mix-de-forno-700g.webp',
-  './assets/images/mix-folhas-1-300g.webp',
-  './assets/images/quiabo-fatiado-500g.webp',
-  './assets/images/salada-de-frutas-250g.webp',
-  './assets/images/seleta-de-legumes-500g.webp',
-  './assets/images/seleta-de-legumes-opcao-milho.webp',
-  './assets/images/vagem-verde-bastonetes-500g.webp',
+  './assets/css/app.css?v=44.1.0',
+  './assets/js/app.js?v=44.1.0'
 ];
 
-self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
-self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
-self.addEventListener('fetch',event=>{
-  if(event.request.method!=='GET') return;
-  event.respondWith(fetch(event.request).then(response=>{
-    if(response && response.ok && new URL(event.request.url).origin===self.location.origin){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));}
-    return response;
-  }).catch(()=>caches.match(event.request).then(cached=>cached||caches.match('./index.html'))));
+self.addEventListener('install', event => {
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    // O ZIP de atualização pode ser parcial; nunca falhar a instalação inteira
+    // quando um recurso individual não existir no servidor.
+    await Promise.allSettled(CORE.map(async path => {
+      const response = await fetch(path, { cache: 'no-store' });
+      if (response.ok) await cache.put(path, response);
+    }));
+    await self.skipWaiting();
+  })());
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil((async () => {
+    const names = await caches.keys();
+    await Promise.all(names
+      .filter(name => (name.startsWith('hs-final-') || name.startsWith('hs-catalog-')) && name !== CACHE)
+      .map(name => caches.delete(name)));
+    await self.clients.claim();
+  })());
+});
+
+self.addEventListener('fetch', event => {
+  const request = event.request;
+  const url = new URL(request.url);
+  if (request.method !== 'GET' || url.origin !== self.location.origin) return;
+  event.respondWith((async () => {
+    const cache = await caches.open(CACHE);
+    try {
+      // Não aceitar HTML / scripts / preços antigos do HTTP cache enquanto online.
+      const response = await fetch(request, { cache: 'no-store' });
+      if (response.ok && response.type !== 'opaque') {
+        await cache.put(request, response.clone());
+      }
+      return response;
+    } catch (error) {
+      const cached = await cache.match(request);
+      if (cached) return cached;
+      // Só navegação pode receber a tela principal; nunca enviar HTML como JS ou CSS.
+      if (request.mode === 'navigate') {
+        return (await cache.match('./index.html')) || (await cache.match('./')) || Response.error();
+      }
+      return Response.error();
+    }
+  })());
 });

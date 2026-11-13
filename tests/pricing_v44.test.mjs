@@ -73,7 +73,7 @@ test('fonte, dist e referências PWA são sincronizados para v44',()=>{
   const distSW=readFileSync(new URL('../dist/sw.js',import.meta.url),'utf8');
   assert.equal(html,distHtml);
   assert.equal(sw,distSW);
-  assert.match(sw,/hs-final-2026-11-12-v44/);
+  assert.match(sw,/hs-catalog-v44-1-2026-11-13/);
   assert.match(html,/app\.js\?v=44/);
   assert.match(html,/app\.css\?v=44/);
 });

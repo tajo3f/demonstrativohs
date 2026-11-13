@@ -2118,7 +2118,17 @@
   });
 
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' })
+        .then(registration => {
+          // Confere atualizações ao abrir/retomar o PWA, sem apagar carrinhos locais.
+          registration.update().catch(() => {});
+          document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') registration.update().catch(() => {});
+          });
+        })
+        .catch(error => console.warn('[HS] Falha ao registrar atualização offline:', error));
+    });
   }
 
   updateOrderingAvailability();

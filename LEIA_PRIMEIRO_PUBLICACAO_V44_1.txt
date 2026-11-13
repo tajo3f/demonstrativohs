@@ -1,0 +1,56 @@
+HS HORTIGRANJEIRO SCHULZ — CORREÇÃO DE PUBLICAÇÃO V44.1
+13/11/2026 | TAJO DIGITAL 3F
+
+ATENÇÃO: ESTE ZIP É UM PATCH, NÃO O SITE COMPLETO.
+O arquivo enviado em V44 tinha apenas 14 arquivos. O repositório ORIGINAL deve
+conservar suas fotos, CSS, manifesto, páginas de termos e privacidade.
+NÃO apague os arquivos originais para colocar apenas estes arquivos no GitHub.
+
+COMO PUBLICAR (recomendado, sem precisar de banco de dados):
+1. Entre no repositório GitHub já conectado ao projeto da Vercel.
+2. Confira que está na branch de produção (normalmente main).
+3. Faça backup do repositório atual.
+4. Extraia este ZIP no computador. Copie os arquivos sobre os caminhos
+   equivalentes do projeto ORIGINAL. Substitua quando houver mesmo nome, mas
+   NÃO exclua CSS, imagens, manifesto ou outras páginas que não estejam no ZIP.
+5. Faça commit e push para a branch de produção.
+6. Vercel: Project > Settings > Build and Deployment:
+   Framework Preset: Other (HTML estático)
+   Node.js Version: 24.x (package.json já força 24.x)
+   Root Directory: pasta do projeto que contém index.html (normalmente ./)
+   Output Directory: deixe vazio para publicar a raiz, OU dist para publicar
+   a pasta dist — mas só escolha dist se dist incluir TODOS os assets originais.
+   Não configure npm run check como Build Command para site estático sem build.
+7. Vercel > Deployments: confirme que o último commit na branch main está
+   com status Ready e no ambiente Production. Se necessário, Redeploy sem
+   reutilizar cache de build.
+8. Teste endereço real + /assets/js/app.js?v=44.1.0 para confirmar que a
+   nova versão está no ar. Em Mais no catálogo, deve aparecer v44.1.
+9. Atualize o site no celular com Internet. Para PWA instalado, feche e
+   reabra o aplicativo. Se persistir, limpe só os dados do site / reinstale
+   o atalho após confirmar que o site online está atualizado.
+
+DIAGNÓSTICO DE ARQUIVOS INCOMPLETOS (local): npm run verify:assets
+TESTES DE PREÇOS E CÓDIGO (local): npm run check
+
+O QUE FOI CORRIGIDO:
+- Node.js 24.x fixado, evitando o override automático por >=20.
+- Serviço offline com cache novo e carregamento da rede primeiro.
+- Erro de instalação PWA por precache obrigatório de arquivos ausentes evitado.
+- JS/CSS com query de versão para forçar nova leitura após publicação.
+- Cabeçalhos sem armazenamento HTTP para HTML, JS, CSS e service worker.
+- Registro PWA confere atualizações no carregamento e ao voltar à tela.
+- Identificação visual de versão na aba Mais.
+- Mantidos os 41 produtos e todos os preços originais da V44.
+- Mantidas as regras do carrinho, CNPJ, descontos e WhatsApp.
+
+LIMITAÇÃO DA ARQUITETURA SEM BANCO:
+Os preços são definidos no app.js, então um novo preço só aparece após
+editar o código, publicar o commit em produção e carregar a nova versão.
+O carrinho fica no navegador do cliente. Preços alterados por uma pessoa
+no próprio navegador não ficam sincronizados com os demais dispositivos.
+
+PROBLEMAS QUE NÃO PODEM SER CONFIRMADOS APENAS COM O ZIP:
+- Se o GitHub recebeu os arquivos na branch efetiva da produção.
+- Se a Vercel está publicando root ou dist com os demais arquivos necessários.
+- Se o domínio do usuário está ligado ao último deploy correto.

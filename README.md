@@ -1,3 +1,15 @@
+# CORREÇÃO TÉCNICA V44.1 — LEIA PRIMEIRO
+
+Este pacote é uma atualização **PARCIAL** do HS V44: não inclui as fotos,
+o CSS, o manifesto nem as páginas legais do site completo. Aplique sobre o
+repositório original do GitHub sem excluir os demais arquivos. Consulte
+`LEIA_PRIMEIRO_PUBLICACAO_V44_1.txt` para o procedimento completo.
+
+**Os preços comerciais continuam os mesmos da V44.** Esta versão altera
+somente publicação, cabeçalhos, cache PWA, versão de Node e diagnóstico.
+
+---
+
 # HS Hortigranjeiro Schulz — Catálogo Digital V44
 
 Aplicação web estática/PWA para catálogo e pedidos da nova linha HS.
