@@ -1,0 +1,38 @@
+# HS Hortigranjeiro Schulz — V44 · Atualização de preços (12/11/2026)
+
+Atualização realizada sobre a V43 COMPLETO, usando os valores visíveis nas **20 fotos enviadas**.
+
+**Importante:** os preços da coluna "Industrial 5 kg" abaixo são os preços mostrados no catálogo, **sem adicionar 15% e sem calcular preço cheio por divisão por 0,85**. A condição comercial de desconto de 15% para pessoa jurídica, ativada na finalização após informar CNPJ, foi preservada conforme regra anterior. A quantidade igual ou maior que 10 unidades de um mesmo produto continua seguindo as regras anteriores.
+
+| Produto | Embalagem padrão | Industrial 5 kg |
+|---|---:|---:|
+| Quiabo fatiado 500 g | R$ 10,49 | R$ 98,82 |
+| Kit para sopa: inhame-chinês, chuchu, batata-inglesa e cenoura 500 g | R$ 8,10 | R$ 74,17 |
+| Abóbora japonesa sem casca em cubos 500 g | R$ 7,99 | R$ 69,69 |
+| Aipim cortado e congelado 500 g | R$ 3,99 | R$ 34,62 |
+| Batata-inglesa em canoas 500 g | R$ 6,90 | R$ 55,89 |
+| Chuchu em corte paysanne 500 g | R$ 3,99 | R$ 20,24 |
+| Batata-doce rosada com casca em rodelas 500 g | R$ 6,49 | R$ 60,49 |
+| Combinado de cenoura e vagem em cubos pequenos 500 g | R$ 9,35 | R$ 86,25 |
+| Kit Primavera 01: couve-flor, brócolis, batata-inglesa e cenoura 500 g | R$ 13,60 | R$ 128,80 |
+| Beterraba em cubos pequenos 500 g | R$ 6,99 | R$ 60,49 |
+| Vagem verde cortada em bastonetes 500 g | R$ 12,99 | R$ 125,66 |
+| Kit Refogado: abobrinha em meia-lua, cenoura em rodelas e vagem em bastonetes 500 g | R$ 10,49 | R$ 89,10 |
+| Kit Primavera 02: couve-flor, brócolis, vagem e cenoura 500 g | R$ 13,60 | R$ 128,80 |
+| Kit Buquê: couve e brócolis 500 g | R$ 9,99 | R$ 92,00 |
+| Inhame-chinês em cubos 500 g | R$ 8,99 | R$ 83,49 |
+| Kit Maionese: cenoura, vagem, chuchu e batata-inglesa 500 g | R$ 8,99 | R$ 80,50 |
+| Kit Yakisoba 500 g | R$ 12,99 | R$ 106,60 |
+| Inhame cará 500 g | R$ 8,99 | R$ 83,49 |
+| Seleta de legumes — corte brunoise 500 g | R$ 8,90 | R$ 82,25 |
+| Espaguete de abobrinha e cenoura 500 g | R$ 7,99 | R$ 63,25 |
+
+## Detalhes
+
+- Os valores **beterraba 500 g = R$ 6,99**, **abóbora japonesa sem casca 500 g = R$ 7,99** e **quiabo 500 g = R$ 10,49** foram atualizados tanto no preço do produto quanto na opção de embalagem padrão.
+- Para a embalagem industrial de 5 kg, todos os 20 preços foram substituídos exatamente pelos valores apresentados, sem qualquer multiplicador.
+- As demais mercadorias, fotos, categorias, regras de pedido e integração de WhatsApp não foram alteradas.
+- Arquivos sincronizados em fonte e `dist/`.
+- Versionamento CSS/JS e cache PWA incrementado para V44.
+- Se o usuário já tinha o app instalado, recarregar com internet ativa para receber a atualização.
+

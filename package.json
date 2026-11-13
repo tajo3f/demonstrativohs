@@ -1,10 +1,10 @@
 {
   "name": "hs-hortigranjeiro-oficial",
-  "version": "39.0.0",
+  "version": "44.0.0",
   "private": true,
   "scripts": {
-    "test": "node --test tests/app.test.mjs tests/pricing_v39.test.mjs",
-    "check": "node --check assets/js/app.js && node --test tests/app.test.mjs tests/pricing_v39.test.mjs",
+    "test": "node --test tests/pricing_v44.test.mjs tests/abacaxi_v43.test.mjs",
+    "check": "node --check assets/js/app.js && node --check dist/assets/js/app.js && node --test tests/pricing_v44.test.mjs tests/abacaxi_v43.test.mjs",
     "test:browser": "python tests/browser_smoke.py"
   },
   "engines": {

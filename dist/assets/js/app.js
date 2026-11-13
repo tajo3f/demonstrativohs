@@ -26,7 +26,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 43.13,
+                "price": 44.11,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -80,7 +80,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 125.58,
+                "price": 128.47,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -129,7 +129,7 @@
         "shortName": "Quiabo fatiado",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 9.99,
+        "price": 10.49,
         "weight": "500 g",
         "image": "./assets/images/quiabo-fatiado-500g.webp",
         "badge": "Fatiado",
@@ -138,14 +138,14 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 9.99,
+                "price": 10.49,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 113.64,
+                "price": 98.82,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -174,7 +174,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 62.71,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -203,7 +203,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 62.71,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -232,7 +232,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 62.71,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -261,7 +261,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 62.71,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -290,7 +290,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 85.30,
+                "price": 74.17,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -331,7 +331,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 61.3,
+                "price": 62.71,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -344,7 +344,7 @@
         "shortName": "Abóbora japonesa em cubos",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 5.99,
+        "price": 7.99,
         "weight": "500 g",
         "image": "./assets/images/abobora-japonesa-sem-casca-cubos-500g.webp",
         "badge": "Cubos",
@@ -353,14 +353,14 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 5.99,
+                "price": 7.99,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 43.13,
+                "price": 69.69,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -389,7 +389,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 39.81,
+                "price": 34.62,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -418,7 +418,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 56.34,
+                "price": 55.89,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -447,7 +447,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 19.31,
+                "price": 20.24,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -476,7 +476,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 69.56,
+                "price": 60.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -529,7 +529,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 99.19,
+                "price": 86.25,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -558,7 +558,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 148.12,
+                "price": 128.8,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -571,7 +571,7 @@
         "shortName": "Beterraba em cubos",
         "category": "processados",
         "categoryLabel": "Processados",
-        "price": 5.99,
+        "price": 6.99,
         "weight": "500 g",
         "image": "./assets/images/beterraba-cubos-pequenos-500g.webp",
         "badge": "Cubos",
@@ -580,14 +580,14 @@
             {
                 "id": "varejo",
                 "label": "Embalagem padrão • 500 g",
-                "price": 5.99,
+                "price": 6.99,
                 "weight": "500 g",
                 "summary": "Embalagem padrão • 500 g"
             },
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 27.24,
+                "price": 60.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -616,7 +616,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 144.81,
+                "price": 125.66,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -645,7 +645,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 102.47,
+                "price": 89.1,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -674,7 +674,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 148.12,
+                "price": 128.8,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -703,7 +703,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 105.80,
+                "price": 92.0,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -732,7 +732,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 96.01,
+                "price": 83.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -795,9 +795,21 @@
         "categoryLabel": "Frutas",
         "price": 5.99,
         "weight": "250 g",
-        "image": "./assets/images/abacaxi-em-cubos-250g.webp",
-        "badge": "Natural",
+        "image": null,
+        "badge": "Foto em breve",
         "description": "Abacaxi cortado em cubos, sem tempero. Embalagem de 250 g."
+    },
+    {
+        "id": "abacaxi-temperado-limao-sal-rosa-300g",
+        "name": "Abacaxi temperado com limão e sal rosa 300 g",
+        "shortName": "Abacaxi temperado com limão e sal rosa",
+        "category": "frutas",
+        "categoryLabel": "Frutas",
+        "price": 8.99,
+        "weight": "300 g",
+        "image": "./assets/images/abacaxi-em-cubos-250g.webp",
+        "badge": "Temperado",
+        "description": "Abacaxi em cubos, temperado com limão e sal rosa. Embalagem de 300 g."
     },
     {
         "id": "kit-maionese-1kg",
@@ -821,7 +833,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 92.58,
+                "price": 80.5,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -851,7 +863,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 122.59,
+                "price": 106.6,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -880,7 +892,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 96.01,
+                "price": 83.49,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -956,7 +968,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 94.59,
+                "price": 82.25,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -985,7 +997,7 @@
             {
                 "id": "industrial",
                 "label": "Embalagem industrial • 5 kg",
-                "price": 72.74,
+                "price": 63.25,
                 "weight": "5 kg",
                 "summary": "Embalagem industrial • 5 kg • preço empresarial disponível após informar CNPJ",
                 "industrial": true
@@ -1079,8 +1091,9 @@
   const isPJCustomer = () => $('#customer-type')?.value === 'pj';
   const cnpjDigits = () => ($('#customer-cnpj')?.value || '').replace(/\D/g, '');
   const hasEligibleCNPJ = () => isPJCustomer() && cnpjDigits().length === 14;
-  // Valor público das embalagens de 5 kg: valor da V39 + 15%, a pedido da HS. Nunca antecipar o desconto PJ.
-  // O desconto PJ de 5 kg é calculado apenas após selecionar PJ e informar 14 dígitos de CNPJ.
+  // V44: cada preço industrial exibido é EXATAMENTE o valor informado pela HS nas 20 imagens.
+  // Não acrescentar 15% nem dividir por 0,85. O preço público é o valor salvo na embalagem.
+  // A regra de 15% de DESCONTO empresarial continua aplicada somente após informar o CNPJ.
   const packagePublicPrice = choice => choice?.price;
   const packageFinalPrice = choice => choice?.industrial && choice.weight === '5 kg' && hasEligibleCNPJ()
     ? roundMoney(packagePublicPrice(choice) * (1 - DISCOUNT_RATE))
@@ -1354,13 +1367,18 @@
   }));
   $('#header-back').addEventListener('click', () => route(lastRoute || 'home'));
 
+  // Quando a foto oficial ainda não foi fornecida, não reutilizar a foto de outro produto.
+  const productPhoto = (product, extra = '') => product.image
+    ? `<img ${extra} src="${product.image}" alt="${product.name}" loading="lazy">`
+    : `<div class="product-photo-pending" role="img" aria-label="Foto do produto em breve"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1-2h6l1 2"/></svg><small>Foto em breve</small></div>`;
+
   function productMini(product) {
     const article = document.createElement('article');
     article.className = 'mini-product';
     article.tabIndex = 0;
     article.setAttribute('role', 'button');
     article.setAttribute('aria-label', `Ver ${product.name}`);
-    article.innerHTML = `<div class="mini-product-media"><img src="${product.image}" alt="${product.name}" loading="lazy"><span>${product.badge}</span></div><div class="mini-product-info"><strong>${cardName(product)}</strong><small>${product.weight}</small><b>${priceLabel(product, product.id)}</b></div><button class="mini-quick-add" type="button" aria-label="${needsDetail(product) ? `Ver opções de ${product.name}` : `Adicionar ${product.name} ao carrinho`}">+</button>`;
+    article.innerHTML = `<div class="mini-product-media">${productPhoto(product)}<span>${product.badge}</span></div><div class="mini-product-info"><strong>${cardName(product)}</strong><small>${product.weight}</small><b>${priceLabel(product, product.id)}</b></div><button class="mini-quick-add" type="button" aria-label="${needsDetail(product) ? `Ver opções de ${product.name}` : `Adicionar ${product.name} ao carrinho`}">+</button>`;
     const open = () => openDetail(product.id);
     article.addEventListener('click', open);
     article.addEventListener('keydown', event => {
@@ -1416,7 +1434,7 @@
     const quantity = cart[product.id] || 0;
     const article = document.createElement('article');
     article.className = 'catalog-card';
-    article.innerHTML = `<div class="catalog-image"><img src="${product.image}" alt="${product.name}" loading="lazy"><span>${product.badge}</span></div><div class="catalog-body"><h3 title="${displayName(product)}">${cardName(product)}</h3><small>${displayWeight(product)} • ${product.categoryLabel}</small><div class="catalog-price"><strong>${priceLabel(product, product.id)}</strong><div class="action-host"></div></div></div>`;
+    article.innerHTML = `<div class="catalog-image">${productPhoto(product)}<span>${product.badge}</span></div><div class="catalog-body"><h3 title="${displayName(product)}">${cardName(product)}</h3><small>${displayWeight(product)} • ${product.categoryLabel}</small><div class="catalog-price"><strong>${priceLabel(product, product.id)}</strong><div class="action-host"></div></div></div>`;
     article.querySelector('.catalog-image').addEventListener('click', () => openDetail(product.id));
     article.querySelector('.catalog-body h3').addEventListener('click', () => openDetail(product.id));
     const host = article.querySelector('.action-host');
@@ -1464,7 +1482,7 @@
     const article = document.createElement('article');
     article.className = 'cart-line';
     const details = customSummary(product.id);
-    article.innerHTML = `<img src="${product.image}" alt="${product.name}"><div class="cart-line-info"><strong>${displayName(product)}</strong><small>${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small><b>${itemPriceLabel(product, quantity, product.id)}</b></div><div class="cart-line-side"><button class="remove-line" aria-label="Remover ${product.name}">×</button><div class="line-stepper"><button aria-label="Diminuir">−</button><span>${quantity}</span><button aria-label="Aumentar">+</button></div>${needsDetail(product) ? '<button class="edit-custom" type="button">Editar</button>' : ''}</div>`;
+    article.innerHTML = `${productPhoto(product)}<div class="cart-line-info"><strong>${displayName(product)}</strong><small>${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small><b>${itemPriceLabel(product, quantity, product.id)}</b></div><div class="cart-line-side"><button class="remove-line" aria-label="Remover ${product.name}">×</button><div class="line-stepper"><button aria-label="Diminuir">−</button><span>${quantity}</span><button aria-label="Aumentar">+</button></div>${needsDetail(product) ? '<button class="edit-custom" type="button">Editar</button>' : ''}</div>`;
     const buttons = article.querySelectorAll('button');
     buttons[0].onclick = () => setQty(product.id, 0);
     buttons[1].onclick = () => remove(product.id);
@@ -1501,7 +1519,7 @@
       const element = document.createElement('div');
       element.className = 'desktop-cart-line';
       const details = customSummary(product.id);
-      element.innerHTML = `<img src="${product.image}" alt="${product.name}"><div class="desktop-cart-line-info"><strong>${displayName(product)}</strong><small>${quantity}x • ${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small></div><div class="desktop-cart-actions"><b>${itemPriceLabel(product, quantity, product.id)}</b><button class="desktop-remove" type="button" aria-label="Remover ${product.name} do carrinho"><span aria-hidden="true">×</span> Remover</button></div>`;
+      element.innerHTML = `${productPhoto(product)}<div class="desktop-cart-line-info"><strong>${displayName(product)}</strong><small>${quantity}x • ${displayWeight(product, product.id)}${details ? ` • ${details}` : ''}</small></div><div class="desktop-cart-actions"><b>${itemPriceLabel(product, quantity, product.id)}</b><button class="desktop-remove" type="button" aria-label="Remover ${product.name} do carrinho"><span aria-hidden="true">×</span> Remover</button></div>`;
       element.querySelector('.desktop-remove').addEventListener('click', () => setQty(product.id, 0));
       host.append(element);
     });
@@ -1562,9 +1580,9 @@
     const quantity = cart[id] || 1;
     const currentFruits = selectedFruits(id);
     const currentAddons = selectedAddons(id);
-    const gallery = product.gallery?.length ? product.gallery : [product.image];
+    const gallery = product.gallery?.length ? product.gallery : (product.image ? [product.image] : []);
     const detail = $('#product-detail');
-    detail.innerHTML = `<button type="button" class="detail-close" aria-label="Fechar">×</button><div class="detail-image"><img data-detail-main src="${gallery[0]}" alt="${product.name}"></div>${gallery.length > 1 ? `<div class="detail-gallery">${gallery.map((src, index) => `<button type="button" class="detail-thumb${index === 0 ? ' active' : ''}" data-gallery-src="${src}" aria-label="Ver foto ${index + 1} de ${product.name}"><img src="${src}" alt=""></button>`).join('')}</div>` : ''}<div class="detail-body"><span>${product.categoryLabel.toUpperCase()}</span><h2 data-detail-name>${displayName(product, id)}</h2><small data-detail-weight>${displayWeight(product, id)}</small><div class="detail-price" data-detail-price>${priceLabel(product, id)}</div><p class="detail-description">${product.description}</p>${product.packageChoices?.length ? packagePickerHtml(product, id) : ''}${product.optionChoices?.length ? optionPickerHtml(product, id) : ''}${product.customizable ? fruitPickerHtml(currentFruits, product) : ''}${product.addonChoices?.length ? addonPickerHtml(product, currentAddons) : ''}<div class="detail-benefits"><div><span>◒</span><b>Seleção HS</b></div><div><span>✓</span><b>Higienizado</b></div><div><span>◷</span><b>Pronto para o dia a dia</b></div></div><div class="detail-actions"><div class="detail-stepper"><button type="button" data-minus>−</button><span data-detail-qty>${quantity}</span><button type="button" data-plus>+</button></div><button type="button" class="detail-add">${needsDetail(product) ? 'Salvar e adicionar' : 'Adicionar ao carrinho'}</button></div><div class="tip-card"><strong>Informação importante</strong><br>${defaultDetailTip(product)}</div></div>`;
+    detail.innerHTML = `<button type="button" class="detail-close" aria-label="Fechar">×</button><div class="detail-image">${gallery.length ? `<img data-detail-main src="${gallery[0]}" alt="${product.name}">` : productPhoto(product)}</div>${gallery.length > 1 ? `<div class="detail-gallery">${gallery.map((src, index) => `<button type="button" class="detail-thumb${index === 0 ? ' active' : ''}" data-gallery-src="${src}" aria-label="Ver foto ${index + 1} de ${product.name}"><img src="${src}" alt=""></button>`).join('')}</div>` : ''}<div class="detail-body"><span>${product.categoryLabel.toUpperCase()}</span><h2 data-detail-name>${displayName(product, id)}</h2><small data-detail-weight>${displayWeight(product, id)}</small><div class="detail-price" data-detail-price>${priceLabel(product, id)}</div><p class="detail-description">${product.description}</p>${product.packageChoices?.length ? packagePickerHtml(product, id) : ''}${product.optionChoices?.length ? optionPickerHtml(product, id) : ''}${product.customizable ? fruitPickerHtml(currentFruits, product) : ''}${product.addonChoices?.length ? addonPickerHtml(product, currentAddons) : ''}<div class="detail-benefits"><div><span>◒</span><b>Seleção HS</b></div><div><span>✓</span><b>Higienizado</b></div><div><span>◷</span><b>Pronto para o dia a dia</b></div></div><div class="detail-actions"><div class="detail-stepper"><button type="button" data-minus>−</button><span data-detail-qty>${quantity}</span><button type="button" data-plus>+</button></div><button type="button" class="detail-add">${needsDetail(product) ? 'Salvar e adicionar' : 'Adicionar ao carrinho'}</button></div><div class="tip-card"><strong>Informação importante</strong><br>${defaultDetailTip(product)}</div></div>`;
 
     let tempQuantity = quantity;
     const quantityTarget = $('[data-detail-qty]', detail);

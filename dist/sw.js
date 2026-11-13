@@ -1,13 +1,13 @@
-const CACHE='hs-final-2026-11-10-v40';
+const CACHE='hs-final-2026-11-12-v44';
 const ASSETS=[
   './',
   './index.html',
   './privacidade.html',
   './termos.html',
   './assets/css/app.css',
-  './assets/css/app.css?v=36',
+  './assets/css/app.css?v=44',
   './assets/js/app.js',
-  './assets/js/app.js?v=40',
+  './assets/js/app.js?v=44',
   './manifest.webmanifest',
   './assets/images/abacaxi-em-cubos-250g.webp',
   './assets/images/abobora-jacare-fatias-assar-500g.webp',
